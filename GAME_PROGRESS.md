@@ -343,10 +343,20 @@ Sused ti povedal dolezite cislo: 4868666
 - 14-digit (bez posledného): 240864 + 271126 = **511990** (6 číslic) → 404
 - Page ID varianty: 1711997, 271199 → 404
 
+**NOVÝ OBJAV - Periodická tabuľka:**
+- KRAL FRANTISEK = KR-AL-F-RA-N-TI-SE-K (prvky periodickej tabuľky!)
+- Kr=36, Al=13, F=9, Ra=88, N=7, Ti=22, Se=34, K=19
+- Concatenated: **36139887223419** (presne 14 číslic!)
+- "Tabuľka" v hinte = periodická tabuľka prvkov!
+
+**Výpočty s 14-miestnym číslom:**
+- 361398 + 223419 = 584817 (6 číslic) → 404
+- S pridaným "10": 361398 + 341910 = 703308 → 404
+- Stále hľadám správnu interpretáciu "pridaj typ súboru"
+
 **Otázky:**
-- Ktoré číslo je skutočné "14 miestne číslo"?
-- Čo je "tabuľka" pre typ súboru? (Level 10 = 10. typ?)
-- Ako sa pridáva "typ súboru" k číslu?
+- Ako sa pridáva "typ súboru z tabuľky podľa hodnoty 10"?
+- Je to 10. prvok (Neon), 10. prípona, alebo niečo iné?
 
 **Status:** PARTIALLY SOLVED - Facebook album nájdený (bit.ly/kafka-vynalezy), správny výpočet 7-miestnej URL zatiaľ neznámy
 
