@@ -223,3 +223,9 @@ v ktorych sa vyskytuje pismeno 'X'
 - Level 01-05: COMPLETED
 - Level 06 (lampas): COMPLETED - riesenie vek:cas
 - Level 07 (dielna): RAR heslo "sedem" najdene, hladam 2 produkty s X
+
+**Skusene stovky kombinacii:**
+- solvex + vsetky bezne znacky tmelov, farieb, chemikalii
+- Rozne variácie textu z dielna.jpg (humorex, humidex, humdirex...)
+- Genericke slova s X (wax, fix, mix, box, latex, flux, hex, rex...)
+- Znacky: sikaflex, primalex, chemfix, bondex, akfix, murexin, sonax, vertex...
