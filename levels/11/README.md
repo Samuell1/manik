@@ -67,8 +67,24 @@
 - Kombinácie s drak:arka, arka:drak
 - Case varianty: SALTO:ALT, Drak:Arka
 - Otočené pozície (ponechať 1,5): so:alt
-- 200+ kombinácií testovaných - všetky vracajú 401
+- 300+ kombinácií testovaných - všetky vracajú 401
+
+## Ďalšie pokusy (session 2)
+- Car model names: MOSKVIC→OSKIC, WARTBURG→ARTURG, SKODA
+- Slovak surnames starting with HO: HORAK→ORA, HOLUB→OLU, HORVAT→ORVT
+- Racing vocabulary: preteky, pretekar, zavod, jazdec, rychlost, pilot
+- Anagrams of SALTO: altos, talos, slota
+- Level 9 + Level 11 combinations: rykyncice+alt, dominik+drak
+- Removed vs remaining: so:alt, s:o
+- DRAK formula: remove pos 1 = RAK
+- Special characters: alt_drak, salto-15
+- Numbers from image as credentials
+- Exact case testing: SALTO:ALT, Drak:Arka
 
 ## Status
-IN PROGRESS - správna interpretácia hintu zatiaľ nenájdená
-Potrebná dodatočná analýza alebo hint od užívateľa
+IN PROGRESS - 300+ kombinácií testovaných, všetky vracajú 401
+Možné príčiny:
+1. "Závodník" je špecifické meno ktoré nepoznám
+2. Čísla v obrázku majú iný význam
+3. Potrebná informácia z Level 09 "lazy" puzzle
+4. Kultúrna referencia na slovenský motorsport
