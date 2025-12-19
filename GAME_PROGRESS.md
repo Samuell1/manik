@@ -142,26 +142,63 @@ http://manik.sk/hra/lampas/
 - zo 7 pismenovej veci, ktora tu ocividne chyba vyskrtni pismeno "I"
 - poskladanim dvoch spravnych slov z ostatnych pismen sa dostanes do dielne
 
+**RIESENIE NAJDENE!**
+
 **Analyza:**
-- 7 pismenova vec = LAMPION (L-A-M-P-I-O-N)
-- Bez I = LAMPON (L-A-M-P-O-N) = 6 pismen
-- Mozne 2 slova: PAN + LOM, MOL + PAN, NAP + LOM...
+- 7 pismenova vec ktora chyba v lampasi = SVIECKA (sviečka/candle)
+- SVIECKA (7 pismen) → bez I = SVECKA (6 pismen)
+- Dve slova z pismen S-V-E-C-K-A: **VEK** (vek/age) + **CAS** (čas/time)
 
-**Skusene kombinacie:** pan:lom, lom:pan, mol:pan, pan:mol, nap:lom, nap:olm, olm:nap, opal:mn, rozsypane:puzzle, meno:heslo
+**Prihlasovacie udaje pre /dielna/:**
+- Meno: vek
+- Heslo: cas
 
-**Dalsie mozne 7-pismenove slova s I:**
-- LAMPION (7) → bez I = LAMPON (6): PAN+LOM, MOL+PAN
-- SVIECKA (7) → bez I = SVECKA (6): VEC+SKA?
-- BATERIA (7) → bez I = BATERA (6): BRAT+EA?
-- ENERGIE (7) → bez I = ENERGE (6): ?
+**Riesenie:** SVIECKA chyba v lampasi, bez I = SVECKA, slova VEK+CAS = prihlasovacie udaje
 
-**Dalsie skusene kombinacie:**
-- SVETILO → SVETLO: svet+lo, los+vet, vol+set, stol+ve, let+vos, sol+vet
-- SVIETKA → SVETKA: kvet+sa
-- PLAMENI → PLAMEN: pan+lem
-- HORENIE → HORENE: hore+ne
-- SVITALO → SVATLO: salto+v
+**Status:** COMPLETED
 
-**Brute force pokusy:** ~1000 kombinacii 3-pismenových slov
+---
 
-**Status:** IN PROGRESS - hadanka zostava nevyriesena, potrebujem spravnu kombinaciu pre /dielna/
+## Level 07
+**URL:** https://manik.sk/hra/dielna/
+
+**Autentifikacia:** vek / cas (HTTP Basic Auth)
+
+**Popis:** Poriadne sa poobzeraj v tejto dielni
+
+**Obrazok:** obrazok.jpg s image map (6 klikatelnych oblasti)
+
+**Image map oblasti:**
+- dielna.jpg (lightbox) - roh dielne so starou pieckou
+- policka.jpg (lightbox) - policky s naradim
+- okno.jpg (lightbox) - hrdzavy pant na okne
+- skrinka.jpg (lightbox) - skrinka s naradim, viditelny SOLVEX
+- ../pred_domom/ - vyzaduje dalsiu autentifikaciu
+- pokracovanie.rar - zasifrovany RAR archiv
+
+**Napoveda:**
+- poriadne sa rozhliadni v tejto dielni
+- zahryznuty zub casu je dolezity
+- vysledok slovom je klucom k pokracovaniu
+
+**Analyza RAR hesla:**
+- "zahryznuty zub casu" = metafora pre plynutie casu
+- Level 7 = SEDEM
+
+**Heslo pre RAR:** sedem
+
+**Obsah pokracovanie.txt:**
+```
+Aby si sa dostal z dielne von oknom budes
+potrebovat dva nazvy produktov
+v ktorych sa vyskytuje pismeno 'X'
+```
+
+**Produkty s X viditelne v obrazkoch:**
+- SOLVEX (skrinka.jpg - modra plechovka)
+- ??? (hladam druhy produkt)
+
+**Skusene kombinacie pre /pred_domom/:**
+- solvex:sikaflex, solvex:primalex, solvex:chemfix, solvex:bondex...
+
+**Status:** IN PROGRESS - hladam druhy produkt s pismenom X
