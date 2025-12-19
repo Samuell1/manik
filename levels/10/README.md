@@ -30,3 +30,24 @@ KRAL FRANTISEK = KR-AL-F-RA-N-TI-SE-K (prvky periodickej tabulky)
 
 ## Status
 CIASTOCNE VYRIESENE - 14-miestne cislo najdene, ale spravna interpretacia "typ suboru" chyba
+
+## PROGRESS UPDATE
+
+### Súbor nájdený!
+- **36139887223419.ne** - ASCII text file
+- Inštrukcie: "Použi úplne posledné slovo z Kafkovho popisu tabuľky a skonvertuj ho do hexadecimálneho tvaru"
+
+### Kafkov popis tabuľky (posledné slovo):
+"...lebo som dlho nemohol nájsť samohlásku, ktorá by do názvu **pasovala**."
+
+### Konverzia:
+- pasovala → hex = **7061736f76616c61**
+
+### Skúšané:
+- Hex ako URL: 404
+- Hex ako filename: 404  
+- Hex ako heslo: ?
+- Rôzne výpočty s hex: 404
+
+### Ďalší postup:
+- Nájsť kde použiť hex hodnotu
