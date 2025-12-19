@@ -106,6 +106,17 @@
 - prezrel by som vsetko radsej dva krat
 - spravne slovo je klucom ku pokracovaniu
 
-**Riesenie:** 5.jpg je RAR archiv s heslom. Potrebujem najst spravne heslo.
+**Analyza:**
+- 5.jpg je RAR archiv (nie obrazok)
+- RAR je zasifrovaný (EncryptedBlockHeader)
+- Obrazky 1-4.jpg su normalne JPEG fotky (800x600)
+- Heslo pre RAR treba najst
 
-**Status:** IN PROGRESS
+**Mozne riesenia:**
+- Heslo moze byt ukryte v jednom z obrazkov 1-4.jpg
+- Heslo moze byt na stranke v skrytom elemente
+- "zeby_tu?" v image map je hint
+
+**Skusene hesla:** kuchyna, kluc, klucom, slovo, dom, v_dome, petra, otvor, dvere, vino, archiv, baterka, svetlo, level05, zeby_tu
+
+**Status:** IN PROGRESS - potrebujem najst heslo pre RAR
