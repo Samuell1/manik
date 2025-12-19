@@ -348,7 +348,12 @@ Sused ti povedal dolezite cislo: 4868666
 - Čo je "tabuľka" pre typ súboru? (Level 10 = 10. typ?)
 - Ako sa pridáva "typ súboru" k číslu?
 
-**Status:** IN PROGRESS - Facebook album nájdený, výpočet URL neznámy
+**Status:** PARTIALLY SOLVED - Facebook album nájdený (bit.ly/kafka-vynalezy), správny výpočet 7-miestnej URL zatiaľ neznámy
+
+**Potrebné kroky:**
+1. Prístup k Facebook albumu pre zistenie presného 14-miestneho čísla
+2. Identifikácia "tabuľky" pre typ súboru podľa hodnoty 10
+3. Aplikácia výpočtu: prvých 6 + posledných 6 čísiel = 7-miestny súčet
 
 ---
 
