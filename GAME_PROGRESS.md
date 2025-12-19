@@ -211,4 +211,15 @@ v ktorych sa vyskytuje pismeno 'X'
 - policka.jpg: tuby tmelov/silikonov (nezname znacky)
 - Hlavny obrazok: sprejovacie plechovky na polici hore
 
+**Dalsie skusene kombinacie:**
+- humorex, humidex, humorek (mozny text na pravej strane dielna.jpg)
+- Rozne znacky tmelov: sikaflex, chemfix, akfix, soudaflex
+- Rozne znacky farieb: primalex, bondex, colorex
+- Genericke slova: wax, fix, mix, box, latex, flux
+
 **Status:** IN PROGRESS - hladam druhy produkt s pismenom X pre /pred_domom/
+
+**Zhrnutie postupu:**
+- Level 01-05: COMPLETED
+- Level 06 (lampas): COMPLETED - riesenie vek:cas
+- Level 07 (dielna): RAR heslo "sedem" najdene, hladam 2 produkty s X
