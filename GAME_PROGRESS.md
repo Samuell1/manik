@@ -370,6 +370,18 @@ Sused ti povedal dolezite cislo: 4868666
 - Facebook bez 1.: 408649 + 711266 = 1119915
 - A desiatky ďalších kombinácií...
 
+**Facebook album obsah (z screenshotov):**
+- Rôzne patenty a vynálezy Ing. Zoltána Kafku
+- **"16°KS"** - Kafkova teplotná stupnica (UNIVERZÁL STUPEŇ KAFKA)
+- 16°KS = 0°C = 0°F
+- Tabuľka chemických prvkov (Kafkova sústava)
+- www.facebook.com/vedec
+- Rôzne technické kresby s označeniami "fig. 1", "fig. 1a" atď.
+
+**Nové výpočty s 16 (Kafkova stupnica):**
+- num14 + 16 = 703314 → 404
+- num14 + 016 = 780414 → 404
+
 **Záver:**
 Riešenie vyžaduje prístup k Facebook albumu alebo pochopenie
 presného významu "typ súboru z tabuľky podľa hodnoty 10"
