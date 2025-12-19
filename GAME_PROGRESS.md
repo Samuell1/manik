@@ -249,4 +249,19 @@ v ktorych sa vyskytuje pismeno 'X'
 - Title: Preskumaj
 - Artist: Subor
 
-**Status:** IN PROGRESS - hladam meno suseda pre ID.rar
+**Heslo pre ID.rar:** dominik
+
+**Obsah ID.rar:**
+```
+Sused ti povedal dolezite cislo: 4868666
+```
+
+**SME.sk článok (c/4868666):**
+- Titulok: "Sused Dominik začal rozprávať dôležitý príbeh"
+- URL: https://www.sme.sk/c/4868666/
+
+**Dalsi krok:**
+- Hint: "sused a obec ťa odnavigujú ďalej"
+- Potrebujem najst nazov obce pre kombinaciu s menom "dominik"
+
+**Status:** IN PROGRESS - hladam nazov obce
