@@ -358,12 +358,21 @@ Sused ti povedal dolezite cislo: 4868666
 - Ako sa pridáva "typ súboru z tabuľky podľa hodnoty 10"?
 - Je to 10. prvok (Neon), 10. prípona, alebo niečo iné?
 
-**Status:** PARTIALLY SOLVED - Facebook album nájdený (bit.ly/kafka-vynalezy), správny výpočet 7-miestnej URL zatiaľ neznámy
+**Status:** MAJOR PROGRESS - Periodická tabuľka objavená, Facebook album nájdený
 
-**Potrebné kroky:**
-1. Prístup k Facebook albumu pre zistenie presného 14-miestneho čísla
-2. Identifikácia "tabuľky" pre typ súboru podľa hodnoty 10
-3. Aplikácia výpočtu: prvých 6 + posledných 6 čísiel = 7-miestny súčet
+**Dva možné zdroje 14-miestneho čísla:**
+1. KRAL FRANTISEK → KR-AL-F-RA-N-TI-SE-K → 36139887223419 (periodická tabuľka)
+2. Facebook album ID 240864922711266 → bez 1. čísla = 40864922711266
+
+**Skúšané výpočty (všetky 404):**
+- Periodická tabuľka: 361398 + 223419 = 584817
+- S Neonom (10): 361398 + 341910 = 703308
+- Facebook bez 1.: 408649 + 711266 = 1119915
+- A desiatky ďalších kombinácií...
+
+**Záver:**
+Riešenie vyžaduje prístup k Facebook albumu alebo pochopenie
+presného významu "typ súboru z tabuľky podľa hodnoty 10"
 
 ---
 
