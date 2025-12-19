@@ -330,13 +330,25 @@ Sused ti povedal dolezite cislo: 4868666
 4. Sčítať ich
 5. 7 miestny výsledok použiť ako URL
 
-**Skúšané kombinácie:**
-- ASCII hodnoty KRALFRANTISEK (sum=977, concat=75826576708265788473836975)
-- A-Z pozície (1-26 mapovanie)
-- ROT13, Base64, Reverse transformácie
-- Rôzne bit.ly kódy (kralfrantisek, kral, frantisek, KF, hraMNK, MNK)
+**KĽÚČOVÝ OBJAV:**
+- HTML komentár `<!-- kafka-vynalezy -->` je hint na bit.ly kód!
+- **bit.ly/kafka-vynalezy** → presmeruje na Facebook album
+- Facebook album URL: a.240864922711266.58013.193545500776542
+- Album ID: **240864922711266** (15 číslic)
+- Page ID: **193545500776542** (15 číslic)
 
-**Status:** IN PROGRESS - potrebujem zistiť formát 14 miestneho čísla a tabuľku
+**Skúšané výpočty:**
+- 15-digit album ID: 240864 + 711266 = **952130** (6 číslic) → 404
+- 14-digit (bez prvého): 408649 + 711266 = **1119915** (7 číslic) → 404
+- 14-digit (bez posledného): 240864 + 271126 = **511990** (6 číslic) → 404
+- Page ID varianty: 1711997, 271199 → 404
+
+**Otázky:**
+- Ktoré číslo je skutočné "14 miestne číslo"?
+- Čo je "tabuľka" pre typ súboru? (Level 10 = 10. typ?)
+- Ako sa pridáva "typ súboru" k číslu?
+
+**Status:** IN PROGRESS - Facebook album nájdený, výpočet URL neznámy
 
 ---
 
