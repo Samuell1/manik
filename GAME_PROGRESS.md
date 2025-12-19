@@ -106,17 +106,18 @@
 - prezrel by som vsetko radsej dva krat
 - spravne slovo je klucom ku pokracovaniu
 
-**Analyza:**
-- 5.jpg je RAR archiv (nie obrazok)
-- RAR je zasifrovaný (EncryptedBlockHeader)
-- Obrazky 1-4.jpg su normalne JPEG fotky (800x600)
-- Heslo pre RAR treba najst
+**RIESENIE NAJDENE!**
 
-**Mozne riesenia:**
-- Heslo moze byt ukryte v jednom z obrazkov 1-4.jpg
-- Heslo moze byt na stranke v skrytom elemente
-- "zeby_tu?" v image map je hint
+**Pismena skryte v obrazkoch:**
+- 1.jpg: **N** (v lavom hornom rohu - popolnik s cigaretami)
+- 2.jpg: **I** (v lavom hornom rohu - stara zehlicka)
+- 3.jpg: **V** (v lavom hornom rohu - zehlicka na uhlie)
+- 4.jpg: **O** (v lavom hornom rohu - sedadlo bicykla)
 
-**Skusene hesla:** kuchyna, kluc, klucom, slovo, dom, v_dome, petra, otvor, dvere, vino, archiv, baterka, svetlo, level05, zeby_tu
+**Heslo pre RAR:** VINO (pismena v poradi 3-2-1-4 alebo NIVO preusporiadane)
 
-**Status:** IN PROGRESS - potrebujem najst heslo pre RAR
+**Obsah RAR archivu:** pokracovanie.txt
+
+**Riesenie:** Heslo "vino" otvori RAR archiv, obsahuje subor pokracovanie.txt
+
+**Status:** COMPLETED (heslo najdene: VINO, v archíve je pokracovanie.txt)
