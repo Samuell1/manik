@@ -199,6 +199,16 @@ v ktorych sa vyskytuje pismeno 'X'
 - ??? (hladam druhy produkt)
 
 **Skusene kombinacie pre /pred_domom/:**
-- solvex:sikaflex, solvex:primalex, solvex:chemfix, solvex:bondex...
+- solvex + sikaflex, primalex, chemfix, bondex, unifix, ferex, akfix, murexin
+- solvex + humorex, sonax, vertex, xerox, inox, nexus
+- solvex + latex, flux, epoxy, wax, lux, dex, rex
+- solvex + primax, naxos, oxidex, tyczka, toxol, tectyl
+- Viacero stoviek kombinacii...
 
-**Status:** IN PROGRESS - hladam druhy produkt s pismenom X
+**Poznamky z obrazkov:**
+- skrinka.jpg: SOLVEX viditelne (modra plechovka)
+- dielna.jpg: SATLOOK (bez X), modra plynova flasa s moznym textom HUMOREX
+- policka.jpg: tuby tmelov/silikonov (nezname znacky)
+- Hlavny obrazok: sprejovacie plechovky na polici hore
+
+**Status:** IN PROGRESS - hladam druhy produkt s pismenom X pre /pred_domom/
