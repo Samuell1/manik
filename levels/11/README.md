@@ -53,5 +53,15 @@
 - Level 09 obrazok má číslo: 383935303445343437 → ASCII "89504E447" (PNG header?)
 - Možno potrebujem najprv vyriešiť Level 09 úplne
 
+## Ďalšie skúšané kombinácie
+- KAFKA → bez pozícií 1,5 → AFK
+- ZOLTAN → bez pozícií 1,5 → OLTN
+- SKODA → bez pozícií 1,5 → KOD
+- inzinier, pan, auto, kopec, laz varianty
+- Rovnaké heslo ako meno: alt:alt, salto:salto, atď.
+- Číselné: 15:15, 1:5, salto:15
+- Všetky vracajú 401
+
 ## Status
 IN PROGRESS - správna interpretácia hintu zatiaľ nenájdená
+Možné, že riešenie vyžaduje dodatočné info z Level 09 "lazy" puzzle
