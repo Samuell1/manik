@@ -57,11 +57,18 @@
 - KAFKA → bez pozícií 1,5 → AFK
 - ZOLTAN → bez pozícií 1,5 → OLTN
 - SKODA → bez pozícií 1,5 → KOD
+- ZAVODNIK → bez pozícií 1,5 → AVONIK
+- INZINIER → bez pozícií 1,5 → NZNER
+- CERVENY (red) → bez pozícií 1,5 → ERVNY
 - inzinier, pan, auto, kopec, laz varianty
 - Rovnaké heslo ako meno: alt:alt, salto:salto, atď.
 - Číselné: 15:15, 1:5, salto:15
-- Všetky vracajú 401
+- ASCII dekódované: drak, arka (z čísel v obrázku)
+- Kombinácie s drak:arka, arka:drak
+- Case varianty: SALTO:ALT, Drak:Arka
+- Otočené pozície (ponechať 1,5): so:alt
+- 200+ kombinácií testovaných - všetky vracajú 401
 
 ## Status
 IN PROGRESS - správna interpretácia hintu zatiaľ nenájdená
-Možné, že riešenie vyžaduje dodatočné info z Level 09 "lazy" puzzle
+Potrebná dodatočná analýza alebo hint od užívateľa
