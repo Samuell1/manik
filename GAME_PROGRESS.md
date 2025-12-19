@@ -288,11 +288,34 @@ Sused ti povedal dolezite cislo: 4868666
 ---
 
 ## Level 09
-**URL:** NEZNÁMA
+**URL:** https://manik.sk/hra/do_dediny/
 
-**Poznámka:** Level 09 sa nepodarilo nájsť. Hint z Level 08 hovorí "sused a obec ťa odnavigujú ďalej" (dominik + rykyncice), ale správna URL kombinácia nebola objavená. Level 10 (/kopec/) je však dostupný verejne.
+**NÁJDENÁ URL!** Level 09 je na /do_dediny/ - vracia 401 (vyžaduje autentifikáciu)
 
-**Status:** NOT FOUND
+**Hint z Level 08:** "sused a obec ťa odnavigujú ďalej"
+- Sused = dominik (z meno.mp3 → ID.rar)
+- Obec = rykyncice (zo SME článku c/4868666)
+
+**PRÍSTUP ZÍSKANÝ!**
+- **Username:** sever
+- **Password:** juh
+
+**Odkiaľ:** Hint "odnavigujú" = navigácia = svetové strany!
+
+**HTML komentár:** `<!-- Wiktória je kamarátka -->`
+
+**Hinty z Level 09:**
+1. nájdi prvý dôležitý súbor a oprav prvých 8 hexadecimálnych bajtov
+2. získaj všetky lazy
+3. nájdi druhý dôležitý súbor a pomôž si názvom obce
+4. nahraď otáznik
+5. výsledok z dvoch lazov ťa pustí do ďalšieho levelu
+
+**Súbory:**
+- obrazok.jpg - laz/lúka
+- dom.jpg - dom (lightbox)
+
+**Status:** PRÍSTUP ZÍSKANÝ - potrebné nájsť "dôležité súbory"
 
 ---
 
