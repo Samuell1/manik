@@ -217,15 +217,36 @@ v ktorych sa vyskytuje pismeno 'X'
 - Rozne znacky farieb: primalex, bondex, colorex
 - Genericke slova: wax, fix, mix, box, latex, flux
 
-**Status:** IN PROGRESS - hladam druhy produkt s pismenom X pre /pred_domom/
+**Status:** COMPLETED
 
-**Zhrnutie postupu:**
-- Level 01-05: COMPLETED
-- Level 06 (lampas): COMPLETED - riesenie vek:cas
-- Level 07 (dielna): RAR heslo "sedem" najdene, hladam 2 produkty s X
+**RIESENIE NAJDENE!**
+- Produkt 1: **SOLVEX** (skrinka.jpg)
+- Produkt 2: **HUMDREX** (dielna.jpg - text na pravej strane)
+- Prihlasovacie udaje pre /pred_domom/: `solvex:humdrex`
 
-**Skusene stovky kombinacii:**
-- solvex + vsetky bezne znacky tmelov, farieb, chemikalii
-- Rozne variácie textu z dielna.jpg (humorex, humidex, humdirex...)
-- Genericke slova s X (wax, fix, mix, box, latex, flux, hex, rex...)
-- Znacky: sikaflex, primalex, chemfix, bondex, akfix, murexin, sonax, vertex...
+---
+
+## Level 08
+**URL:** https://manik.sk/hra/pred_domom/
+
+**Autentifikacia:** solvex / humdrex (HTTP Basic Auth)
+
+**Popis:** Vyskocil si z dielne, zbadal si stareho suseda s dolezitymi informaciami
+
+**Obrazok:** obrazok.jpg - scena zo slovenskej dediny, sused na zahrade
+
+**Napoveda:**
+- neznáme 'meno' suseda sa dozvieš zo súboru najbežnejšieho komprimovaného audio formátu (MP3)
+- ďalšiu indíciu dostaneš preskúmaním nájdeného
+- dôležitú informáciu použi na webe najčítanejších správ na Slovensku (SME.sk)
+- sused a obec ťa odnavigujú ďalej
+
+**Najdene subory:**
+- meno.mp3 - obsahuje skryty text: "Meno suseda je heslo do suboru: ID.rar"
+- ID.rar - zasifrovany archiv, heslo = meno suseda
+
+**ID3 tagy v meno.mp3:**
+- Title: Preskumaj
+- Artist: Subor
+
+**Status:** IN PROGRESS - hladam meno suseda pre ID.rar
