@@ -120,4 +120,33 @@
 
 **Riesenie:** Heslo "vino" otvori RAR archiv, obsahuje subor pokracovanie.txt
 
-**Status:** COMPLETED (heslo najdene: VINO, v archíve je pokracovanie.txt)
+**Obsah pokracovanie.txt:**
+```
+http://manik.sk/hra/lampas/
+```
+
+**Status:** COMPLETED
+
+---
+
+## Level 06
+**URL:** https://manik.sk/hra/lampas/
+
+**Obrazok:** Stary kovovy lampas (bez svetla)
+
+**Popis:** Na chodbe nesvieti svetlo, lampa je nepouzitelna
+
+**Link:** Obrazok linkuje na /dielna/ (vyžaduje autentifikáciu)
+
+**Napoveda:**
+- zo 7 pismenovej veci, ktora tu ocividne chyba vyskrtni pismeno "I"
+- poskladanim dvoch spravnych slov z ostatnych pismen sa dostanes do dielne
+
+**Analyza:**
+- 7 pismenova vec = LAMPION (L-A-M-P-I-O-N)
+- Bez I = LAMPON (L-A-M-P-O-N) = 6 pismen
+- Mozne 2 slova: PAN + LOM, MOL + PAN, NAP + LOM...
+
+**Skusene kombinacie:** pan:lom, lom:pan, mol:pan, pan:mol, nap:lom
+
+**Status:** IN PROGRESS - hladam spravne prihlasovacie udaje
