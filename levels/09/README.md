@@ -1,22 +1,19 @@
-# Level 09 (NEZNAMY)
+# Level 09 (Do dediny)
 
-**URL:** NEZNAMA
+**URL:** https://manik.sk/hra/do_dediny/
+**Status:** NÁJDENÉ! Vyžaduje autentifikáciu (401)
 
 ## Hint z Level 08
-"sused a obec ta odnaviguju dalej"
-- Sused = dominik
-- Obec = rykyncice
+"sused a obec ťa odnavigujú ďalej"
+- Sused = dominik (z meno.mp3 → ID.rar)
+- Obec = rykyncice (zo SME článku c/4868666)
 
-## Skusane kombinacie (vsetky 404)
-- dominik_rykyncice, rykyncice_dominik
-- dominik-rykyncice, rykyncice-dominik
-- dominikrykyncice, rykyncicedominik
-- dominik_bzenica, dominik_hradok
-- sused_obec, obec_sused
-- dominik_les, les_dominik
-- dominik_kafka, kafka_dominik
-- naviguj, navigacia, smer, cesta, dalej
-- Stovky dalsich kombinacii...
+## Skúšané prihlasovacie údaje (všetky 401)
+- dominik:rykyncice, rykyncice:dominik
+- sused:obec, obec:sused
+- dom:ryk, ryk:dom
+- kafka:rykyncice, rykyncice:kafka
+- A desiatky ďalších kombinácií...
 
 ## Status
-NERIESENE - URL nebola najdena
+URL NÁJDENÁ, ale správne prihlasovacie údaje zatiaľ neznáme.
