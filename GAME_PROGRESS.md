@@ -155,4 +155,13 @@ http://manik.sk/hra/lampas/
 - BATERIA (7) → bez I = BATERA (6): BRAT+EA?
 - ENERGIE (7) → bez I = ENERGE (6): ?
 
-**Status:** IN PROGRESS - potrebujem najst spravnu 7-pismenovu vec a jej rozdelenie na 2 slova
+**Dalsie skusene kombinacie:**
+- SVETILO → SVETLO: svet+lo, los+vet, vol+set, stol+ve, let+vos, sol+vet
+- SVIETKA → SVETKA: kvet+sa
+- PLAMENI → PLAMEN: pan+lem
+- HORENIE → HORENE: hore+ne
+- SVITALO → SVATLO: salto+v
+
+**Brute force pokusy:** ~1000 kombinacii 3-pismenových slov
+
+**Status:** IN PROGRESS - hadanka zostava nevyriesena, potrebujem spravnu kombinaciu pre /dielna/
