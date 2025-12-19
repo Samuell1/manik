@@ -438,9 +438,16 @@ Sused ti povedal dolezite cislo: 4868666
 - PNG/RAR/TXT ASCII varianty → všetky 404
 
 **Záver Level 10:**
-Preskúmané stovky kombinácií. Hint hovorí o 7-miestnom výsledku,
-ale správna interpretácia "typ súboru z tabuľky podľa hodnoty 10" zatiaľ nebola nájdená.
-Potrebná je ďalšia analýza Kafkovho Facebook albumu alebo iná interpretácia hintu.
+Preskúmané stovky kombinácií vrátane:
+- Atomic number Ba (56), mass (137, 13733)
+- ASCII kódy prípon (jpg, png, rar, zip, bmp)
+- Pozície v abecede pre prípony
+- Aritmetické sčítanie namiesto konkatenácie
+- Facebook album ID čísla
+
+Hint hovorí o 7-miestnom výsledku, ale správna interpretácia
+"typ súboru z tabuľky podľa hodnoty 10" zatiaľ nebola nájdená.
+Potrebná je ďalšia analýza alebo iná interpretácia hintu.
 
 ---
 
