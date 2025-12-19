@@ -260,8 +260,101 @@ Sused ti povedal dolezite cislo: 4868666
 - Titulok: "Sused Dominik začal rozprávať dôležitý príbeh"
 - URL: https://www.sme.sk/c/4868666/
 
+**SME.sk článok - obsah:**
+- Príbeh o susedovi Dominikovi z obce **Rykynčice**
+- Rozpráva o vynálezcovi **Ing. Zoltán Kafka**
+- Kafka každú nedeľu miznul do lesa na hodinu, vracal sa zablatený
+- Spomína **hrádok** - ruiny hradu nad obcou
+- Les na severozápad od obce
+
+**Geografické info o Rykynčiciach:**
+- Obec v okrese Krupina, Banskobystrický kraj
+- Na vrchu Hrádok sú ruiny hradu **Bzenica**
+- V okolí: Sitno, Dudince, hrad Čabraď
+
 **Dalsi krok:**
 - Hint: "sused a obec ťa odnavigujú ďalej"
-- Potrebujem najst nazov obce pre kombinaciu s menom "dominik"
+- Sused = dominik, Obec = rykyncice
+- URL pre Level 09 NENÁJDENÁ
 
-**Status:** IN PROGRESS - hladam nazov obce
+**Skusene URL kombinacie (stovky pokusov):**
+- dominik_rykyncice, rykyncice_dominik, dominik-rykyncice
+- hradok, bzenica, hrad_bzenica, les, v_lese
+- rykyncice, krupina, sitno, kafka, zoltan
+- Všetky vracajú 404
+
+**Status:** PARTIALLY COMPLETED - Level 09 URL neznáma, ale /kopec/ (Level 10) nájdený
+
+---
+
+## Level 09
+**URL:** NEZNÁMA
+
+**Poznámka:** Level 09 sa nepodarilo nájsť. Hint z Level 08 hovorí "sused a obec ťa odnavigujú ďalej" (dominik + rykyncice), ale správna URL kombinácia nebola objavená. Level 10 (/kopec/) je však dostupný verejne.
+
+**Status:** NOT FOUND
+
+---
+
+## Level 10
+**URL:** https://manik.sk/hra/kopec/
+
+**Popis:** V lese si objavil tajné laboratórium Ing. Zoltána Kafku, inžiniera
+
+**Obrazok:** obrazok.jpg
+- Text hore: **KRAL FRANTISEK**
+- Text dole: **http://bit.ly/**
+- Zobrazuje vezu/rozhladnu v lesnatom kopci
+
+**HTML komentár:** `<!-- kafka-vynalezy -->`
+
+**Napoveda:**
+- uvedená doména na fotke otvára isté stránky (bit.ly)
+- bez tabuľky by sa kráľ len veľmi ťažko zaobišiel (šachová tabuľka?)
+- za získané 14 miestne číslo pridaj typ súboru z tabuľky podľa hodnoty čísla tohto levelu
+- z výsledku zrátaj prvých a posledných 6 čísiel
+- 7 miestny súčet použi do URL
+
+**Analyza:**
+- bit.ly - URL skracovač, potrebujem nájsť správny krátky kód
+- bit.ly/kralfrantisek - ZABLOKOVANÝ (Bitly bezpečnostné varovanie)
+- KRAL FRANTISEK - 14 znakov vrátane medzery
+- "bez tabuľky by sa kráľ len veľmi ťažko zaobišiel" - neznáma tabuľka
+- Na obrazku je biela rozhľadňa v lesnatom kopci
+- HTML komentár: `<!-- kafka-vynalezy -->`
+
+**Postup podľa hintu:**
+1. Získať 14 miestne číslo (z bit.ly?)
+2. Pridať príponu súboru podľa hodnoty 10 z tabuľky
+3. Zobrať prvých 6 a posledných 6 čísiel
+4. Sčítať ich
+5. 7 miestny výsledok použiť ako URL
+
+**Skúšané kombinácie:**
+- ASCII hodnoty KRALFRANTISEK (sum=977, concat=75826576708265788473836975)
+- A-Z pozície (1-26 mapovanie)
+- ROT13, Base64, Reverse transformácie
+- Rôzne bit.ly kódy (kralfrantisek, kral, frantisek, KF, hraMNK, MNK)
+
+**Status:** IN PROGRESS - potrebujem zistiť formát 14 miestneho čísla a tabuľku
+
+---
+
+## Zhrnutie celkoveho postupu
+
+**Dokoncene levely:**
+- Level 01: Klucova dierka → /level_02/
+- Level 02: Napis "Petra" → /petra/
+- Level 03: Zla hlavicka → /zahrada/
+- Level 04: vino4.txt → otvor:dvere → /v_dome/
+- Level 05: NIVO pismena v obrazkoch → heslo "vino" pre RAR → /lampas/
+- Level 06: SVIECKA → VEK:CAS → /dielna/
+- Level 07: RAR heslo "sedem", produkty SOLVEX:HUMDREX → /pred_domom/
+- Level 08: meno.mp3 → ID.rar heslo "dominik" → SME.sk c/4868666 → dominik+rykyncice
+- Level 09: NEZNÁMA URL
+- Level 10: /kopec/ - KRAL FRANTISEK + bit.ly puzzle
+
+**Subory ulozene v /tmp/:**
+- Obrazky zo vsetkych levelov
+- meno.mp3, ID.rar z levelu 08
+- kopec_obrazok.jpg z levelu 10
