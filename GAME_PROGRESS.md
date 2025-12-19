@@ -437,17 +437,42 @@ Sused ti povedal dolezite cislo: 4868666
 - ICO (10. v abecede): 10599111 → 960509 → 404
 - PNG/RAR/TXT ASCII varianty → všetky 404
 
-**Záver Level 10:**
-Preskúmané stovky kombinácií vrátane:
-- Atomic number Ba (56), mass (137, 13733)
-- ASCII kódy prípon (jpg, png, rar, zip, bmp)
-- Pozície v abecede pre prípony
-- Aritmetické sčítanie namiesto konkatenácie
-- Facebook album ID čísla
+**LEVEL 10 VYRIEŠENÝ!**
 
-Hint hovorí o 7-miestnom výsledku, ale správna interpretácia
-"typ súboru z tabuľky podľa hodnoty 10" zatiaľ nebola nájdená.
-Potrebná je ďalšia analýza alebo iná interpretácia hintu.
+**Postup riešenia:**
+1. KRAL FRANTISEK = Kr-Al-F-Ra-N-Ti-Se-K = **36139887223419** (14 číslic)
+2. "typ súboru z tabuľky podľa hodnoty čísla tohto levelu" = level 10 = atómové číslo 10 = **Neon (Ne)** = prípona .ne
+3. Súbor **36139887223419.ne** EXISTUJE! Obsahuje hint:
+   - "Použi úplne posledné slovo z Kafkovho popisu tabuľky a skonvertuj ho do hexadecimálneho tvaru"
+4. Kafkov popis tabuľky (ÚPLNÝ):
+   - "...lebo som dlho nemohol nájsť samohlásku, ktorá by do názvu pasovala. Takto sa dajú prvky medzi sebou zlučovať prehľadnejšie a nové zlúčeniny môžem vynachádzať **rychlejsie**."
+5. Posledné slovo = **rychlejsie** (NIE pasovala - to je len kratšia verzia!)
+6. rychlejsie → hex = **727963686c656a736965** (20 znakov)
+7. Digits only: 727963686656736965 (18 číslic)
+8. First 6: 727963, Last 6: 736965
+9. Sum: 727963 + 736965 = **1464928** (7 číslic!)
+
+**Level 11 URL:** https://manik.sk/hra/1464928/
+
+---
+
+## Level 11
+**URL:** https://manik.sk/hra/1464928/
+
+**Popis:** "Na lazoch za kopcom si objavil navždy odparkované auto pána inžiniera"
+
+**Obrazok:** obrazok.jpg - závodné auto, obsahuje clickable area → ../na_lazoch/
+
+**Napoveda:**
+- Číslice závodného auta označujú poradie nepotrebných písmen samotného závodníka
+- (The racing car digits indicate the order of unnecessary letters of the racer himself)
+
+**Ďalší level:**
+- URL: https://manik.sk/hra/na_lazoch/
+- Status: 401 (vyžaduje autentifikáciu)
+- Potrebné identifikovať závodníka a použiť čísla auta na odstránenie písmen
+
+**Status:** IN PROGRESS - hľadanie prístupových údajov pre /na_lazoch/
 
 ---
 
@@ -484,8 +509,9 @@ Potrebná je ďalšia analýza alebo iná interpretácia hintu.
 - Level 06: SVIECKA → VEK:CAS → /dielna/
 - Level 07: RAR heslo "sedem", produkty SOLVEX:HUMDREX → /pred_domom/
 - Level 08: meno.mp3 → ID.rar heslo "dominik" → SME.sk c/4868666 → dominik+rykyncice
-- Level 09: NEZNÁMA URL
-- Level 10: /kopec/ - KRAL FRANTISEK + bit.ly puzzle
+- Level 09: /do_dediny/ - sever:juh (navigácia = svetové strany)
+- Level 10: /kopec/ - KRAL FRANTISEK → 36139887223419.ne → rychlejsie → hex → 1464928
+- Level 11: /1464928/ - IN PROGRESS (závodné auto puzzle)
 
 **Subory ulozene v /tmp/:**
 - Obrazky zo vsetkych levelov

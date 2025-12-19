@@ -1,8 +1,10 @@
 # Kafkova sústava chemických prvkov
 **Autor:** Ing. Zoltán Kafka
 
-## Popis (z Facebook albumu)
-"Po nociach som strihal, triedil a lepil prvky do svojej tabulky prvkov aby sa lepsie hladalo, pretoze v zastaralej Medenejlevovej tabulke sa zle hladalo. To bola velka prekazka pri vynachadzani nazvov novych zlucenin prvkov, lebo som dlho nemohol najst samohlasku, ktora by do nazvu pasovala. Takto sa daju prvky medzi sebou zlucovat prehladnejsie a nove zluceniny mozem vynachadzat rychlejsie."
+## Popis (z Facebook albumu) - ÚPLNÁ VERZIA!
+"Po nociach som strihal, triedil a lepil prvky do svojej tabulky prvkov aby sa lepsie hladalo, pretoze v zastaralej Medenejlevovej tabulke sa zle hladalo. To bola velka prekazka pri vynachadzani nazvov novych zlucenin prvkov, lebo som dlho nemohol najst samohlasku, ktora by do nazvu pasovala. Takto sa daju prvky medzi sebou zlucovat prehladnejsie a nove zluceniny mozem vynachadzat **rychlejsie**."
+
+**DÔLEŽITÉ:** Posledné slovo celého popisu je **rychlejsie** (NIE pasovala!)
 
 ## Kľúčová vlastnosť
 Tabuľka je zoradená **ABECEDNE podľa symbolov prvkov** (nie podľa atómového čísla ako Mendelejevova)

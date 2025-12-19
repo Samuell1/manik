@@ -29,7 +29,7 @@ KRAL FRANTISEK = KR-AL-F-RA-N-TI-SE-K (prvky periodickej tabulky)
 - page.html - HTML stranka levelu
 
 ## Status
-CIASTOCNE VYRIESENE - 14-miestne cislo najdene, ale spravna interpretacia "typ suboru" chyba
+**COMPLETED** - Level 11 nájdený na /1464928/
 
 ## PROGRESS UPDATE
 
@@ -49,5 +49,19 @@ CIASTOCNE VYRIESENE - 14-miestne cislo najdene, ale spravna interpretacia "typ s
 - Hex ako heslo: ?
 - Rôzne výpočty s hex: 404
 
-### Ďalší postup:
-- Nájsť kde použiť hex hodnotu
+### RIEŠENIE NÁJDENÉ!
+
+**Kľúčový objav:** Kafkov popis tabuľky má DLHŠIU verziu!
+- Kratšia verzia končí: "...ktorá by do názvu **pasovala**."
+- ÚPLNÁ verzia pokračuje: "Takto sa dajú prvky medzi sebou zlučovať prehľadnejšie a nové zlúčeniny môžem vynachádzať **rychlejsie**."
+
+**Posledné slovo = rychlejsie** (NIE pasovala!)
+
+**Výpočet:**
+1. rychlejsie → hex = 727963686c656a736965 (20 znakov)
+2. Digits only: 727963686656736965 (18 číslic)
+3. First 6: 727963
+4. Last 6: 736965
+5. Sum: 727963 + 736965 = **1464928** (7 číslic!)
+
+**Level 11 URL:** https://manik.sk/hra/1464928/
