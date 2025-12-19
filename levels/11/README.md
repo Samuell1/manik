@@ -126,9 +126,29 @@ IN PROGRESS - 400+ kombinácií testovaných, všetky vracajú 401
 - lazy:alt, laz:alt, lazoch:alt
 - Všetky vracajú 401
 
+## Session 4 - Extensive testing
+
+### Additional combinations tested (all 401):
+- skoda:kod, zavodnik:avonik
+- kafka:afk, zoltan:oltn
+- homola:omoa (Slovak racing driver)
+- hasak:asa (pipe wrench transformation)
+- Description words: lazoch:azoh, kopcom:opcm, navzdy:avzy
+- drak:rak (if DRAK only removes position 1)
+- All meadow-related: lazy:alt, laz:alt, nalazoch:alt
+- Mass test of all key words in all combinations
+
+### File searches (all 404):
+- .ne files like Level 10
+- hint/napoveda/tip files
+- Number-based filenames
+
+### Total combinations tested: 500+
+
 ## Možné príčiny
 1. "Závodník" je špecifické meno ktoré nepoznám
 2. Čísla v obrázku majú iný význam (nie ASCII)
 3. Potrebná informácia z Level 09 "lazy" puzzle
 4. Kultúrna referencia na slovenský motorsport
 5. Spojenie dvoch "laz" z Level 09 a Level 11
+6. Hidden clue in the image we haven't found
