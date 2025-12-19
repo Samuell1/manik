@@ -29,6 +29,29 @@
 - Potrebné nájsť username:password z hintu o závodníkovi
 
 ## Analýza hintu
-- Potrebujem identifikovať závodníka na obrázku
-- Čísla na aute určia ktoré písmená z jeho mena odstrániť
-- Výsledok = prihlasovacie údaje pre /na_lazoch/
+- Závodník: **SALTO** (viditeľné na aute)
+- Číslo auta: **15** → číslice 1 a 5 = pozície nepotrebných písmen
+- SALTO bez pozícií 1,5 (S a O) = **ALT**
+
+## Detaily z obrazka
+- Rusty Škoda s nápisom "SALTO 15"
+- Červený hasák (pipe wrench) na pravej strane - clickable area
+- Rozptýlené čísla: 42 64 677 7, 92 100 135 77, 122 65 51 123, 100 114 97 107, atď.
+- Čísla 100 114 97 107 = ASCII "drak" (dragon)
+- "Ho 292 987 3" viditeľné dole
+
+## Skúšané kombinácie (všetky 401)
+- salto:alt, alt:salto
+- drak:alt, alt:drak
+- hasak:alt, kluc:alt
+- laz:alt, lazy:alt
+- kafka:alt, zoltan:alt
+- A desiatky ďalších kombinácií
+
+## Súvislosť s Level 09
+- Level 09 má hint o "lazy" (lúky/lazy)
+- Level 09 obrazok má číslo: 383935303445343437 → ASCII "89504E447" (PNG header?)
+- Možno potrebujem najprv vyriešiť Level 09 úplne
+
+## Status
+IN PROGRESS - správna interpretácia hintu zatiaľ nenájdená
