@@ -1,0 +1,2 @@
+username ..: otvor
+password ..: dvere
