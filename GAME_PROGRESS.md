@@ -147,6 +147,12 @@ http://manik.sk/hra/lampas/
 - Bez I = LAMPON (L-A-M-P-O-N) = 6 pismen
 - Mozne 2 slova: PAN + LOM, MOL + PAN, NAP + LOM...
 
-**Skusene kombinacie:** pan:lom, lom:pan, mol:pan, pan:mol, nap:lom
+**Skusene kombinacie:** pan:lom, lom:pan, mol:pan, pan:mol, nap:lom, nap:olm, olm:nap, opal:mn, rozsypane:puzzle, meno:heslo
 
-**Status:** IN PROGRESS - hladam spravne prihlasovacie udaje
+**Dalsie mozne 7-pismenove slova s I:**
+- LAMPION (7) → bez I = LAMPON (6): PAN+LOM, MOL+PAN
+- SVIECKA (7) → bez I = SVECKA (6): VEC+SKA?
+- BATERIA (7) → bez I = BATERA (6): BRAT+EA?
+- ENERGIE (7) → bez I = ENERGE (6): ?
+
+**Status:** IN PROGRESS - potrebujem najst spravnu 7-pismenovu vec a jej rozdelenie na 2 slova
