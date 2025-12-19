@@ -382,9 +382,64 @@ Sused ti povedal dolezite cislo: 4868666
 - num14 + 16 = 703314 → 404
 - num14 + 016 = 780414 → 404
 
-**Záver:**
-Riešenie vyžaduje prístup k Facebook albumu alebo pochopenie
-presného významu "typ súboru z tabuľky podľa hodnoty 10"
+**Rozsiahla analýza výpočtov (všetky 404):**
+
+*Kafkova abecedná tabuľka - 10. prvok = Ba (Barium)*
+- V Kafkovej abecedne zoradenej tabuľke je 10. prvok Ba (atómové číslo 56)
+- Skúšané suffixy: 56, 137 (atómová hmotnosť), 10 (pozícia), 16 (Kafka temp.)
+
+*KRAL FRANTISEK výpočty (14-miestne číslo: 36139887223419):*
+- + 56 (Ba atomic): 361398 + 341956 = 703354 → 404
+- + 137 (Ba mass): 361398 + 419137 = 780535 → 404
+- + 10 (level): 361398 + 341910 = 703308 → 404
+- + 16 (Kafka): 361398 + 341916 = 703314 → 404
+- + 6665 (BA ASCII): 361398 + 196665 = 558063 → 404
+- + 56000: 361398 + 956000 = 1317398 → 404
+- + 13727 (Ba mass exact): 361398 + 913727 = 1275125 → 404
+
+*Kafkova pozičná tabuľka (prvky podľa abecedy):*
+- Kr=52, Al=3, F=34, Ra=85, N=64, Ti=107, Se=96, K=51
+- Concatenated: 5233485641079651 (16 číslic)
+- + 56: 523348 + 965156 = 1488504 → 404
+- + 10: 523348 + 965110 = 1488458 → 404
+
+*Facebook URL čísla:*
+- Album ID: 240864922711266 (15 číslic)
+- Page ID: 193545500776542 (15 číslic)
+- Middle: 58013
+- Page[1:] + 56: 935455 + 654256 = 1589711 → 404
+
+*Typ súboru interpretácie:*
+- JPG ASCII (upper): 74807171 → 1168569 → 404
+- ICO (10. v abecede): 10599111 → 960509 → 404
+- PNG/RAR/TXT ASCII varianty → všetky 404
+
+**Záver Level 10:**
+Preskúmané stovky kombinácií. Hint hovorí o 7-miestnom výsledku,
+ale správna interpretácia "typ súboru z tabuľky podľa hodnoty 10" zatiaľ nebola nájdená.
+Potrebná je ďalšia analýza Kafkovho Facebook albumu alebo iná interpretácia hintu.
+
+---
+
+## Level 09 - Rozsiahle hľadanie
+
+**Hint z Level 08:** "sused a obec ťa odnavigujú ďalej"
+- Sused = dominik
+- Obec = rykyncice
+
+**Skúšané URL kombinácie (všetky 404):**
+- dominik_rykyncice, rykyncice_dominik, dominik-rykyncice
+- dominikrykyncice, rykyncicedominik
+- dominik_bzenica, dominik_hradok, dominik_krupina
+- sused_obec, obec_sused, sused_a_obec
+- dominik_les, v_lese_dominik, les_dominik
+- dominik_kafka, kafka_dominik, zoltan_dominik
+- naviguj, navigacia, smer, cesta, dalej
+- GPS súradnice: 48_18, 4828_1898
+- PSČ: 96271
+- Desiatky ďalších kombinácií
+
+**Status:** NEÚSPEŠNE - URL pre Level 09 nebola nájdená
 
 ---
 
