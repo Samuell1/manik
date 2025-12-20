@@ -312,10 +312,42 @@ Sused ti povedal dolezite cislo: 4868666
 5. výsledok z dvoch lazov ťa pustí do ďalšieho levelu
 
 **Súbory:**
-- obrazok.jpg - laz/lúka
-- dom.jpg - dom (lightbox)
+- obrazok.jpg - laz/lúka s číslom **383935530344534347** na budove
+- dom.jpg - dom (lightbox, cez image map coords="367, 327, 400, 367")
 
-**Status:** PRÍSTUP ZÍSKANÝ - potrebné nájsť "dôležité súbory"
+**Ďalší level:**
+- URL: https://manik.sk/hra/na_lazoch/
+- Status: 401 (vyžaduje autentifikáciu)
+- Potrebné identifikovať credentials z "dvoch lazov"
+
+**Analýza čísla 383935530344534347:**
+- 18 číslic = 9 hex bajtov
+- Prvých 16 znakov (8 bajtov): 3839355303445343
+- Posledné 2 znaky: 47 (hex = 'G', začiatok GIF)
+- Hex decode: 38=8, 39=9, 35=5, 53=S, 03=[ETX], 44=D, 53=S, 43=C → "895S[03]DSC"
+- Možná interpretácia: corrupted GIF header, 47 naznačuje GIF formát (GIF začína 47 49 46 = "GIF")
+
+**Interpretácia "Wiktória je kamarátka":**
+- Wiktória ≈ Wikipedia/Wiktionary - slovník je priateľ
+- Možno hint na hľadanie v slovenskom Wiktionary pre slovo "laz"
+- Slovo "laz" = "čistinka v lese zarastená trávou" (clearing in forest)
+
+**Hľadané súbory (všetky vrátili 404):**
+- laz*.jpg, laz*.gif, laz*.txt, lazy*.*, laz1, laz2
+- rykyncice*.*, *rykyncice*.*
+- prvy*.*, druhy*.*, dolezity*.*
+- 383935530344534347.*, 38393553.*, 47.*
+- GIF*.*, fix*.*, oprav*.*
+- Stovky ďalších kombinácií
+
+**Teória riešenia:**
+1. "Prvý dôležitý súbor" má corrupted header (38 39 35 53 03 44 53 43)
+2. Treba opraviť na GIF header (47 49 46 38 39 61...)
+3. "Druhý súbor" použiť názov obce (rykyncice)
+4. "Nahraď otáznik" - neznáme kde je otáznik
+5. Výsledok z dvoch lazov = username:password pre /na_lazoch/
+
+**Status:** IN PROGRESS - súbory nenájdené, hľadám "dôležité súbory"
 
 ---
 
