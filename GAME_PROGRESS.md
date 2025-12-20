@@ -461,18 +461,41 @@ Sused ti povedal dolezite cislo: 4868666
 
 **Popis:** "Na lazoch za kopcom si objavil navždy odparkované auto pána inžiniera"
 
-**Obrazok:** obrazok.jpg - závodné auto, obsahuje clickable area → ../na_lazoch/
+**Obrazok:** obrazok.jpg - závodné auto s nápisom "SALTO 15"
+- Clickable area → ../na_lazoch/
+- Červený hasák (pipe wrench) na pravej strane
+- Čísla v obrazku: 42 64 677 7, 36 248 216 37, 92 100 135 77, 122 65 51 123
+- **100 114 97 107 = ASCII "drak"** (dragon)
+- "Ho 292 987 3" dole
 
 **Napoveda:**
 - Číslice závodného auta označujú poradie nepotrebných písmen samotného závodníka
 - (The racing car digits indicate the order of unnecessary letters of the racer himself)
 
+**Analýza hintu:**
+- Závodník: SALTO (viditeľné na aute)
+- Číslo: 15 → pozície 1 a 5 na odstránenie
+- SALTO bez S(1) a O(5) = **ALT**
+- Alternatíva: DRAK bez D(1) = **RAK** (len 4 písmená)
+
 **Ďalší level:**
 - URL: https://manik.sk/hra/na_lazoch/
 - Status: 401 (vyžaduje autentifikáciu)
-- Potrebné identifikovať závodníka a použiť čísla auta na odstránenie písmen
 
-**Status:** IN PROGRESS - hľadanie prístupových údajov pre /na_lazoch/
+**Testované kombinácie (500+, všetky 401):**
+- Základné: salto:alt, drak:rak, alt:rak, rak:alt
+- Transformácie: kafka:afk, skoda:kod, hasak:asa, zavodnik:avonik
+- Encoding: ASCII (657684), hex (414c54), Base64 (QUxU), Caesar (+/-15)
+- Regionálne: cerovo:lazy, rykyncice:alt, krupina:rupna
+- Škoda modely: felicia:elia, fabia:abi, octavia:ctaia
+- Číselné: salto:15, 404:alt, salto:33
+
+**Spojenie s Level 09:**
+- Level 09 hint: "výsledok z dvoch lazov ťa pustí do ďalšieho levelu"
+- Level 11 destination: /na_lazoch/
+- Možno potrebné riešiť Level 09 najprv
+
+**Status:** IN PROGRESS - 500+ kombinácií testovaných, riešenie nenájdené
 
 ---
 
