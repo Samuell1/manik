@@ -1,0 +1,55 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+    <title>:: HRA by MNK | Slovenská online psychodventúra ::</title>
+    <style type="text/css" media="all">
+        @import "../hra.css";
+        @import "../fancybox/jquery.fancybox.css";
+    </style>
+    <script src="../jquery.js"></script>
+    <script src="../fancybox/jquery.fancybox.pack.js"></script>
+    <script>
+        $('[rel="lightbox"]').fancybox();
+    </script>
+</head>
+
+<!-- Wiktória je kamarátka -->
+
+<body>
+    <div class="hlavicka">
+     <h1 class="nazov">HRA by MNK</h1>
+     <h1 class="popis">.. slovenská online psychodventúra ..</h1>
+
+
+        <ul class="stranky">
+            <li><a href="../index.html">Úvod</a></li>
+            <li><a href="../pravidla.html">Pravidlá a tipy</a></li>
+            <li class="selected">Level 20</li>
+            <li><a href="../vitazi.html">Tabuľka víťazov</a></li>
+        </ul>
+    </div>
+
+    <div class="hlavna-cast1"><div class="hlavna-cast2">
+
+       <div class="thumb"><map name="klik"><area href="dom.jpg" rel="lightbox" shape="rect" coords="367, 327, 400, 367"></map><img src="obrazok.jpg" usemap="#klik">
+       <div class="popis">Vybral si sa do dediny a po ceste si sa zastavil na takomto laze ..</div></div>
+    
+      <h2 class="napis">Tipy a indície</h2>
+
+        <p class="text">
+        - nájdi prvý dôležitý súbor a oprav prvých 8 hexadecimálnych bajtov<br>
+        - získaj všetky lazy<br>
+        - nájdi druhý dôležitý súbor a pomôž si názvom obce<br>
+        - nahraď otáznik<br>
+        - výsledok z dvoch lazov ťa pustí do ďalšieho levelu
+        </p>
+    
+        </div>
+    </div><br>
+
+<!-- HRA by MNK | Slovenska Psychodventura (C) by MNK -->
+
+    <hr>
+      <div class="spodok1">HRA by MNK</div>
+    	<div class="spodok2">Slovenská psychodventúra</div>
+    <hr>
+</body>

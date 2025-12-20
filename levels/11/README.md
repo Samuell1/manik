@@ -145,6 +145,85 @@ IN PROGRESS - 400+ kombinácií testovaných, všetky vracajú 401
 
 ### Total combinations tested: 500+
 
+## Session 5 - Encoding/Decoding attempts
+
+### User hint: "decode and encode letters"
+
+### ASCII encoding tests (all 401):
+- salto:657684 (ALT as ASCII decimal: A=65, L=76, T=84)
+- salto:414c54 (ALT as hex)
+- drak:826575 (RAK as ASCII: R=82, A=65, K=75)
+- drak:52414B (RAK as hex)
+- 100114097107:657684 (drak ASCII : alt ASCII)
+
+### Base64 encoding (all 401):
+- salto:QUxU (ALT in Base64)
+- U0FMVE8:QUxU (SALTO:ALT both Base64)
+- drak:cmFr (rak in Base64)
+
+### Caesar cipher tests (all 401):
+- salto:hpaid (SALTO +15)
+- salto:dlwez (SALTO -15)
+- salto:pai (ALT +15)
+- salto:fnygb (SALTO ROT13)
+- salto:bmu (ALT +1)
+- salto:fqy (ALT +5)
+- salto:zks (ALT -1)
+
+### Vigenère cipher with key "15" (all 401):
+- salto:tfmyp (+15151 pattern)
+- salto:rvkon (-15151 pattern)
+
+### Letter position encoding (all 401):
+- salto:11220 (ALT positions: A=1, L=12, T=20)
+- salto:33 (sum of ALT positions)
+- salto:34 (sum of S+O positions: S=19, O=15)
+- drak:18111 (RAK positions)
+- 19112015:11220 (SALTO:ALT positions)
+
+### Additional word transformations (all 401):
+- virax:ira (wrench brand)
+- hora:ora (mountain)
+- vodic:odi (driver)
+- motor:oto, koleso:oleo, volant:olat (car parts)
+- felicia:elia, fabia:abi, octavia:ctaia (Škoda models)
+- stillson:tilson, ridgid:idgd, bahco:ahc (tool brands)
+
+### Reversed/anagram tests (all 401):
+- kard:drak, drak:kard (kard = sword in Hungarian)
+- otlas:tla (SALTO reversed)
+- talos:alo, slota:lot, altos:lto
+
+### Geographic/regional names (all 401):
+- cerovo:lazy, lazy:cerovo (Camping Lazy near Cerovo)
+- litava:itaa, krupina:rupna
+- laz:laz, lazy:lazy, alt:laz, laz:alt
+
+### Number-based tests (all 401):
+- 404:alt (sum of 92+100+135+77)
+- salto:404, drak:361
+- 361:404, salto:67
+
+## Level 9 Connection Analysis
+
+### Downloaded Level 9 files for analysis:
+- obrazok.jpg - contains number 383935303445343437
+- dom.jpg - rural Slovak house
+- Level 9 hint: "Wiktória je kamarátka" (Wikipedia is a friend)
+
+### Level 9 hints suggest:
+1. Find first file, fix first 8 hex bytes (corrupted PNG?)
+2. Get all "lazy" (meadows)
+3. Find second file using town name
+4. Replace question mark
+5. Result from TWO "laz" opens next level
+
+### Cross-level connection:
+- Level 9: "výsledok z dvoch lazov ťa pustí do ďalšieho levelu"
+- Level 11 destination: /na_lazoch/
+- Both levels reference "lazy" (meadows)
+- May need to solve Level 9 fully first
+
 ## Možné príčiny
 1. "Závodník" je špecifické meno ktoré nepoznám
 2. Čísla v obrázku majú iný význam (nie ASCII)
@@ -152,3 +231,5 @@ IN PROGRESS - 400+ kombinácií testovaných, všetky vracajú 401
 4. Kultúrna referencia na slovenský motorsport
 5. Spojenie dvoch "laz" z Level 09 a Level 11
 6. Hidden clue in the image we haven't found
+7. **Encoding/decoding step** - user hint suggests transformation needed
+8. **Hidden file** - like .ne file in Level 10
