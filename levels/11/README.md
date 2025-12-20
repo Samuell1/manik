@@ -19,136 +19,126 @@
 - Číslice závodného auta označujú poradie nepotrebných písmen samotného závodníka
 - (The racing car digits indicate the order of unnecessary letters of the racer himself)
 
-## Obrazok
-- obrazok.jpg - závodné auto s číslami
+## Obrazok Analysis
+- **obrazok.jpg** - závodné auto s číslami
 - Obsahuje clickable area → "../na_lazoch/"
+- Car displays: **SALTO 15**
+- Red pipe wrench (hasák) on right side
+
+## Numbers in Image
+| Location | Numbers | ASCII Decode |
+|----------|---------|--------------|
+| Top left | 42 64 677 7 | * @ (677 too high) |
+| Diagonal | 36 248 216 37 | $ ř Ř % (extended ASCII) |
+| Right side | 92 100 135 77 | \ d ? M (sum=404) |
+| On car | 122 65 51 123 | z A 3 { |
+| Below car | 100 114 97 107 | **"drak"** (dragon) ✓ |
+| Bottom | "Ho 292 987 3" | Initials? Numbers? |
 
 ## Ďalší level
 - **URL:** https://manik.sk/hra/na_lazoch/
 - **Status:** 401 (vyžaduje autentifikáciu)
 - Potrebné nájsť username:password z hintu o závodníkovi
 
-## Analýza hintu
+## Hlavná analýza
+
+### Štandardná interpretácia hintu
 - Závodník: **SALTO** (viditeľné na aute)
 - Číslo auta: **15** → číslice 1 a 5 = pozície nepotrebných písmen
-- SALTO bez pozícií 1,5 (S a O) = **ALT**
+- SALTO: S(1) A(2) L(3) T(4) O(5)
+- Remove positions 1,5 (S and O) = **ALT**
 
-## Detaily z obrazka
-- Rusty Škoda s nápisom "SALTO 15"
-- Červený hasák (pipe wrench) na pravej strane - clickable area
-- Rozptýlené čísla: 42 64 677 7, 92 100 135 77, 122 65 51 123, 100 114 97 107, atď.
-- Čísla 100 114 97 107 = ASCII "drak" (dragon)
-- "Ho 292 987 3" viditeľné dole
+### Alternatívna interpretácia (DRAK)
+- DRAK (from ASCII 100 114 97 107)
+- D(1) R(2) A(3) K(4) - only 4 letters
+- Remove position 1 only = **RAK**
 
-## Skúšané kombinácie (všetky 401)
+## Testované kombinácie (500+)
+
+### Základné kombinácie (všetky 401)
 - salto:alt, alt:salto
-- drak:alt, alt:drak
-- hasak:alt, kluc:alt
-- laz:alt, lazy:alt
-- kafka:alt, zoltan:alt
-- A desiatky ďalších kombinácií
+- drak:rak, rak:drak
+- salto:drak, drak:salto
+- alt:rak, rak:alt
+- salto:rak, drak:alt
 
-## Súvislosť s Level 09
-- Level 09 má hint o "lazy" (lúky/lazy)
-- Level 09 obrazok má číslo: 383935303445343437 → ASCII "89504E447" (PNG header?)
-- Možno potrebujem najprv vyriešiť Level 09 úplne
+### Transformácie slov (všetky 401)
+- kafka:afk, zoltan:oltn
+- skoda:kod, hasak:asa
+- zavodnik:avonik, pretekar:rekar
+- jazdec:azdc, pilot:ilo
+- vodic:odi, motor:oto
+- kopec:ope, lazoch:azoh
 
-## Ďalšie skúšané kombinácie
-- KAFKA → bez pozícií 1,5 → AFK
-- ZOLTAN → bez pozícií 1,5 → OLTN
-- SKODA → bez pozícií 1,5 → KOD
-- ZAVODNIK → bez pozícií 1,5 → AVONIK
-- INZINIER → bez pozícií 1,5 → NZNER
-- CERVENY (red) → bez pozícií 1,5 → ERVNY
-- inzinier, pan, auto, kopec, laz varianty
-- Rovnaké heslo ako meno: alt:alt, salto:salto, atď.
-- Číselné: 15:15, 1:5, salto:15
-- ASCII dekódované: drak, arka (z čísel v obrázku)
-- Kombinácie s drak:arka, arka:drak
-- Case varianty: SALTO:ALT, Drak:Arka
-- Otočené pozície (ponechať 1,5): so:alt
-- 300+ kombinácií testovaných - všetky vracajú 401
+### Encoding pokusy (všetky 401)
+- ASCII encoded: salto:657684, drak:826575
+- Hex encoded: salto:414c54, drak:52414B
+- Base64: salto:QUxU
+- Caesar cipher shifts (+15, -15, +1, -1, +5, -5)
+- Position sums: salto:33, salto:34, salto:67
 
-## Ďalšie pokusy (session 2)
-- Car model names: MOSKVIC→OSKIC, WARTBURG→ARTURG, SKODA
-- Slovak surnames starting with HO: HORAK→ORA, HOLUB→OLU, HORVAT→ORVT
-- Racing vocabulary: preteky, pretekar, zavod, jazdec, rychlost, pilot
-- Anagrams of SALTO: altos, talos, slota
-- Level 9 + Level 11 combinations: rykyncice+alt, dominik+drak
-- Removed vs remaining: so:alt, s:o
-- DRAK formula: remove pos 1 = RAK
-- Special characters: alt_drak, salto-15
-- Numbers from image as credentials
-- Exact case testing: SALTO:ALT, Drak:Arka
+### Regionálne názvy (všetky 401)
+- cerovo:lazy, lazy:cerovo
+- rykyncice:alt, krupina:rupna
+- litava:itaa, bzenica:alt
+
+### Škoda modely (všetky 401)
+- felicia:elia, fabia:abi
+- octavia:ctaia, favorit:avort
+
+### Anagramy SALTO (všetky 401)
+- talos:alo, slota:lot
+- altos:lto, otlas:tla
+
+### Case varianty (všetky 401)
+- SALTO:ALT, Salto:Alt
+- DRAK:RAK, Drak:Rak
+
+### Číselné kombinácie (všetky 401)
+- salto:15, 15:alt, salto15:alt
+- 361:404, 404:alt, salto:404
+- salto:33, salto:34 (position sums)
+
+## Analýza čísel
+
+### Sum of number groups
+- 42+64+677+7 = 790
+- 36+248+216+37 = 537
+- 92+100+135+77 = **404** (HTTP Not Found!)
+- 122+65+51+123 = 361
+- 100+114+97+107 = 418
+
+### "Ho 292 987 3" interpretácie
+- Ho = Holmium (element 67)?
+- Ho = Initials (Horák, Holub, Homola)?
+- 292 987 = coordinates? Patent number? Phone?
+
+### ASCII letters found
+- Unique letters: d, r, a, k, M, A, z
+- "drak" clearly intentional
+- Other letters scattered but no clear word
+
+## Spojenie s Level 9
+
+Level 9 hint: "výsledok z dvoch lazov ťa pustí do ďalšieho levelu"
+- Suggests TWO "laz" (meadows) provide the answer
+- Level 11 destination: /na_lazoch/ (on the meadows)
+- Possible connection between Level 9 and Level 11 puzzles
+
+## Možné príčiny neúspechu
+
+1. **Neznámy závodník** - "Závodník" môže byť špecifická osoba (slovenský pretekár?)
+2. **Encoding/decoding** - User hint suggests encode/decode step needed
+3. **Level 9 spojenie** - May need to solve Level 9 "lazy" puzzle first
+4. **Skrytý súbor** - May be a hidden file with additional hints (like .ne in Level 10)
+5. **Kultúrna referencia** - Slovak motorsport or cultural reference unknown to us
+
+## Potrebné ďalšie kroky
+
+1. Research Slovak rally/racing drivers associated with "SALTO" or number 15
+2. Investigate Level 9 "lazy" puzzle more thoroughly
+3. Look for hidden files or alternate interpretations
+4. Consider the encoding/decoding hint from user
 
 ## Status
-IN PROGRESS - 400+ kombinácií testovaných, všetky vracajú 401
-
-## Dodatočná analýza (session 3)
-
-### Čísla v obrazku - detailná analýza
-- 42 64 677 7 (top left) - 677 je príliš vysoké pre ASCII
-- 36 248 216 37 (diagonal) - 248, 216 sú vysoké
-- 92 100 135 77 (right) - súčet = 404 (HTTP kód!)
-- 122 65 51 123 (on car) = z(122) A(65) 3(51) {(123) - "zA3{" - nečitateľné
-- 100 114 97 107 = "drak" ✓
-- Ho 292 987 3 - "Ho" môže byť meno (Horák?) alebo prvok Holmium
-
-### Reversed ASCII
-- 100 114 97 107 = "drak" (vpred)
-- 107 97 114 100 = "kard" (vzad) - "kard" = meč v maďarčine!
-
-### Vlastník auta
-- Popis hovorí "auto pána inžiniera" = Ing. Zoltán KAFKA z Level 10
-- KAFKA: K(1) A(2) F(3) K(4) A(5) → bez 1,5 = AFK
-
-### Modely áut
-- SKODA: S(1) K(2) O(3) D(4) A(5) → bez 1,5 = KOD ("kód"!)
-- WARTBURG → bez 1,5 = ARTURG (meno Arthur?)
-- MOSKVIC → bez 1,5 = OSKIC
-
-### Spojenie s Level 09
-- Level 09 hint: "výsledok z dvoch lazov ťa pustí do ďalšieho levelu"
-- Level 11 URL next = /na_lazoch/ (na lazoch = na lúkach)
-- Možno potrebujem vyriešiť Level 09 puzzle najprv
-
-### Level 09 číslo v obrazku
-- 383935303445343437 → ASCII = "89504E447"
-- Toto je takmer PNG header (89 50 4E 47), ale má extra "4"
-- Hint: "oprav prvých 8 hex bajtov" - opraviť corrupted PNG?
-
-### Skúšané kombinácie (nové)
-- kafka:afk, afk:kafka
-- skoda:kod, kod:skoda
-- drak:kard, kard:drak
-- wartburg:arturg
-- dominik:alt, wiktoria:alt, rykyncice:alt
-- lazy:alt, laz:alt, lazoch:alt
-- Všetky vracajú 401
-
-## Session 4 - Extensive testing
-
-### Additional combinations tested (all 401):
-- skoda:kod, zavodnik:avonik
-- kafka:afk, zoltan:oltn
-- homola:omoa (Slovak racing driver)
-- hasak:asa (pipe wrench transformation)
-- Description words: lazoch:azoh, kopcom:opcm, navzdy:avzy
-- drak:rak (if DRAK only removes position 1)
-- All meadow-related: lazy:alt, laz:alt, nalazoch:alt
-- Mass test of all key words in all combinations
-
-### File searches (all 404):
-- .ne files like Level 10
-- hint/napoveda/tip files
-- Number-based filenames
-
-### Total combinations tested: 500+
-
-## Možné príčiny
-1. "Závodník" je špecifické meno ktoré nepoznám
-2. Čísla v obrázku majú iný význam (nie ASCII)
-3. Potrebná informácia z Level 09 "lazy" puzzle
-4. Kultúrna referencia na slovenský motorsport
-5. Spojenie dvoch "laz" z Level 09 a Level 11
-6. Hidden clue in the image we haven't found
+**IN PROGRESS** - 500+ kombinácií testovaných, riešenie nenájdené
