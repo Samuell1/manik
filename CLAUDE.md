@@ -43,6 +43,21 @@ Pri každom obrázku VŽDY skontroluj:
 - Ukladaj progress priebežne, nie len na konci
 - Dokumentuj nájdené skryté súbory a kľúče v README.md pre daný level
 
+## DÔLEŽITÉ: Použitie výsledkov hádaniek
+- Keď nájdeš výsledok z hádanky, ZAMYSLI SA ako ho použiť
+- Výsledok môže byť:
+  - Inštrukcia (napr. "LATINSKY" = prelož do latinčiny)
+  - Kľúč k ďalšej šifre
+  - Časť username:password kombinácie
+  - Hint na ďalší krok
+- Nikdy nepredpokladaj, že výsledok je priamo URL - analyzuj jeho VÝZNAM
+
+## DÔLEŽITÉ: Testovanie kombinácií
+- Pri hľadaní username:password skúšaj VŠETKY kombinácie medzi relevantnými slovami
+- Vytvor zoznam kandidátov (výsledky šifier, preklady, synonymá, súvisiace slová)
+- Systematicky testuj: slovo1:slovo2, slovo2:slovo1 pre každú dvojicu
+- Testuj aj s číslami levelu, reverzné slová, a variácie bez diakritiky
+
 ## Context Files (auto-load)
 @GAME_PROGRESS.md
 @levels/13/README.md
