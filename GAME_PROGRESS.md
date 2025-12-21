@@ -18,6 +18,7 @@
 ---
 
 ## Level 01
+@levels/01/README.md
 **URL:** https://manik.sk/hra/level_01/
 
 **Popis:** Nachadzas sa pred pivnicou, kde ma ulozene archivne vino..
@@ -33,6 +34,7 @@
 ---
 
 ## Level 02
+@levels/02/README.md
 **URL:** https://manik.sk/hra/level_02/
 
 **Popis:** Zmizli vsetky flase a jedine, co ti zostalo je najstarsi sud.
@@ -48,6 +50,7 @@
 ---
 
 ## Level 03
+@levels/03/README.md
 **URL:** https://manik.sk/hra/petra/
 
 **Popis:** Petra, ktorej si veril, ze sa ti postara o tvoju pivnicu ta pekne sklamala
@@ -65,6 +68,7 @@
 ---
 
 ## Level 04
+@levels/04/README.md
 **URL:** https://manik.sk/hra/zahrada/
 
 **Popis:** Petra sa uz dlhsi cas nenachadza na svojej zahrade, ale ma tu zaparkovane auto
@@ -88,6 +92,7 @@
 ---
 
 ## Level 05
+@levels/05/README.md
 **URL:** https://manik.sk/hra/v_dome/
 
 **Autentifikacia:** otvor / dvere (HTTP Basic Auth)
@@ -130,6 +135,7 @@ http://manik.sk/hra/lampas/
 ---
 
 ## Level 06
+@levels/06/README.md
 **URL:** https://manik.sk/hra/lampas/
 
 **Obrazok:** Stary kovovy lampas (bez svetla)
@@ -160,6 +166,7 @@ http://manik.sk/hra/lampas/
 ---
 
 ## Level 07
+@levels/07/README.md
 **URL:** https://manik.sk/hra/dielna/
 
 **Autentifikacia:** vek / cas (HTTP Basic Auth)
@@ -227,6 +234,7 @@ v ktorych sa vyskytuje pismeno 'X'
 ---
 
 ## Level 08
+@levels/08/README.md
 **URL:** https://manik.sk/hra/pred_domom/
 
 **Autentifikacia:** solvex / humdrex (HTTP Basic Auth)
@@ -288,6 +296,7 @@ Sused ti povedal dolezite cislo: 4868666
 ---
 
 ## Level 09
+@levels/09/README.md
 **URL:** https://manik.sk/hra/do_dediny/
 
 **NÁJDENÁ URL!** Level 09 je na /do_dediny/ - vracia 401 (vyžaduje autentifikáciu)
@@ -352,6 +361,7 @@ Sused ti povedal dolezite cislo: 4868666
 ---
 
 ## Level 10
+@levels/10/README.md
 **URL:** https://manik.sk/hra/kopec/
 
 **Popis:** V lese si objavil tajné laboratórium Ing. Zoltána Kafku, inžiniera
@@ -489,6 +499,7 @@ Sused ti povedal dolezite cislo: 4868666
 ---
 
 ## Level 11
+@levels/11/README.md
 **URL:** https://manik.sk/hra/1464928/
 
 **Popis:** "Na lazoch za kopcom si objavil navždy odparkované auto pána inžiniera"
@@ -497,37 +508,114 @@ Sused ti povedal dolezite cislo: 4868666
 - Clickable area → ../na_lazoch/
 - Červený hasák (pipe wrench) na pravej strane
 - Čísla v obrazku: 42 64 677 7, 36 248 216 37, 92 100 135 77, 122 65 51 123
-- **100 114 97 107 = ASCII "drak"** (dragon)
+- **118 114 97 107** a **97 117 116 111** - kľúčové čísla!
 - "Ho 292 987 3" dole
 
 **Napoveda:**
 - Číslice závodného auta označujú poradie nepotrebných písmen samotného závodníka
-- (The racing car digits indicate the order of unnecessary letters of the racer himself)
 
-**Analýza hintu:**
-- Závodník: SALTO (viditeľné na aute)
-- Číslo: 15 → pozície 1 a 5 na odstránenie
-- SALTO bez S(1) a O(5) = **ALT**
-- Alternatíva: DRAK bez D(1) = **RAK** (len 4 písmená)
+**RIEŠENIE NÁJDENÉ!**
 
-**Ďalší level:**
-- URL: https://manik.sk/hra/na_lazoch/
-- Status: 401 (vyžaduje autentifikáciu)
+**Kľúč:** CP850 kódovanie (Code Page 850 - DOS character encoding)
+- 118 114 97 107 = **vrak** (wreck/shipwreck)
+- 97 117 116 111 = **auto** (car)
 
-**Testované kombinácie (500+, všetky 401):**
-- Základné: salto:alt, drak:rak, alt:rak, rak:alt
-- Transformácie: kafka:afk, skoda:kod, hasak:asa, zavodnik:avonik
-- Encoding: ASCII (657684), hex (414c54), Base64 (QUxU), Caesar (+/-15)
-- Regionálne: cerovo:lazy, rykyncice:alt, krupina:rupna
-- Škoda modely: felicia:elia, fabia:abi, octavia:ctaia
-- Číselné: salto:15, 404:alt, salto:33
+**Prihlasovacie údaje pre /na_lazoch/:**
+- **Username:** vrak
+- **Password:** auto
 
-**Spojenie s Level 09:**
-- Level 09 hint: "výsledok z dvoch lazov ťa pustí do ďalšieho levelu"
-- Level 11 destination: /na_lazoch/
-- Možno potrebné riešiť Level 09 najprv
+**Status:** COMPLETED
 
-**Status:** IN PROGRESS - 500+ kombinácií testovaných, riešenie nenájdené
+---
+
+## Level 12
+@levels/12/README.md
+**URL:** https://manik.sk/hra/na_lazoch/
+
+**Autentifikácia:** vrak / auto (HTTP Basic Auth)
+
+**Popis:** "Ocitol si sa pred starým opusteným domom .."
+
+**Obrazky:**
+- obrazok.jpg - starý opustený dom s rozbitými oknami
+- stena.jpg - stena s číslovanými markermi (lightbox)
+
+**Napoveda:**
+1. nie je všetko tak, ako sa na prvý pohľad môže zdať
+2. **prievan** roztrieskal všetky okná na dome (z HTML entít &#112;&#114;&#105;&#101;&#118;&#97;&#110;)
+3. v hrnci na verande si našiel Nokiu 6310i
+4. 'X' ťa navedie na správnu stopu
+5. k výsledku pridaj číslo aktuálneho levelu (12) a použi URL do ďalšieho levelu
+
+**Analýza stena.jpg:**
+- Markery s číslami a písmenami: 8R, 4E, 2I, 5P, 2N, 9V, 6A
+- Písmená tvoria **PRIEVAN** (draft/wind)
+- Nokia 6310i = T9 klávesnica reference
+
+**Testované kombinácie (100+, všetky 404):**
+- prievan12, prievan_12, 12prievan
+- 7743838 (T9 + 12), 49 (suma T9 + 12), 48 (suma markerov + 12)
+- Rôzne matematické operácie s číslami markerov
+- X ako Roman numeral (10), multiplication, T9 key
+
+**Skrytý súbor kluc.txt** (nájdený cez `strings obrazok.jpg`):
+```
+.X.
+.X.
+..X
+.X.
+..X.
+.X.
+X..
+```
+X pozície: 2, 2, 3, 2, 3, 2, 1
+
+**RIEŠENIE NÁJDENÉ!**
+
+**Kľúč:** Čísla markerov ako T9 klávesy + X pozície z kluc.txt = výber písmen
+
+| Písmeno | Marker | T9 Kláves | X Pozícia | Výsledok |
+|---------|--------|-----------|-----------|----------|
+| P | 5 | JKL | 2 | **K** |
+| R | 8 | TUV | 2 | **U** |
+| I | 2 | ABC | 3 | **C** |
+| E | 4 | GHI | 2 | **H** |
+| V | 9 | WXYZ | 3 | **Y** |
+| A | 6 | MNO | 2 | **N** |
+| N | 2 | ABC | 1 | **A** |
+
+**Výsledok:** KUCHYNA + 12 = **kuchyna12**
+
+**Level 13 URL:** https://manik.sk/hra/kuchyna12/
+
+**Status:** COMPLETED
+
+---
+
+## Level 13
+@levels/13/README.md
+**URL:** https://manik.sk/hra/kuchyna12/
+
+**Popis:** "Vošiel si do zaujímavej kuchyne .."
+
+**Obrazok:** obrazok.jpg - kuchyňa s lienkou a textom
+
+**Napoveda:**
+1. nájdi v skrinke potrebnú šifru
+2. chrobáčika pozná každý (lienka/ladybug)
+3. niečo je na tejto kuchyni dôležité
+
+**Clickable areas:**
+- skrinka (coords: 503, 75, 655, 242)
+- ../latrina/ (coords: 745, 550, 788, 587) - vyžaduje 401 auth
+
+**Text na obrázku:**
+```
+LANO MASŤ MÄTA AUDI
+NOHY OSOH BOKY ROKY
+```
+
+**Status:** IN PROGRESS
 
 ---
 
@@ -566,9 +654,10 @@ Sused ti povedal dolezite cislo: 4868666
 - Level 08: meno.mp3 → ID.rar heslo "dominik" → SME.sk c/4868666 → dominik+rykyncice
 - Level 09: /do_dediny/ - sever:juh (navigácia = svetové strany)
 - Level 10: /kopec/ - KRAL FRANTISEK → 36139887223419.ne → rychlejsie → hex → 1464928
-- Level 11: /1464928/ - IN PROGRESS (závodné auto puzzle)
+- Level 11: /1464928/ - CP850: 118 114 97 107 = vrak, 97 117 116 111 = auto → vrak:auto
+- Level 12: /na_lazoch/ - PRIEVAN markery + kluc.txt → T9 → KUCHYNA + 12 = kuchyna12
+- Level 13: /kuchyna12/ - IN PROGRESS (lienka + 8 slov puzzle)
 
-**Subory ulozene v /tmp/:**
-- Obrazky zo vsetkych levelov
-- meno.mp3, ID.rar z levelu 08
-- kopec_obrazok.jpg z levelu 10
+**Subory ulozene v /home/user/manik/levels/:**
+- 01/ až 13/ - README.md pre každý level
+- kafka_table.md - Kafkova periodická tabuľka (abecedne zoradená)

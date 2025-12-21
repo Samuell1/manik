@@ -82,7 +82,22 @@
 - Exact case testing: SALTO:ALT, Drak:Arka
 
 ## Status
-IN PROGRESS - 400+ kombinácií testovaných, všetky vracajú 401
+IN PROGRESS - 700+ kombinácií testovaných, všetky vracajú 401
+
+## Kafka tabuľka analýza (nová)
+- Vytvorená kompletná prevodová tabuľka: `/levels/kafka_table.md`
+- Čísla z obrazku dekódované ako atómové čísla aj Kafka pozície
+- Výsledok: MGNKRUFITSL (gibberish) - žiadne zmysluplné slovo
+
+## Čo bolo vyskúšané:
+- ALT ako heslo (z SALTO 15)
+- DRAK ako username (z ASCII)
+- Kafka-kódované verzie (898398, 9548894, atď.)
+- Kombinácie s Level 9 (sever, juh, rykyncice)
+- Slovenské slová (laz, luka, polana, hasak, kluc)
+- Značky áut (skoda, moskvic, wartburg)
+- Ho- priezviská (horak, homola, holub)
+- Predchádzajúce level credentials
 
 ## Dodatočná analýza (session 3)
 
