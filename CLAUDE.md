@@ -58,6 +58,18 @@ Pri každom obrázku VŽDY skontroluj:
 - Systematicky testuj: slovo1:slovo2, slovo2:slovo1 pre každú dvojicu
 - Testuj aj s číslami levelu, reverzné slová, a variácie bez diakritiky
 
+## DÔLEŽITÉ: Kompletná analýza obrázkov
+- NIKDY sa nepýtaj čo hľadať - prejdi KAŽDÚ možnosť sám
+- Pre každý obrázok analyzuj:
+  1. Všetky viditeľné objekty a ich názvy
+  2. Čísla, text, nápisy
+  3. Farby a ich významy
+  4. Pozície objektov (hore, dole, stred, ľavo, pravo)
+  5. Vzory a symetrie
+  6. Skryté detaily (rohy, pozadie)
+  7. Počet objektov (napr. bodky na lienke)
+- Každý nájdený detail môže byť hint - ZAPÍŠ ho a POUŽI
+
 ## Context Files (auto-load)
 @GAME_PROGRESS.md
 @levels/13/README.md
