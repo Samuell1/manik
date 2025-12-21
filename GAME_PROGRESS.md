@@ -18,6 +18,7 @@
 ---
 
 ## Level 01
+@levels/01/README.md
 **URL:** https://manik.sk/hra/level_01/
 
 **Popis:** Nachadzas sa pred pivnicou, kde ma ulozene archivne vino..
@@ -33,6 +34,7 @@
 ---
 
 ## Level 02
+@levels/02/README.md
 **URL:** https://manik.sk/hra/level_02/
 
 **Popis:** Zmizli vsetky flase a jedine, co ti zostalo je najstarsi sud.
@@ -48,6 +50,7 @@
 ---
 
 ## Level 03
+@levels/03/README.md
 **URL:** https://manik.sk/hra/petra/
 
 **Popis:** Petra, ktorej si veril, ze sa ti postara o tvoju pivnicu ta pekne sklamala
@@ -65,6 +68,7 @@
 ---
 
 ## Level 04
+@levels/04/README.md
 **URL:** https://manik.sk/hra/zahrada/
 
 **Popis:** Petra sa uz dlhsi cas nenachadza na svojej zahrade, ale ma tu zaparkovane auto
@@ -88,6 +92,7 @@
 ---
 
 ## Level 05
+@levels/05/README.md
 **URL:** https://manik.sk/hra/v_dome/
 
 **Autentifikacia:** otvor / dvere (HTTP Basic Auth)
@@ -130,6 +135,7 @@ http://manik.sk/hra/lampas/
 ---
 
 ## Level 06
+@levels/06/README.md
 **URL:** https://manik.sk/hra/lampas/
 
 **Obrazok:** Stary kovovy lampas (bez svetla)
@@ -160,6 +166,7 @@ http://manik.sk/hra/lampas/
 ---
 
 ## Level 07
+@levels/07/README.md
 **URL:** https://manik.sk/hra/dielna/
 
 **Autentifikacia:** vek / cas (HTTP Basic Auth)
@@ -227,6 +234,7 @@ v ktorych sa vyskytuje pismeno 'X'
 ---
 
 ## Level 08
+@levels/08/README.md
 **URL:** https://manik.sk/hra/pred_domom/
 
 **Autentifikacia:** solvex / humdrex (HTTP Basic Auth)
@@ -288,6 +296,7 @@ Sused ti povedal dolezite cislo: 4868666
 ---
 
 ## Level 09
+@levels/09/README.md
 **URL:** https://manik.sk/hra/do_dediny/
 
 **NÁJDENÁ URL!** Level 09 je na /do_dediny/ - vracia 401 (vyžaduje autentifikáciu)
@@ -352,6 +361,7 @@ Sused ti povedal dolezite cislo: 4868666
 ---
 
 ## Level 10
+@levels/10/README.md
 **URL:** https://manik.sk/hra/kopec/
 
 **Popis:** V lese si objavil tajné laboratórium Ing. Zoltána Kafku, inžiniera
@@ -489,6 +499,7 @@ Sused ti povedal dolezite cislo: 4868666
 ---
 
 ## Level 11
+@levels/11/README.md
 **URL:** https://manik.sk/hra/1464928/
 
 **Popis:** "Na lazoch za kopcom si objavil navždy odparkované auto pána inžiniera"
@@ -518,6 +529,7 @@ Sused ti povedal dolezite cislo: 4868666
 ---
 
 ## Level 12
+@levels/12/README.md
 **URL:** https://manik.sk/hra/na_lazoch/
 
 **Autentifikácia:** vrak / auto (HTTP Basic Auth)
@@ -546,10 +558,62 @@ Sused ti povedal dolezite cislo: 4868666
 - Rôzne matematické operácie s číslami markerov
 - X ako Roman numeral (10), multiplication, T9 key
 
-**Kľúčové otázky:**
-1. Čo je "výsledok" na pridanie 12?
-2. Ako interpretovať 'X' hint?
-3. Vzťah čísla-písmená v markeroch?
+**Skrytý súbor kluc.txt** (nájdený cez `strings obrazok.jpg`):
+```
+.X.
+.X.
+..X
+.X.
+..X.
+.X.
+X..
+```
+X pozície: 2, 2, 3, 2, 3, 2, 1
+
+**RIEŠENIE NÁJDENÉ!**
+
+**Kľúč:** Čísla markerov ako T9 klávesy + X pozície z kluc.txt = výber písmen
+
+| Písmeno | Marker | T9 Kláves | X Pozícia | Výsledok |
+|---------|--------|-----------|-----------|----------|
+| P | 5 | JKL | 2 | **K** |
+| R | 8 | TUV | 2 | **U** |
+| I | 2 | ABC | 3 | **C** |
+| E | 4 | GHI | 2 | **H** |
+| V | 9 | WXYZ | 3 | **Y** |
+| A | 6 | MNO | 2 | **N** |
+| N | 2 | ABC | 1 | **A** |
+
+**Výsledok:** KUCHYNA + 12 = **kuchyna12**
+
+**Level 13 URL:** https://manik.sk/hra/kuchyna12/
+
+**Status:** COMPLETED
+
+---
+
+## Level 13
+@levels/13/README.md
+**URL:** https://manik.sk/hra/kuchyna12/
+
+**Popis:** "Vošiel si do zaujímavej kuchyne .."
+
+**Obrazok:** obrazok.jpg - kuchyňa s lienkou a textom
+
+**Napoveda:**
+1. nájdi v skrinke potrebnú šifru
+2. chrobáčika pozná každý (lienka/ladybug)
+3. niečo je na tejto kuchyni dôležité
+
+**Clickable areas:**
+- skrinka (coords: 503, 75, 655, 242)
+- ../latrina/ (coords: 745, 550, 788, 587) - vyžaduje 401 auth
+
+**Text na obrázku:**
+```
+LANO MASŤ MÄTA AUDI
+NOHY OSOH BOKY ROKY
+```
 
 **Status:** IN PROGRESS
 
@@ -591,9 +655,9 @@ Sused ti povedal dolezite cislo: 4868666
 - Level 09: /do_dediny/ - sever:juh (navigácia = svetové strany)
 - Level 10: /kopec/ - KRAL FRANTISEK → 36139887223419.ne → rychlejsie → hex → 1464928
 - Level 11: /1464928/ - CP850: 118 114 97 107 = vrak, 97 117 116 111 = auto → vrak:auto
-- Level 12: /na_lazoch/ - IN PROGRESS (PRIEVAN + Nokia 6310i + 'X' puzzle)
+- Level 12: /na_lazoch/ - PRIEVAN markery + kluc.txt → T9 → KUCHYNA + 12 = kuchyna12
+- Level 13: /kuchyna12/ - IN PROGRESS (lienka + 8 slov puzzle)
 
 **Subory ulozene v /home/user/manik/levels/:**
-- 11/ - Level 11 obrazky a README
-- 12/ - Level 12 obrazky (obrazok.jpg, stena.jpg), page.html a README
+- 01/ až 13/ - README.md pre každý level
 - kafka_table.md - Kafkova periodická tabuľka (abecedne zoradená)
