@@ -42,3 +42,7 @@ Pri každom obrázku VŽDY skontroluj:
 - Pri každom dôležitom zistení COMMITUJ zmeny
 - Ukladaj progress priebežne, nie len na konci
 - Dokumentuj nájdené skryté súbory a kľúče v README.md pre daný level
+
+## Context Files (auto-load)
+@GAME_PROGRESS.md
+@levels/13/README.md
