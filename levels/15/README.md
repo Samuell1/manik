@@ -80,5 +80,12 @@
 
 ## Status
 IN PROGRESS - hľadám credentials pre /opilec/
-- 200+ kombinácií testovaných
+- 300+ kombinácií testovaných
 - Žltý/modrý štvorec ostáva záhadou
+
+## Ďalšie pokusy potrebné
+- Steganografia v PNG/JPG
+- Analýza pixelov v rohových štvorcoch
+- Slovenské idiomy a frázy
+- Súvislosť s predchádzajúcimi levelmi
+- Možná referencia na vylet/výlet story
