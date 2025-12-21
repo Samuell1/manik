@@ -80,12 +80,25 @@
 
 ## Status
 IN PROGRESS - hľadám credentials pre /opilec/
-- 300+ kombinácií testovaných
+- 800+ kombinácií testovaných
 - Žltý/modrý štvorec ostáva záhadou
 
+## Kľúčové objavy z vylet stránky
+- **Modrý štvorec** = frankovka modrá (víno z výletu)
+- **Žltý štvorec** = zlatistý mok / Corgoň (pivo z výletu den2)
+- Výlet popis: "padá frankovka modrá", "chlápkajúc osviežujúci zlatistý mok"
+
+## Testované kombinácie (všetky 401)
+- Farby: zlta:modra, modra:zlta, zlty:modry, yellow:blue, atď.
+- Víno/pivo: frankovka:modra, corgon:frankovka, pivo:vino, atď.
+- Ikony: maria:jezis, jezis:maria, ikona:kriz, atď.
+- Objekty: pec:postel, uhlie:drevo, debna:uhlak, atď.
+- Miesta z výletu: tisovec:lucenec, klenovec:slopovo, atď.
+- Idiomy: doma:najlepsie, teplo:pec, pod:obraz, atď.
+- Reverzné slová: siram:sizej, konavnarf:ardoma, atď.
+
 ## Ďalšie pokusy potrebné
-- Steganografia v PNG/JPG
-- Analýza pixelov v rohových štvorcoch
-- Slovenské idiomy a frázy
-- Súvislosť s predchádzajúcimi levelmi
-- Možná referencia na vylet/výlet story
+- Text na bielom štítku pece (user hint: "ta pec daco musi mat")
+- Steganografia v obrazok.png
+- Možné skryté súbory s neštandardnými názvami
+- Pixel analýza žltého/modrého štvorca
