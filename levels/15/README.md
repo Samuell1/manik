@@ -102,3 +102,11 @@ IN PROGRESS - hľadám credentials pre /opilec/
 - Steganografia v obrazok.png
 - Možné skryté súbory s neštandardnými názvami
 - Pixel analýza žltého/modrého štvorca
+- Špecifický slovenský kultúrny kontext
+- OCR analýza textu na štítku pece
+
+## Poznámky z vylet stránky
+- den2: "otvorili Corgoňov ... chlápkajúc osviežujúci zlatistý mok"
+- Úvod: "padá frankovka modrá"
+- Trasa: z Tisovca cez Prahu do Lučenca
+- Miesta: Slopovo, Klenovec, Veporské vrchy
