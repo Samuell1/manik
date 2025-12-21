@@ -598,22 +598,54 @@ X pozície: 2, 2, 3, 2, 3, 2, 1
 
 **Popis:** "Vošiel si do zaujímavej kuchyne .."
 
-**Obrazok:** obrazok.jpg - kuchyňa s lienkou a textom
+**RIEŠENIE:** LATINSKY cipher → lienka = Coccinella septempunctata → zrkadlo = obe otočené
+- **Username:** alleniccoc
+- **Password:** atatcnupmetpes
 
-**Napoveda:**
-1. nájdi v skrinke potrebnú šifru
-2. chrobáčika pozná každý (lienka/ladybug)
-3. niečo je na tejto kuchyni dôležité
+**Status:** COMPLETED
+
+---
+
+## Level 14
+@levels/14/README.md
+**URL:** https://manik.sk/hra/latrina/
+
+**Autentifikácia:** alleniccoc / atatcnupmetpes
+
+**Popis:** "Zdá sa, že na latrine nie je nič zaujímavé .."
+
+**HTML komentár:** `<!-- Base64 -->`
+
+**RIEŠENIE:**
+1. subor.txt → 3x Base64 dekódovanie → "terakota"
+2. terakota = ZIP s poškodenou hlavičkou (opraviť 00→PK)
+3. ZIP obsahuje odkaz na manik.sk/vylet
+4. "tretí deň" = /vylet/den3/ → 029.jpg (autobusová zastávka)
+5. Posledné 2 stanice: Utekáč, Havrilovo
+
+**Prihlasovacie údaje pre /doma_v_izbe/:**
+- **Username:** utekac
+- **Password:** havrilovo
+
+**Status:** COMPLETED
+
+---
+
+## Level 15
+@levels/15/README.md
+**URL:** https://manik.sk/hra/doma_v_izbe/
+
+**Autentifikácia:** utekac / havrilovo
+
+**Popis:** "Nachádzaš sa v izbe .."
+
+**Hinty:** bez indícií
 
 **Clickable areas:**
-- skrinka (coords: 503, 75, 655, 242)
-- ../latrina/ (coords: 745, 550, 788, 587) - vyžaduje 401 auth
+- pec.jpg (lightbox)
+- ../opilec/ (vyžaduje 401 auth)
 
-**Text na obrázku:**
-```
-LANO MASŤ MÄTA AUDI
-NOHY OSOH BOKY ROKY
-```
+**Obrazok:** Izba so zelenou stenou, žltý a modrý štvorec v rohu
 
 **Status:** IN PROGRESS
 
@@ -656,8 +688,10 @@ NOHY OSOH BOKY ROKY
 - Level 10: /kopec/ - KRAL FRANTISEK → 36139887223419.ne → rychlejsie → hex → 1464928
 - Level 11: /1464928/ - CP850: 118 114 97 107 = vrak, 97 117 116 111 = auto → vrak:auto
 - Level 12: /na_lazoch/ - PRIEVAN markery + kluc.txt → T9 → KUCHYNA + 12 = kuchyna12
-- Level 13: /kuchyna12/ - IN PROGRESS (lienka + 8 slov puzzle)
+- Level 13: /kuchyna12/ - LATINSKY cipher → lienka = Coccinella septempunctata → alleniccoc:atatcnupmetpes
+- Level 14: /latrina/ - Base64 3x → terakota ZIP → vylet/den3 → utekac:havrilovo
+- Level 15: /doma_v_izbe/ - IN PROGRESS (žltý+modrý štvorec, pec)
 
 **Subory ulozene v /home/user/manik/levels/:**
-- 01/ až 13/ - README.md pre každý level
+- 01/ až 15/ - README.md pre každý level
 - kafka_table.md - Kafkova periodická tabuľka (abecedne zoradená)
