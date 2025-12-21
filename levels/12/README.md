@@ -73,5 +73,31 @@ X..
 
 **Číslo domu:** 581 (viditeľné na obrazok.jpg)
 
+## RIEŠENIE ✓
+
+**Kľúč k riešeniu:** Použiť čísla markerov ako T9 klávesy a X pozície z kluc.txt na výber písmen!
+
+### Postup:
+1. Markery v poradí PRIEVAN: 5(P), 8(R), 2(I), 4(E), 9(V), 6(A), 2(N)
+2. X pozície z kluc.txt: 2, 2, 3, 2, 3, 2, 1
+3. Použiť čísla markerov ako T9 klávesy a X pozície na výber písmena:
+
+| Písmeno | Marker | T9 Kláves | X Pozícia | Výsledok |
+|---------|--------|-----------|-----------|----------|
+| P | 5 | JKL | 2 | **K** |
+| R | 8 | TUV | 2 | **U** |
+| I | 2 | ABC | 3 | **C** |
+| E | 4 | GHI | 2 | **H** |
+| V | 9 | WXYZ | 3 | **Y** |
+| A | 6 | MNO | 2 | **N** |
+| N | 2 | ABC | 1 | **A** |
+
+**Výsledok: KUCHYNA** (kitchen v slovenčine)
+**URL: kuchyna + 12 = kuchyna12**
+
+## Ďalší level
+- **URL:** https://manik.sk/hra/kuchyna12/
+- **Level:** 13
+
 ## Status
-IN PROGRESS - analyzujem vzor z kluc.txt
+VYRIEŠENÉ ✓
