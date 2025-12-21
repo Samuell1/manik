@@ -70,6 +70,22 @@ Pri každom obrázku VŽDY skontroluj:
   7. Počet objektov (napr. bodky na lienke)
 - Každý nájdený detail môže byť hint - ZAPÍŠ ho a POUŽI
 
+## DÔLEŽITÉ: Logické myslenie pri riešení
+- VŽDY najprv ZAMYSLI sa nad významom hintov
+- Hľadaj SÚVISLOSTI medzi hintami (napr. zrkadlo + slová = otočené slová)
+- Skúšaj VIACERO interpretácií každého hintu:
+  - Doslovný význam
+  - Prenesený význam (metafora)
+  - Technický význam (kódovanie, formáty)
+  - Jazykový význam (preklady, synonymá)
+- Pri auth skúšaj VŠETKY transformácie:
+  - Originál
+  - Otočené (reversed)
+  - Obe otočené
+  - Kombinácie s číslami
+  - Preklady (SK↔Latin↔EN)
+- NIKDY sa nevzdávaj po prvých pokusoch - systematicky prejdi všetky možnosti
+
 ## Context Files (auto-load)
 @GAME_PROGRESS.md
-@levels/13/README.md
+@levels/14/README.md

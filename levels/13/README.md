@@ -93,5 +93,21 @@ Použitím pozícií 1,2,3,4,1,2,3,4:
 2. Septempunctata = 7-bodková (scientific name lienky)
 3. Zrkadlová symetria kuchyne môže byť hint
 
+## RIEŠENIE ✓
+
+**Kľúč k riešeniu:** Zrkadlová symetria kuchyne → OBE slová musia byť OTOČENÉ!
+
+- LATINSKY = inštrukcia "preložiť do latinčiny"
+- chrobáčik = lienka = **Coccinella septempunctata** (Latin)
+- Zrkadlo = obe slová otočené
+
+**Prihlasovacie údaje pre latrina:**
+- **Username:** alleniccoc (coccinella reversed)
+- **Password:** atatcnupmetpes (septempunctata reversed)
+
+## Ďalší level
+- **URL:** https://manik.sk/hra/latrina/
+- **Level:** 14
+
 ## Status
-IN PROGRESS - 500+ kombinácií testovaných, latrina stále 401
+VYRIEŠENÉ ✓
