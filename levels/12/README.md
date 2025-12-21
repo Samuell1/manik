@@ -50,5 +50,28 @@ V obrázku stena.jpg sú viditeľné location-pin markery s číslami a písmena
 2. Ako sa má interpretovať 'X' - ako marker, násobenie, alebo T9 kláves?
 3. Aký je vzťah medzi číslami na markeroch a písmenami?
 
+## Nájdený skrytý súbor: kluc.txt
+
+V obrazok.jpg cez `strings` sa nachádza názov súboru **kluc.txt**!
+
+**Obsah kluc.txt:**
+```
+.X.
+.X.
+..X
+.X.
+..X.
+.X.
+X..
+```
+
+**Analýza vzoru:**
+- 7 riadkov (zodpovedá 7 písmenám PRIEVAN)
+- X pozície: 2, 2, 3, 2, 3, 2, 1
+- Rôzne dĺžky riadkov: 3, 3, 3, 3, 4, 3, 3
+- Hint: 'X' ťa navedie na správnu stopu
+
+**Číslo domu:** 581 (viditeľné na obrazok.jpg)
+
 ## Status
-IN PROGRESS - čakám na ďalšie hinty alebo správnu interpretáciu
+IN PROGRESS - analyzujem vzor z kluc.txt
