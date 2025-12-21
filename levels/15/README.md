@@ -42,10 +42,37 @@
 - Umývadlo (sink) - pri peci
 
 ## Testované kombinácie (všetky 401)
-- zlta:modra, modra:zlta
-- yellow:blue, blue:yellow
-- postel:pec, pec:postel
-- hodiny:lampa, izba:pec
+
+### Farby
+- zlta:modra, modra:zlta, zlty:modry, modry:zlty
+- yellow:blue, blue:yellow, green:blue
+- zelena:stena, stena:zelena, farba:zelena
+- gelb:blau (nemecky), jaune:bleu (francúzsky)
+
+### Objekty z izby
+- postel:pec, pec:postel, hodiny:lampa
+- stol:stolica, obraz:stena, okno:dvere
+- ikona:kriz, maria:jezis, jezis:maria
+
+### Alkohol/opilec súvisiace
+- vino:pivo, pivo:vino, palinka:slivovica
+- opity:triezvy, spanok:kocovina
+- frankovka:modra (z výletu)
+
+### Vlajky
+- ukrajina:vlajka, svedsko:vlajka
+- ukraine:flag, sweden:flag
+
+### Ostatné
+- bez:indicii, stvorec:farba
+- doma:izbe, izbe:doma
+- koordináty: 732:459, 427:539
+
+### Možné interpretácie žltý+modrý
+1. Yellow + Blue = Green (stena je zelená)
+2. Vlajka Ukrajiny/Švédska
+3. RGB hodnoty
+4. Semafór/signál
 
 ## Ďalší level
 - **URL:** https://manik.sk/hra/opilec/
@@ -53,3 +80,5 @@
 
 ## Status
 IN PROGRESS - hľadám credentials pre /opilec/
+- 200+ kombinácií testovaných
+- Žltý/modrý štvorec ostáva záhadou
