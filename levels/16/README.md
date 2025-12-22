@@ -223,3 +223,40 @@ EnCt29461dc1f9e7e9e5e1d20996c137e37288f0ee0fc9461dc1f9e7e9e5e1d20996cbwfLn5phXAO
 - Je tam nejaký iný nápis na autobuse alebo v okolí zastávky?
 - Je na autobuse nejaké firemné logo alebo znak okrem SAD?
 - Existuje nejaká tabuľka alebo cedula na zastávke?
+
+## Session December 2025 - Rozšírené testovanie
+
+### Nové testované kategórie:
+1. **Karosa** (pôvodný výrobca pred IVECO):
+   - karosa, KAROSA, karosavysokemyto, karosa as
+   - Sodomka (zakladateľ), Josef Sodomka
+   - Vysoké Mýto (lokalita továrne)
+
+2. **SAD Zvolen detaily:**
+   - sad, SAD, sadzvolen, SADZVOLEN, sadzv
+   - slovenskaautobusovadoprava, autobusovadoprava
+
+3. **Forgácsfalva** (maďarský názov Lomu nad Rimavicou):
+   - forgacsfalva, forgacs, Forgacs
+
+4. **Lokálne podniky pri Kokave nad Rimavicou:**
+   - Kokavská Izba, Pizzéria Favore, Koliba Studienka
+   - Reštaurácia KA-MO, Hostinec v Horách
+
+5. **Slovaské slová s diakritikou:**
+   - ŠPZ, Štefan, kľúč, krčma, zastávka
+
+6. **Algoritmy testované:**
+   - encipher.it (PBKDF2-SHA1 + AES-CTR)
+   - SJCL s CCM, GCM, OCB2 módmi
+   - Rôzne kombinácie salt/IV
+
+### Celkom testované:
+- 500,000+ hesiel (všetky 3-4 písmenkové kombinácie)
+- 10,000 čísel
+- 2,000+ špecifických slov a variácií
+- Algoritmy: Python PyCryptodome + Node.js SJCL
+
+### Záver:
+Heslo nebolo nájdené. Potrebné dodatočné informácie z Google Street View
+alebo iný pohľad na hint "podnik ktorý ho vyrobil".
