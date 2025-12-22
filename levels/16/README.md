@@ -171,7 +171,7 @@ EnCt29461dc1f9e7e9e5e1d20996c137e37288f0ee0fc9461dc1f9e7e9e5e1d20996cbwfLn5phXAO
 - AES-CBC, AES-CFB, AES-OFB módy
 
 ## Status
-**IN PROGRESS** - Zašifrovaný súbor nájdený, heslo zatiaľ neznáme
+**IN PROGRESS** - Zašifrovaný súbor nájdený, heslo zatiaľ neznáme (1000+ hesiel testovaných)
 
 ### Čo vieme:
 1. Súbor ZV414BC obsahuje encipher.it šifrovaný text
@@ -179,13 +179,47 @@ EnCt29461dc1f9e7e9e5e1d20996c137e37288f0ee0fc9461dc1f9e7e9e5e1d20996cbwfLn5phXAO
 3. Dopravca je SAD Zvolen (www.sadzv.sk)
 4. Hint: "kľúč je názov podniku, ktorý ho vyrobil"
 
+### Rozšírené testovanie hesiel (December 2025):
+
+**Testované kategórie (všetky neúspešné):**
+
+1. **Výrobcovia autobusov:**
+   - IVECO, Irisbus, Karosa, SOR, MAN, Mercedes, Setra, Neoplan
+   - Kombinácie: ivecocrossway, ivecoczech, irisbusiveco
+   - Vysoké Mýto (továreň), Sodomka (zakladateľ)
+
+2. **Výrobcovia ŠPZ:**
+   - Turčan Delta, SPM Security, turcandeltasro
+
+3. **Dopravcovia:**
+   - SAD Zvolen, SAD Lučenec, sadzvolen, sadzv, autobusovadoprava
+
+4. **Lokality:**
+   - Lom nad Rimavicou, Zvolen, Sihla, Kokava nad Rimavicou
+   - lomnadrimavicou, 1015 (nadmorská výška), 060146 (číslo zastávky)
+
+5. **Historické spoločnosti:**
+   - Karosa, AZNP, Sodomka, Forgáč
+
+6. **Podniky v okolí:**
+   - krčma u Havlíčkov (z filmu Zemianska česť)
+   - Koliba Studienka, Penzión Vrchár, Chata Molik
+   - Drevenice Drevené kráľovstvo
+
+7. **Všeobecné:**
+   - podnik, firma, vyrobca, autobus, kluc, heslo
+   - Všetky 3-4 písmenkové kombinácie (450,000+)
+   - Čísla 0-10000
+
 ### Možné interpretácie "podnik ktorý ho vyrobil":
 1. **Výrobca autobusu** - IVECO, Irisbus (všetky testované)
 2. **Výrobca ŠPZ** - Turčan Delta, SPM Security (testované)
 3. **Dopravca** - SAD Zvolen (testované)
-4. **Niečo iné** - názov podniku/hostinca? lokálna firma?
+4. **Krčma kde sa opil Štefan** - u Havlíčkov? (testované)
+5. **Niečo viditeľné na Google Street View** - ???
 
 ### Potrebné ďalšie informácie:
 - Čo presne je viditeľné na Google Street View okrem "CROSSWAY"?
-- Je tam nejaký iný nápis na autobuse alebo v okolí?
-- Existuje nejaký lokálny podnik/hostinec v Lome nad Rimavicou?
+- Je tam nejaký iný nápis na autobuse alebo v okolí zastávky?
+- Je na autobuse nejaké firemné logo alebo znak okrem SAD?
+- Existuje nejaká tabuľka alebo cedula na zastávke?
