@@ -260,8 +260,23 @@ odstranenim maleho 'u' dostavas meno a heslo ;)
 - Nájsť nápis na plote oproti obecnému úradu v Lome nad Rimavicou
 - Po odstránení malého 'u' z nápisu dostaneme username a password pre /kamenista_dolina/
 
+## RIEŠENIE LEVEL 16 ✓
+
+**Nápis nájdený v obci Sihla!**
+
+Nápis na plote: **KRCMA u SKODOV** (Krčma u Škodov)
+
+Odstránením malého 'u':
+- KRCMA u SKODOV → **KRCMA** + **SKODOV**
+
+**Prihlasovacie údaje pre /kamenista_dolina/:**
+- **Username:** krcma
+- **Password:** skodov
+
+**Kľúč k riešeniu:** Emoji ";)" v dešifrovanej správe naznačovalo "hľadaj inde" - nápis nebol v Lome nad Rimavicou, ale v susednej obci **Sihla**!
+
 ## Status
-**IN PROGRESS** - Súbor dešifrovaný, hľadám nápis na plote
+**COMPLETED ✓**
 
 ## Testované kombinácie (1000+)
 Všetky vrátili 401:
