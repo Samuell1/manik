@@ -263,6 +263,20 @@ odstranenim maleho 'u' dostavas meno a heslo ;)
 ## Status
 **IN PROGRESS** - Súbor dešifrovaný, hľadám nápis na plote
 
+## Testované kombinácie (2000+)
+Všetky vrátili 401:
+- Bežné slovenské slová s 'u': sukromne, kulturny, bufet, atď.
+- Slovenské priezviská s 'u': Kubáň, Dušan, Rudolf, Burian, Lukáč, atď.
+- Názvy podnikov: pohostinstvo, hostinec, krčma, bufet
+- Dvojslovné kombinácie kde obe slová majú 'u'
+- Miestne názvy: Lom, Rimavica, Forgács, Drábsko, Sihla
+
+## Potrebné informácie
+- **Fotka plota oproti obecnému úradu v Lome nad Rimavicou**
+- Obecný úrad je na č. 13, takže plot oproti môže byť pri č. 12 alebo 14
+- Nápis na plote obsahuje 'u', po odstránení dáva username a password
+- "meno a heslo" naznačuje dva rôzne reťazce (nie rovnaké)
+
 ## Ďalší level
 - **URL:** https://manik.sk/hra/kamenista_dolina/
 - **Status:** 401 (credentials z nápisu na plote)
