@@ -51,9 +51,30 @@
 - Vodič zo Sardínie ich zviezol
 - Obrázky den3 stiahnuté - zatiaľ žiadne auto/ŠPZ
 
+## Google Street View analýza (od používateľa)
+- **Číslo zastávky:** 060146
+- **PSČ:** 976 53 Sihla
+- **Autobusový dopravca:** SAD Zvolen (Slovenská autobusová doprava)
+- Zastávka "Lom nad Rimavicou, obec"
+
+## Čo hľadať na Street View
+1. Viditeľná ŠPZ na akomkoľvek vozidle
+2. Názov výrobcu autobusu (IVECO, SOR, Karosa, Setra)
+3. Nápisy a čísla v okolí zastávky
+4. Staré autá (Škoda 120 z príbehu)
+
+## Testované súbory (stovky, všetky 404)
+- spz, SPZ, ŠPZ (rôzne varianty, URL encoded)
+- ecv, ECV, plate, cislo, tanier, tabula
+- skoda, skoda120, aznp, auto, car
+- sad, sadzvolen, zvolen, iveco, sor, karosa
+- 060146, 97653, sihla, lom, rimavica
+- cipher, encipher, encrypted, data, subor, kluc
+- Rôzne prípony: .txt, .rar, .zip, .jpg, .enc, .dat, .png, .gif
+
 ## Ďalší level
 - **URL:** https://manik.sk/hra/kamenista_dolina/
 - **Status:** 401 (credentials neznáme)
 
 ## Status
-IN PROGRESS - hľadám ŠPZ súbor
+IN PROGRESS - hľadám ŠPZ súbor na stiahnutie
