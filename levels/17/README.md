@@ -127,9 +127,34 @@ Toto je permutácia 1-9. Možné interpretácie:
 - KAMENISTY → pozície 4,3,9,1,6,7,2,8,5 = EMYKISATN ❌
 - VYHLIADKE → pozície 4,3,9,1,6,7,2,8,5 = LHEVADYKI ❌
 
-### Potrebné:
-- Zistiť presný text na informačnej tabuli z YouTube videa
-- Screenshot z videa obsahuje túto tabuľu
+## Text z tabule (YouTube video screenshot)
+
+```
+MEANDRE
+KAMENISTÉHO POTOKA
+
+PRIRODZENE MEANDRUJÚCI TOK NA KTOROM MOŽNO DO-
+KLADOVAŤ TVORBU A DYNAMIKU MEANDROV. DĹŽKA CHRÁ-
+NENÉHO VÝTVORU 2,5 km.
+
+NEZNEČISŤUJTE A NEPOŠKODZUJTE CHRÁNENÉ ÚZEMIE !
+
+ŠTÁTNA OCHRANA PRÍRODY SR
+```
+
+### Analýza textu bez diakritiky:
+- Riadok 1: MEANDRE (7) ✓
+- Riadok 2: KAMENISTEHO POTOKA (11+6) ✓
+- Popis: PRIRODZENE MEANDRUJUCI TOK NA KTOROM MOZNO DOKLADOVAT TVORBU A DYNAMIKU MEANDROV DLZKA CHRANENEHO VYTVORU
+- Varovanie: NEZNECISTUJTE A NEPOSKODZUJTE CHRANENE UZEMIE
+- Päta: STATNA OCHRANA PRIRODY SR (6+7+7+2) ✓
+
+### Testované kombinácie (100+, všetky 401):
+- Dvojice slov z tabule: meandre:potoka, chranene:uzemie, statna:ochrana
+- Permutované prvé písmená: ppmm:tnkkm, ntapmdmtk
+- Latinská fráza z kanálu: pisces:mortui, solum:flumine
+- Príroda/ochrana: priroda:ochrana, ochrana:prirody
+- Video ID časti: 1hHcWSUxQB8 kombinácie
 
 ## Status
-**IN PROGRESS** - RAR rozšifrovaný, čakám na text z tabule vo videu
+**IN PROGRESS** - Čakám na správnu interpretáciu čísel 4 3 9 1 6 7 2 8 5
