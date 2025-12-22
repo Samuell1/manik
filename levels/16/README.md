@@ -294,6 +294,54 @@ Všetky vrátili 401:
 - Nápis na plote obsahuje 'u', po odstránení dáva username a password
 - Potrebný prístup k Google Street View alebo podobnému zdroju
 
+## Rozšírené testovanie (December 2025 - Session 2)
+
+### Google Street View obrázky (od používateľa)
+1. **Stavebná cedula:** "Revitalizácie obce Lom nad Rimavicou"
+2. **Spadnutá cedula:** červený text (možno "SÚKROMNÉ AUTO" alebo podobné)
+3. **Trafostanica:** "384 /ts/ lom.n.rimavicou_obec.1"
+4. **Penzión Vrchár:** reklamná tabuľa
+
+### Testované kombinácie z obrázkov (všetky 401):
+- Zo spadnutej cedule: skromne:ato, ato:skromne, sukromne:auto
+- Z trafostanice: lom:rimavico, rimavico:obec, 384:lom
+- Z penziónu: penzion:vrchar, vrchar:penzion
+
+### Systematické testovanie kategórií:
+
+**Bežné nápisy na plotoch (500+ kombinácií):**
+- SÚKROMNÉ variácie: skromne:ato, skromny:pozemok, skromna:cesta
+- POZOR PES: pozor:pes, zly:pes, tocny:pes
+- VSTUP ZAKÁZANÝ: vstp:zakazany, zakaz:vstp
+- KULTÚRNY DOM: kultrny:dom, kltrny:dom
+
+**Formát "X U Y" (pub/restaurant mená):**
+- hostinec:petra, krcma:jana, bufet:marie
+- bfet:stefana, klb:jana, dom:cesty
+
+**Rovnaké meno a heslo:**
+- skromne:skromne, ato:ato, rad:rad, bfet:bfet
+
+**Krátke slovenské slová bez 'u':**
+- bk:db (buk:dub), mr:dom (mur:dom), lk:tr
+
+**EU projekty:**
+- eropska:nia, projekt:nie, fondy:eu
+
+**Názvy v okolí:**
+- coop:jednota, obecny:rad, martin:uradnikova
+
+### Webový výskum:
+- Obecný úrad: č. 13
+- COOP Jednota: č. 12 (vedľa)
+- Starostka: Martina Úradníková
+- GPS: 48.65°N, 19.65°E
+
+### Chýbajúce informácie:
+- Presný text na spadnutej ceduľke (ťažko čitateľný)
+- Fotka plota **priamo oproti** obecnému úradu
+- Akékoľvek iné nápisy viditeľné na Street View
+
 ## Ďalší level
 - **URL:** https://manik.sk/hra/kamenista_dolina/
-- **Status:** 401 (credentials z nápisu na plote)
+- **Status:** 401 (credentials z nápisu na plote - zatiaľ nenájdené)
