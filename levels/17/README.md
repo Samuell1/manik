@@ -28,26 +28,87 @@
 ## Clickable areas
 - **../na_vyhliadke/** (coords: 12, 299, 57, 346) - ďalší level
 
-## Obrazok
-- **obrazok.jpg** - scéna z doliny
+## Nájdené súbory
 
-## Analýza hintov
+### obrazok.jpg
+- Scéna z Kamenistej doliny
+- Na konci súboru je ukrytý **YouTube video ID: 1hHcWSUxQB8**
+- Nájdené cez `strings obrazok.jpg | tail`
 
-### "mnoho z indicii su subory"
-- Potrebné hľadať skryté súbory na serveri
+### pomocka (Base64)
+- Súbor: `https://manik.sk/hra/kamenista_dolina/pomocka`
+- Po dekódovaní z Base64 obsahuje vzor z bodiek:
+```
+*****************************************************
+*                                                   *
+*                     .......                       *
+*                ........... ......                 *
+*                                                   *
+* .......... ........... ... .. ...... ..... ...    *
+* ........ ...... . ........ ......... ..... .....  *
+* ...... ....... ... ...                            *
+*                                                   *
+* ............. . ............. ........ .......    *
 
-### "vždy si rád pozeral videá"
-- Možno video súbor (.mp4, .avi, .mov)?
+*                                                   *
+*                        S..... O...... P...... SR  *
+*                                                   *
+*****************************************************
+```
+- Šablóna na konci: S..... O...... P...... SR
+- Bodky pravdepodobne reprezentujú nejaký kód alebo písmená
 
-### "zišla by sa ti pomôcka"
-- Možno nejaký nástroj alebo helper file
+### riadok (RAR archív)
+- Súbor: `https://manik.sk/hra/kamenista_dolina/riadok`
+- Má poškodený header (00 00 00 00 namiesto "Rar!")
+- Po oprave prvých 4 bajtov na 52 61 72 21 → RAR archív
+- **ŠIFROVANÝ** - potrebuje heslo
+- Obsahuje súbor s názvom "riadok"
 
-### "chýba ti dôležitý riadok"
-- Možno chýbajúci riadok v súbore alebo kóde
+## YouTube video analýza
+
+### Video info
+- **ID:** 1hHcWSUxQB8
+- **Názov:** Meandre Kamenistého Potoka
+- **Kanál:** Mnk (@MnkFcbk)
+- **Dĺžka:** 7:32
+- **Dátum:** 31.12.2013
+
+### Popis kanála
+`.. pisces mortui solum cum flumine natant ..`
+- Latinská fráza: "Mŕtve ryby len plávajú s prúdom"
+- Možný hint pre heslo alebo credentials
+
+## Interpretácia šablóny S..... O...... P...... SR
+
+Možné významy:
+1. **ŠOP SR** = Štátna ochrana prírody Slovenskej republiky
+   - Meandre Kamenistého potoka je chránený areál pod CHKO Poľana
+2. **Prvé písmená slov** z nejakej frázy
+3. **Slová začínajúce na S, O, P** + skratka SR
+
+## Kamenistá dolina - geografické info
+- 25 km dlhá dolina s Kamenistým potokom
+- Chránený areál: Meandre Kamenistého potoka (2.5 km)
+- Vodná nádrž Hronček v strede doliny
+- Prístup z obcí Sihla alebo Hronec
+- Lesná železnička v minulosti
+- Tunelom točitých schodov z hrádze nádrže
+
+## Testované heslá pre RAR (všetky neúspešné)
+- meandre, potok, dolina, kamenista, kamenistypotok
+- pisces, mortui, solum, flumine, natant, cum
+- stefan, obrazok, pomocka, riadok, video, videa
+- mnk, MnkFcbk, youtube, 1hHcWSUxQB8
+- vino, sedem, karosa, dominik (z predchádzajúcich levelov)
+- chraneneareal, polana, statnaochranaprirody
+- SOPSR, sopsr, SOP_SR
+- MeandreKamenistehoPotoka, kamenistopotoka
+- 732, 2013, 31122013
 
 ## Ďalší level
 - **URL:** https://manik.sk/hra/na_vyhliadke/
-- **Status:** Pravdepodobne vyžaduje auth
+- **Status:** 401 - vyžaduje auth
 
 ## Status
-**IN PROGRESS**
+**IN PROGRESS** - Potrebné nájsť heslo pre RAR archív "riadok"
