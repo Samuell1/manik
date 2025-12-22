@@ -89,4 +89,22 @@ Pri každom obrázku VŽDY skontroluj:
 
 ## Context Files (auto-load)
 @GAME_PROGRESS.md
+
+### Level README files
+@levels/01/README.md
+@levels/02/README.md
+@levels/03/README.md
+@levels/04/README.md
+@levels/05/README.md
+@levels/06/README.md
+@levels/07/README.md
+@levels/08/README.md
+@levels/09/README.md
+@levels/10/README.md
+@levels/11/README.md
+@levels/12/README.md
+@levels/13/README.md
+@levels/14/README.md
 @levels/15/README.md
+@levels/16/README.md
+@levels/17/README.md
