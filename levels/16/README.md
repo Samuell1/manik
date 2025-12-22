@@ -39,9 +39,17 @@
 - "podnik ktorý ho vyrobil" = výrobca ŠPZ/auta?
 
 ## Testované súbory (404)
-- spz, SPZ, ŠPZ (rôzne varianty)
-- ecv, ECV, plate, cislo
-- Rôzne prípony: .txt, .rar, .zip, .jpg, .enc
+- spz, SPZ, ŠPZ (rôzne varianty, URL encoded)
+- ecv, ECV, plate, cislo, tanier
+- skoda, skoda120, aznp, auto, car
+- cipher, encipher, encrypted, data
+- lom, rimavica, zastavka
+- Rôzne prípony: .txt, .rar, .zip, .jpg, .enc, .dat
+
+## Analýza vylet/den3
+- Škoda 120 zmienená v príbehu
+- Vodič zo Sardínie ich zviezol
+- Obrázky den3 stiahnuté - zatiaľ žiadne auto/ŠPZ
 
 ## Ďalší level
 - **URL:** https://manik.sk/hra/kamenista_dolina/
