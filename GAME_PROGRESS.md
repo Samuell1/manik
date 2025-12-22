@@ -598,24 +598,83 @@ X pozície: 2, 2, 3, 2, 3, 2, 1
 
 **Popis:** "Vošiel si do zaujímavej kuchyne .."
 
-**Obrazok:** obrazok.jpg - kuchyňa s lienkou a textom
+**RIEŠENIE:** LATINSKY cipher → lienka = Coccinella septempunctata → zrkadlo = obe otočené
+- **Username:** alleniccoc
+- **Password:** atatcnupmetpes
 
-**Napoveda:**
-1. nájdi v skrinke potrebnú šifru
-2. chrobáčika pozná každý (lienka/ladybug)
-3. niečo je na tejto kuchyni dôležité
+**Status:** COMPLETED
 
-**Clickable areas:**
-- skrinka (coords: 503, 75, 655, 242)
-- ../latrina/ (coords: 745, 550, 788, 587) - vyžaduje 401 auth
+---
 
-**Text na obrázku:**
-```
-LANO MASŤ MÄTA AUDI
-NOHY OSOH BOKY ROKY
-```
+## Level 14
+@levels/14/README.md
+**URL:** https://manik.sk/hra/latrina/
 
-**Status:** IN PROGRESS
+**Autentifikácia:** alleniccoc / atatcnupmetpes
+
+**Popis:** "Zdá sa, že na latrine nie je nič zaujímavé .."
+
+**HTML komentár:** `<!-- Base64 -->`
+
+**RIEŠENIE:**
+1. subor.txt → 3x Base64 dekódovanie → "terakota"
+2. terakota = ZIP s poškodenou hlavičkou (opraviť 00→PK)
+3. ZIP obsahuje odkaz na manik.sk/vylet
+4. "tretí deň" = /vylet/den3/ → 029.jpg (autobusová zastávka)
+5. Posledné 2 stanice: Utekáč, Havrilovo
+
+**Prihlasovacie údaje pre /doma_v_izbe/:**
+- **Username:** utekac
+- **Password:** havrilovo
+
+**Status:** COMPLETED
+
+---
+
+## Level 15
+@levels/15/README.md
+**URL:** https://manik.sk/hra/doma_v_izbe/
+
+**Autentifikácia:** utekac / havrilovo
+
+**Popis:** "Nachádzaš sa v izbe .."
+
+**RIEŠENIE:** RGB hex kódy zo žltého a modrého štvorca
+- Žltý štvorec: RGB(171,193,35) = #ABC123 → abc123
+- Modrý štvorec: RGB(18,58,188) = #123ABC → 123abc
+
+**Prihlasovacie údaje pre /opilec/:**
+- **Username:** abc123
+- **Password:** 123abc
+
+**Status:** COMPLETED
+
+---
+
+## Level 16
+@levels/16/README.md
+**URL:** https://manik.sk/hra/opilec/
+
+**Autentifikácia:** abc123 / 123abc
+
+**Popis:** "Opitý Štefan ti toho veľa povedať nevedel .."
+
+**HTML komentáre:**
+- `<!-- encipher -->` - hint na šifrovanie
+- `<!-- dolezita zastavka je v Lome nad Rimavicou -->` - dôležitá zastávka
+
+**Hinty:**
+1. stiahni 'ŠPZ'
+2. kľúč je názov podniku, ktorý ho vyrobil
+
+**RIEŠENIE:**
+1. Na Google Street View v Lome nad Rimavicou je autobus s ŠPZ **ZV414BC**
+2. Súbor ZV414BC obsahuje encipher.it šifrovaný text
+3. Heslo: **karosa** (pôvodný výrobca autobusov Karosa Vysoké Mýto)
+4. Dešifrovaný text: "Na plote oproti obecnemu uradu sa nachadza napis, odstranenim maleho 'u' dostavas meno a heslo"
+5. Nájsť nápis na plote oproti obecnému úradu v Lome nad Rimavicou
+
+**Status:** IN PROGRESS - Súbor dešifrovaný, hľadám nápis na plote
 
 ---
 
@@ -656,8 +715,11 @@ NOHY OSOH BOKY ROKY
 - Level 10: /kopec/ - KRAL FRANTISEK → 36139887223419.ne → rychlejsie → hex → 1464928
 - Level 11: /1464928/ - CP850: 118 114 97 107 = vrak, 97 117 116 111 = auto → vrak:auto
 - Level 12: /na_lazoch/ - PRIEVAN markery + kluc.txt → T9 → KUCHYNA + 12 = kuchyna12
-- Level 13: /kuchyna12/ - IN PROGRESS (lienka + 8 slov puzzle)
+- Level 13: /kuchyna12/ - LATINSKY cipher → lienka = Coccinella septempunctata → alleniccoc:atatcnupmetpes
+- Level 14: /latrina/ - Base64 3x → terakota ZIP → vylet/den3 → utekac:havrilovo
+- Level 15: /doma_v_izbe/ - RGB hex kódy → abc123:123abc → /opilec/
+- Level 16: /opilec/ - ZV414BC encipher.it → karosa → nápis na plote (IN PROGRESS)
 
 **Subory ulozene v /home/user/manik/levels/:**
-- 01/ až 13/ - README.md pre každý level
+- 01/ až 16/ - README.md pre každý level
 - kafka_table.md - Kafkova periodická tabuľka (abecedne zoradená)

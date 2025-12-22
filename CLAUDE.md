@@ -38,10 +38,11 @@ Pri každom obrázku VŽDY skontroluj:
 5. **Koniec súboru** - možné pripojené dáta za obrazkom
 6. **HTML kód stránky** - image mapy, komentáre, entity
 
-## DÔLEŽITÉ: Commitovanie
-- Pri každom dôležitom zistení COMMITUJ zmeny
+## DÔLEŽITÉ: Commitovanie a Push
+- Pri každom vyriešenom leveli COMMITUJ a PUSHNI zmeny do branche
 - Ukladaj progress priebežne, nie len na konci
 - Dokumentuj nájdené skryté súbory a kľúče v README.md pre daný level
+- Po commite vždy urob `git push -u origin <branch-name>`
 
 ## DÔLEŽITÉ: Použitie výsledkov hádaniek
 - Keď nájdeš výsledok z hádanky, ZAMYSLI SA ako ho použiť
@@ -88,4 +89,4 @@ Pri každom obrázku VŽDY skontroluj:
 
 ## Context Files (auto-load)
 @GAME_PROGRESS.md
-@levels/14/README.md
+@levels/15/README.md
