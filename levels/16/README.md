@@ -63,18 +63,46 @@
 3. Nápisy a čísla v okolí zastávky
 4. Staré autá (Škoda 120 z príbehu)
 
-## Testované súbory (stovky, všetky 404)
-- spz, SPZ, ŠPZ (rôzne varianty, URL encoded)
-- ecv, ECV, plate, cislo, tanier, tabula
-- skoda, skoda120, aznp, auto, car
-- sad, sadzvolen, zvolen, iveco, sor, karosa
-- 060146, 97653, sihla, lom, rimavica
-- cipher, encipher, encrypted, data, subor, kluc
-- Rôzne prípony: .txt, .rar, .zip, .jpg, .enc, .dat, .png, .gif
+## NÁJDENÝ SÚBOR: ZV414BC
+
+**ŠPZ autobusu nájdená na Google Street View:** ZV 414BC
+
+**Súbor:** `ZV414BC` - obsahuje zašifrovaný text (encipher.it formát)
+
+**Obsah:**
+```
+EnCt29461dc1f9e7e9e5e1d20996c137e37288f0ee0fc9461dc1f9e7e9e5e1d20996cbwfLn5phXAO...
+```
+
+**Formát:**
+- `EnCt` - prefix (Encipher Text)
+- 64 hex znakov - salt/IV
+- Base64 dáta - zašifrovaný obsah
+- `IwEmS` - suffix
+
+## Dešifrovanie
+
+**Problém:** Potrebujeme správne heslo (názov výrobcu autobusu)
+
+**Testované heslá (230+, všetky neúspešné):**
+- Výrobcovia: karosa, KAROSA, sor, SOR, iveco, IVECO, irisbus, ikarus, man, mercedes, setra, neoplan, solaris, tatra, skoda, liaz, praga...
+- Modely: c934, C934, c954, crossway, recreo, evadys...
+- Miesta: zvolen, lom, rimavica, sihla...
+- Iné: sad, encipher, manik, hra, opilec, stefan...
+
+**Potrebné:**
+- Zistiť presný názov výrobcu autobusu z Google Street View
+- Výrobca by mal byť viditeľný na prednej časti alebo boku autobusu
+
+## Google Street View - autobus
+- **ŠPZ:** ZV 414BC
+- **Dopravca:** Slovenská autobusová doprava (SAD Zvolen)
+- **Typ:** Pravdepodobne Karosa C934 alebo SOR
+- **Potrebné:** Nájsť nápis výrobcu na autobuse
 
 ## Ďalší level
 - **URL:** https://manik.sk/hra/kamenista_dolina/
 - **Status:** 401 (credentials neznáme)
 
 ## Status
-IN PROGRESS - hľadám ŠPZ súbor na stiahnutie
+IN PROGRESS - nájdený zašifrovaný súbor, hľadám správne heslo (výrobca autobusu)
