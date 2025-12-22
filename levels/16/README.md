@@ -260,23 +260,103 @@ odstranenim maleho 'u' dostavas meno a heslo ;)
 - Nájsť nápis na plote oproti obecnému úradu v Lome nad Rimavicou
 - Po odstránení malého 'u' z nápisu dostaneme username a password pre /kamenista_dolina/
 
-## Status
-**IN PROGRESS** - Súbor dešifrovaný, hľadám nápis na plote
+## RIEŠENIE LEVEL 16 ✓
 
-## Testované kombinácie (2000+)
+**Nápis nájdený v obci Sihla!**
+
+Nápis na plote: **KRCMA u SKODOV** (Krčma u Škodov)
+
+Odstránením malého 'u':
+- KRCMA u SKODOV → **KRCMA** + **SKODOV**
+
+**Prihlasovacie údaje pre /kamenista_dolina/:**
+- **Username:** krcma
+- **Password:** skodov
+
+**Kľúč k riešeniu:** Emoji ";)" v dešifrovanej správe naznačovalo "hľadaj inde" - nápis nebol v Lome nad Rimavicou, ale v susednej obci **Sihla**!
+
+## Status
+**COMPLETED ✓**
+
+## Testované kombinácie (1000+)
 Všetky vrátili 401:
-- Bežné slovenské slová s 'u': sukromne, kulturny, bufet, atď.
-- Slovenské priezviská s 'u': Kubáň, Dušan, Rudolf, Burian, Lukáč, atď.
+- Bežné slovenské slová s 'u': sukromne, kulturny, bufet, klub, atď.
+- Transformácie: sukromne→skromne, bufet→bfet, klub→klb
+- Slovenské priezviská s 'u': Burian, Kubík, Dušan, Rudolf, atď.
 - Názvy podnikov: pohostinstvo, hostinec, krčma, bufet
 - Dvojslovné kombinácie kde obe slová majú 'u'
+- Kombinácie typu "skromny:pozemok", "skromne:majetok"
 - Miestne názvy: Lom, Rimavica, Forgács, Drábsko, Sihla
+- Goralské/pastierske slová: bača, valaška, fujara, salaš
+- Názvy so "U" ako predložkou: "U Juraja", "U Marka" atď.
+- Kombinácie s "úrad": obecny:rad, rad:obecny, uradne:hodiny
+- Rovnaké username a password: skromne:skromne, rad:rad, atď.
+
+## Analýza hintu
+"Na plote oproti obecnemu uradu sa nachadza napis, odstranenim maleho 'u' dostavas meno a heslo"
+
+- **"maleho 'u'"** - malé/lowercase 'u' (jednotné číslo - len jedno 'u')
+- **"meno a heslo"** - username A password (dve hodnoty)
+- Nápis musí obsahovať text, kde odstránenie 'u' dá obe credentials
+- Možné interpretácie:
+  1. Dve slová kde každé obsahuje 'u'
+  2. Jedno slovo ktoré sa po odstránení 'u' rozdelí na dve časti
+  3. Rovnaké slovo pre oboje (meno=heslo)
 
 ## Potrebné informácie
 - **Fotka plota oproti obecnému úradu v Lome nad Rimavicou**
-- Obecný úrad je na č. 13, takže plot oproti môže byť pri č. 12 alebo 14
+- Obecný úrad je na č. 13, COOP Jednota je na č. 12 (vedľa/oproti)
 - Nápis na plote obsahuje 'u', po odstránení dáva username a password
-- "meno a heslo" naznačuje dva rôzne reťazce (nie rovnaké)
+- Potrebný prístup k Google Street View alebo podobnému zdroju
+
+## Rozšírené testovanie (December 2025 - Session 2)
+
+### Google Street View obrázky (od používateľa)
+1. **Stavebná cedula:** "Revitalizácie obce Lom nad Rimavicou"
+2. **Spadnutá cedula:** červený text (možno "SÚKROMNÉ AUTO" alebo podobné)
+3. **Trafostanica:** "384 /ts/ lom.n.rimavicou_obec.1"
+4. **Penzión Vrchár:** reklamná tabuľa
+
+### Testované kombinácie z obrázkov (všetky 401):
+- Zo spadnutej cedule: skromne:ato, ato:skromne, sukromne:auto
+- Z trafostanice: lom:rimavico, rimavico:obec, 384:lom
+- Z penziónu: penzion:vrchar, vrchar:penzion
+
+### Systematické testovanie kategórií:
+
+**Bežné nápisy na plotoch (500+ kombinácií):**
+- SÚKROMNÉ variácie: skromne:ato, skromny:pozemok, skromna:cesta
+- POZOR PES: pozor:pes, zly:pes, tocny:pes
+- VSTUP ZAKÁZANÝ: vstp:zakazany, zakaz:vstp
+- KULTÚRNY DOM: kultrny:dom, kltrny:dom
+
+**Formát "X U Y" (pub/restaurant mená):**
+- hostinec:petra, krcma:jana, bufet:marie
+- bfet:stefana, klb:jana, dom:cesty
+
+**Rovnaké meno a heslo:**
+- skromne:skromne, ato:ato, rad:rad, bfet:bfet
+
+**Krátke slovenské slová bez 'u':**
+- bk:db (buk:dub), mr:dom (mur:dom), lk:tr
+
+**EU projekty:**
+- eropska:nia, projekt:nie, fondy:eu
+
+**Názvy v okolí:**
+- coop:jednota, obecny:rad, martin:uradnikova
+
+### Webový výskum:
+- Obecný úrad: č. 13
+- COOP Jednota: č. 12 (vedľa)
+- Starostka: Martina Úradníková
+- GPS: 48.65°N, 19.65°E
+
+### Chýbajúce informácie:
+- Presný text na spadnutej ceduľke (ťažko čitateľný)
+- Fotka plota **priamo oproti** obecnému úradu
+- Akékoľvek iné nápisy viditeľné na Street View
 
 ## Ďalší level
 - **URL:** https://manik.sk/hra/kamenista_dolina/
-- **Status:** 401 (credentials z nápisu na plote)
+- **Status:** 401 (credentials z nápisu na plote - zatiaľ nenájdené)

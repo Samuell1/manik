@@ -1,0 +1,114 @@
+# Level 17 (Kamenista dolina)
+
+**URL:** https://manik.sk/hra/kamenista_dolina/
+
+## Prihlasovacie údaje
+- **Username:** krcma
+- **Password:** skodov
+
+**Odkiaľ:** Level 16 - nápis "KRCMA u SKODOV" na plote v obci Sihla
+- Odstránením malého 'u' → krcma:skodov
+
+## Popis
+"V krásnej doline .."
+
+## HTML komentár
+`<!-- mnoho z indicii su subory -->` - mnoho hintov sú súbory!
+
+## Hinty
+1. tentokrát buď veľmi obozretný
+2. použi skúsenosti z predchádzajúcich levelov
+3. niektoré veci využiješ viackrát
+4. len jedna z možností je správna
+5. vždy si rád pozeral videá
+6. zišla by sa ti pomôcka
+7. chýba ti dôležitý riadok
+8. výsledok je postup do ďalšieho levelu
+
+## Clickable areas
+- **../na_vyhliadke/** (coords: 12, 299, 57, 346) - ďalší level
+
+## Nájdené súbory
+
+### obrazok.jpg
+- Scéna z Kamenistej doliny
+- Na konci súboru je ukrytý **YouTube video ID: 1hHcWSUxQB8**
+- Nájdené cez `strings obrazok.jpg | tail`
+
+### pomocka (Base64)
+- Súbor: `https://manik.sk/hra/kamenista_dolina/pomocka`
+- Po dekódovaní z Base64 obsahuje vzor z bodiek:
+```
+*****************************************************
+*                                                   *
+*                     .......                       *
+*                ........... ......                 *
+*                                                   *
+* .......... ........... ... .. ...... ..... ...    *
+* ........ ...... . ........ ......... ..... .....  *
+* ...... ....... ... ...                            *
+*                                                   *
+* ............. . ............. ........ .......    *
+
+*                                                   *
+*                        S..... O...... P...... SR  *
+*                                                   *
+*****************************************************
+```
+- Šablóna na konci: S..... O...... P...... SR
+- Bodky pravdepodobne reprezentujú nejaký kód alebo písmená
+
+### riadok (RAR archív)
+- Súbor: `https://manik.sk/hra/kamenista_dolina/riadok`
+- Má poškodený header (00 00 00 00 namiesto "Rar!")
+- Po oprave prvých 4 bajtov na 52 61 72 21 → RAR archív
+- **ŠIFROVANÝ** - potrebuje heslo
+- Obsahuje súbor s názvom "riadok"
+
+## YouTube video analýza
+
+### Video info
+- **ID:** 1hHcWSUxQB8
+- **Názov:** Meandre Kamenistého Potoka
+- **Kanál:** Mnk (@MnkFcbk)
+- **Dĺžka:** 7:32
+- **Dátum:** 31.12.2013
+
+### Popis kanála
+`.. pisces mortui solum cum flumine natant ..`
+- Latinská fráza: "Mŕtve ryby len plávajú s prúdom"
+- Možný hint pre heslo alebo credentials
+
+## Interpretácia šablóny S..... O...... P...... SR
+
+Možné významy:
+1. **ŠOP SR** = Štátna ochrana prírody Slovenskej republiky
+   - Meandre Kamenistého potoka je chránený areál pod CHKO Poľana
+2. **Prvé písmená slov** z nejakej frázy
+3. **Slová začínajúce na S, O, P** + skratka SR
+
+## Kamenistá dolina - geografické info
+- 25 km dlhá dolina s Kamenistým potokom
+- Chránený areál: Meandre Kamenistého potoka (2.5 km)
+- Vodná nádrž Hronček v strede doliny
+- Prístup z obcí Sihla alebo Hronec
+- Lesná železnička v minulosti
+- Tunelom točitých schodov z hrádze nádrže
+
+## Testované heslá pre RAR (všetky neúspešné)
+- meandre, potok, dolina, kamenista, kamenistypotok
+- pisces, mortui, solum, flumine, natant, cum
+- stefan, obrazok, pomocka, riadok, video, videa
+- mnk, MnkFcbk, youtube, 1hHcWSUxQB8
+- vino, sedem, karosa, dominik (z predchádzajúcich levelov)
+- chraneneareal, polana, statnaochranaprirody
+- SOPSR, sopsr, SOP_SR
+- MeandreKamenistehoPotoka, kamenistopotoka
+- 732, 2013, 31122013
+
+## Ďalší level
+- **URL:** https://manik.sk/hra/na_vyhliadke/
+- **Status:** 401 - vyžaduje auth
+
+## Status
+**IN PROGRESS** - Potrebné nájsť heslo pre RAR archív "riadok"
