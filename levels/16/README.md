@@ -131,11 +131,12 @@ EnCt29461dc1f9e7e9e5e1d20996c137e37288f0ee0fc9461dc1f9e7e9e5e1d20996cbwfLn5phXAO
 - Zastávka Utekáč, Drahová
 - Cieľové stanice: Lom nad Rimavicou, Utekáč (Dlhá Lúka, Havrilovo)
 
-## Google Street View - autobus
+## Google Street View - autobus (NÁJDENÉ!)
 - **ŠPZ:** ZV 414BC (okres Zvolen)
-- **Dopravca:** SAD Lučenec alebo SAD Zvolen
-- **Typ:** Pravdepodobne Karosa C934 alebo SOR
-- **Potrebné:** Nájsť presný nápis výrobcu na autobuse
+- **Dopravca:** Slovenská autobusová doprava Zvolen, a.s. (www.sadzv.sk)
+- **Model:** CROSSWAY (nápis viditeľný na autobuse)
+- **Výrobca:** IVECO (IVECO Crossway)
+- **Logo:** SAD - modrý a červený kruh
 
 ## Ďalší level
 - **URL:** https://manik.sk/hra/kamenista_dolina/
