@@ -263,19 +263,36 @@ odstranenim maleho 'u' dostavas meno a heslo ;)
 ## Status
 **IN PROGRESS** - Súbor dešifrovaný, hľadám nápis na plote
 
-## Testované kombinácie (2000+)
+## Testované kombinácie (1000+)
 Všetky vrátili 401:
-- Bežné slovenské slová s 'u': sukromne, kulturny, bufet, atď.
-- Slovenské priezviská s 'u': Kubáň, Dušan, Rudolf, Burian, Lukáč, atď.
+- Bežné slovenské slová s 'u': sukromne, kulturny, bufet, klub, atď.
+- Transformácie: sukromne→skromne, bufet→bfet, klub→klb
+- Slovenské priezviská s 'u': Burian, Kubík, Dušan, Rudolf, atď.
 - Názvy podnikov: pohostinstvo, hostinec, krčma, bufet
 - Dvojslovné kombinácie kde obe slová majú 'u'
+- Kombinácie typu "skromny:pozemok", "skromne:majetok"
 - Miestne názvy: Lom, Rimavica, Forgács, Drábsko, Sihla
+- Goralské/pastierske slová: bača, valaška, fujara, salaš
+- Názvy so "U" ako predložkou: "U Juraja", "U Marka" atď.
+- Kombinácie s "úrad": obecny:rad, rad:obecny, uradne:hodiny
+- Rovnaké username a password: skromne:skromne, rad:rad, atď.
+
+## Analýza hintu
+"Na plote oproti obecnemu uradu sa nachadza napis, odstranenim maleho 'u' dostavas meno a heslo"
+
+- **"maleho 'u'"** - malé/lowercase 'u' (jednotné číslo - len jedno 'u')
+- **"meno a heslo"** - username A password (dve hodnoty)
+- Nápis musí obsahovať text, kde odstránenie 'u' dá obe credentials
+- Možné interpretácie:
+  1. Dve slová kde každé obsahuje 'u'
+  2. Jedno slovo ktoré sa po odstránení 'u' rozdelí na dve časti
+  3. Rovnaké slovo pre oboje (meno=heslo)
 
 ## Potrebné informácie
 - **Fotka plota oproti obecnému úradu v Lome nad Rimavicou**
-- Obecný úrad je na č. 13, takže plot oproti môže byť pri č. 12 alebo 14
+- Obecný úrad je na č. 13, COOP Jednota je na č. 12 (vedľa/oproti)
 - Nápis na plote obsahuje 'u', po odstránení dáva username a password
-- "meno a heslo" naznačuje dva rôzne reťazce (nie rovnaké)
+- Potrebný prístup k Google Street View alebo podobnému zdroju
 
 ## Ďalší level
 - **URL:** https://manik.sk/hra/kamenista_dolina/
