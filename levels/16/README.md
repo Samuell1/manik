@@ -142,10 +142,50 @@ EnCt29461dc1f9e7e9e5e1d20996c137e37288f0ee0fc9461dc1f9e7e9e5e1d20996cbwfLn5phXAO
 - **URL:** https://manik.sk/hra/kamenista_dolina/
 - **Status:** 401 (credentials neznáme)
 
-## Status
-IN PROGRESS - nájdený zašifrovaný súbor, hľadám správne heslo
+## Rozšírené testovanie hesiel (1000+)
 
-**Potrebné od používateľa:**
-1. Skontrolovať autobus na Google Street View a identifikovať výrobcu
-2. Logo/nápis na boku alebo prednej časti autobusu
-3. Presný model autobusu (ak je viditeľný)
+### Algoritmy encipher.it (testované)
+- PBKDF2-SHA1 s 1000 iteráciami
+- AES-ECB pre generovanie kľúča
+- AES-CTR pre dešifrovanie
+- Rôzne kombinácie salt (8/16 bytes) a nonce (8 bytes)
+
+### ROT13 variácie (všetky neúspešné)
+- CROSSWAY → PEBFFJNL
+- IVECO → VIRPB
+- IRISBUS → VEVFOHF
+- SAD → FNQ
+
+### Ďalšie testované kategórie
+- Výrobcovia autobusov: IVECO, Irisbus, Karosa, SOR, MAN, Mercedes, Setra, Neoplan
+- Dopravcovia: SAD Zvolen, SAD Lučenec, Arriva
+- Výrobcovia ŠPZ: Turčan Delta, SPM Security
+- Lokality: Zvolen, Lom, Rimavica, Sihla, Vysoké Mýto
+- Rodná spoločnosť: CNH Industrial, FIAT
+- Brute force: všetky 3-4 písmenkové kombinácie (450,000+)
+
+### Algoritmy (testované)
+- encipher.it (PBKDF2-SHA1 + AES-CTR)
+- OpenSSL EVP_BytesToKey
+- Priamy MD5/SHA256 hash ako kľúč
+- AES-CBC, AES-CFB, AES-OFB módy
+
+## Status
+**IN PROGRESS** - Zašifrovaný súbor nájdený, heslo zatiaľ neznáme
+
+### Čo vieme:
+1. Súbor ZV414BC obsahuje encipher.it šifrovaný text
+2. Autobus na Google Street View je IVECO Crossway
+3. Dopravca je SAD Zvolen (www.sadzv.sk)
+4. Hint: "kľúč je názov podniku, ktorý ho vyrobil"
+
+### Možné interpretácie "podnik ktorý ho vyrobil":
+1. **Výrobca autobusu** - IVECO, Irisbus (všetky testované)
+2. **Výrobca ŠPZ** - Turčan Delta, SPM Security (testované)
+3. **Dopravca** - SAD Zvolen (testované)
+4. **Niečo iné** - názov podniku/hostinca? lokálna firma?
+
+### Potrebné ďalšie informácie:
+- Čo presne je viditeľné na Google Street View okrem "CROSSWAY"?
+- Je tam nejaký iný nápis na autobuse alebo v okolí?
+- Existuje nejaký lokálny podnik/hostinec v Lome nad Rimavicou?
