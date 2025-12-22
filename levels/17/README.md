@@ -156,5 +156,40 @@ NEZNEČISŤUJTE A NEPOŠKODZUJTE CHRÁNENÉ ÚZEMIE !
 - Príroda/ochrana: priroda:ochrana, ochrana:prirody
 - Video ID časti: 1hHcWSUxQB8 kombinácie
 
+## RIEŠENIE ✓
+
+### Súbor /prezident
+- Nájdený skrytý súbor: `https://manik.sk/hra/kamenista_dolina/prezident`
+- Formát: encipher.it (rovnaký ako level 16)
+- **Heslo:** `1hHcWSUxQB8` (YouTube video ID - použité aj pre riadok.rar!)
+
+### Dešifrovaný obsah:
+```
+---------------------------------------------------------------
+HRA by MNK | Slovenska online psychodventura
+---------------------------------------------------------------
+
+        Meno a heslo do 18. levelu su nasledovne
+
+                        prekrasne / vyhlady
+
+---------------------------------------------------------------
+```
+
+### Prihlasovacie údaje pre /na_vyhliadke/:
+- **Username:** prekrasne
+- **Password:** vyhlady
+
+### Kľúč k riešeniu:
+- Hint "niektoré veci využiješ viackrát" = YouTube video ID sa používa 2x!
+  1. Ako heslo pre riadok.rar
+  2. Ako heslo pre súbor /prezident
+- Súbor /prezident bol nájdený cez hint "je to prezident"
+
 ## Status
-**IN PROGRESS** - Čakám na správnu interpretáciu čísel 4 3 9 1 6 7 2 8 5
+**COMPLETED ✓**
+
+## Ďalší level
+- **URL:** https://manik.sk/hra/na_vyhliadke/
+- **Auth:** prekrasne:vyhlady
+- **Level:** 18
