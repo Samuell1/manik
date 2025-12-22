@@ -639,15 +639,42 @@ X pozície: 2, 2, 3, 2, 3, 2, 1
 
 **Popis:** "Nachádzaš sa v izbe .."
 
-**Hinty:** bez indícií
+**RIEŠENIE:** RGB hex kódy zo žltého a modrého štvorca
+- Žltý štvorec: RGB(171,193,35) = #ABC123 → abc123
+- Modrý štvorec: RGB(18,58,188) = #123ABC → 123abc
 
-**Clickable areas:**
-- pec.jpg (lightbox)
-- ../opilec/ (vyžaduje 401 auth)
+**Prihlasovacie údaje pre /opilec/:**
+- **Username:** abc123
+- **Password:** 123abc
 
-**Obrazok:** Izba so zelenou stenou, žltý a modrý štvorec v rohu
+**Status:** COMPLETED
 
-**Status:** IN PROGRESS
+---
+
+## Level 16
+@levels/16/README.md
+**URL:** https://manik.sk/hra/opilec/
+
+**Autentifikácia:** abc123 / 123abc
+
+**Popis:** "Opitý Štefan ti toho veľa povedať nevedel .."
+
+**HTML komentáre:**
+- `<!-- encipher -->` - hint na šifrovanie
+- `<!-- dolezita zastavka je v Lome nad Rimavicou -->` - dôležitá zastávka
+
+**Hinty:**
+1. stiahni 'ŠPZ'
+2. kľúč je názov podniku, ktorý ho vyrobil
+
+**RIEŠENIE:**
+1. Na Google Street View v Lome nad Rimavicou je autobus s ŠPZ **ZV414BC**
+2. Súbor ZV414BC obsahuje encipher.it šifrovaný text
+3. Heslo: **karosa** (pôvodný výrobca autobusov Karosa Vysoké Mýto)
+4. Dešifrovaný text: "Na plote oproti obecnemu uradu sa nachadza napis, odstranenim maleho 'u' dostavas meno a heslo"
+5. Nájsť nápis na plote oproti obecnému úradu v Lome nad Rimavicou
+
+**Status:** IN PROGRESS - Súbor dešifrovaný, hľadám nápis na plote
 
 ---
 
@@ -690,8 +717,9 @@ X pozície: 2, 2, 3, 2, 3, 2, 1
 - Level 12: /na_lazoch/ - PRIEVAN markery + kluc.txt → T9 → KUCHYNA + 12 = kuchyna12
 - Level 13: /kuchyna12/ - LATINSKY cipher → lienka = Coccinella septempunctata → alleniccoc:atatcnupmetpes
 - Level 14: /latrina/ - Base64 3x → terakota ZIP → vylet/den3 → utekac:havrilovo
-- Level 15: /doma_v_izbe/ - IN PROGRESS (žltý+modrý štvorec, pec)
+- Level 15: /doma_v_izbe/ - RGB hex kódy → abc123:123abc → /opilec/
+- Level 16: /opilec/ - ZV414BC encipher.it → karosa → nápis na plote (IN PROGRESS)
 
 **Subory ulozene v /home/user/manik/levels/:**
-- 01/ až 15/ - README.md pre každý level
+- 01/ až 16/ - README.md pre každý level
 - kafka_table.md - Kafkova periodická tabuľka (abecedne zoradená)

@@ -224,39 +224,45 @@ EnCt29461dc1f9e7e9e5e1d20996c137e37288f0ee0fc9461dc1f9e7e9e5e1d20996cbwfLn5phXAO
 - Je na autobuse nejaké firemné logo alebo znak okrem SAD?
 - Existuje nejaká tabuľka alebo cedula na zastávke?
 
-## Session December 2025 - Rozšírené testovanie
+## RIEŠENIE NÁJDENÉ ✓
 
-### Nové testované kategórie:
-1. **Karosa** (pôvodný výrobca pred IVECO):
-   - karosa, KAROSA, karosavysokemyto, karosa as
-   - Sodomka (zakladateľ), Josef Sodomka
-   - Vysoké Mýto (lokalita továrne)
+### Dešifrovanie súboru ZV414BC
 
-2. **SAD Zvolen detaily:**
-   - sad, SAD, sadzvolen, SADZVOLEN, sadzv
-   - slovenskaautobusovadoprava, autobusovadoprava
+**Heslo:** `karosa` (pôvodný československý výrobca autobusov)
 
-3. **Forgácsfalva** (maďarský názov Lomu nad Rimavicou):
-   - forgacsfalva, forgacs, Forgacs
+**Správny formát encipher.it:**
+- Header: `EnCt2` (5 znakov)
+- HMAC: 40 hex znakov
+- HMAC[:24] opakované: 24 hex znakov
+- Salt: 8 base64 znakov
+- Base64(nonce + ciphertext)
+- Footer: `IwEmS` (5 znakov)
 
-4. **Lokálne podniky pri Kokave nad Rimavicou:**
-   - Kokavská Izba, Pizzéria Favore, Koliba Studienka
-   - Reštaurácia KA-MO, Hostinec v Horách
+**Algoritmus:**
+- PBKDF2-HMAC-SHA1 (1000 iterácií) pre MAC key
+- AES-ECB pre generovanie AES kľúča
+- AES-CTR pre dešifrovanie
 
-5. **Slovaské slová s diakritikou:**
-   - ŠPZ, Štefan, kľúč, krčma, zastávka
+**Dešifrovaný obsah:**
+```
+---------------------------------------------------------------
+HRA by MNK | Slovenska online psychodventura
+---------------------------------------------------------------
 
-6. **Algoritmy testované:**
-   - encipher.it (PBKDF2-SHA1 + AES-CTR)
-   - SJCL s CCM, GCM, OCB2 módmi
-   - Rôzne kombinácie salt/IV
+Na plote oproti obecnemu uradu sa nachadza napis
 
-### Celkom testované:
-- 500,000+ hesiel (všetky 3-4 písmenkové kombinácie)
-- 10,000 čísel
-- 2,000+ špecifických slov a variácií
-- Algoritmy: Python PyCryptodome + Node.js SJCL
+odstranenim maleho 'u' dostavas meno a heslo ;)
 
-### Záver:
-Heslo nebolo nájdené. Potrebné dodatočné informácie z Google Street View
-alebo iný pohľad na hint "podnik ktorý ho vyrobil".
+---------------------------------------------------------------
+```
+
+### Ďalší krok
+- Nájsť nápis na plote oproti obecnému úradu v Lome nad Rimavicou
+- Po odstránení malého 'u' z nápisu dostaneme username a password pre /kamenista_dolina/
+
+## Status
+**IN PROGRESS** - Súbor dešifrovaný, hľadám nápis na plote
+
+## Ďalší level
+- **URL:** https://manik.sk/hra/kamenista_dolina/
+- **Status:** 401 (credentials z nápisu na plote)
