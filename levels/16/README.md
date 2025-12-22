@@ -82,27 +82,69 @@ EnCt29461dc1f9e7e9e5e1d20996c137e37288f0ee0fc9461dc1f9e7e9e5e1d20996cbwfLn5phXAO
 
 ## Dešifrovanie
 
-**Problém:** Potrebujeme správne heslo (názov výrobcu autobusu)
+**Formát:** encipher.it (AES encryption)
+- ENCT format: EnCt + 64 hex (salt/IV) + Base64 ciphertext + IwEmS
+- Pravdepodobne 16-znakový kľúč
+- AES-CBC alebo AES-CCM s PBKDF2 key derivation
 
-**Testované heslá (230+, všetky neúspešné):**
-- Výrobcovia: karosa, KAROSA, sor, SOR, iveco, IVECO, irisbus, ikarus, man, mercedes, setra, neoplan, solaris, tatra, skoda, liaz, praga...
-- Modely: c934, C934, c954, crossway, recreo, evadys...
-- Miesta: zvolen, lom, rimavica, sihla...
-- Iné: sad, encipher, manik, hra, opilec, stefan...
+**Problém:** Potrebujeme správne heslo (názov podniku/výrobcu)
 
-**Potrebné:**
-- Zistiť presný názov výrobcu autobusu z Google Street View
-- Výrobca by mal byť viditeľný na prednej časti alebo boku autobusu
+**Testované heslá (500+, všetky neúspešné):**
+
+### Výrobcovia autobusov:
+- karosa, KAROSA, Karosa, karosavysokemyto, vysokemyto
+- sor, SOR, sorlibchavy, libchavy
+- iveco, IVECO, ivecobus, irisbus, IRISBUS
+- ikarus, IKARUS, man, MAN, mercedes, MERCEDES
+- setra, SETRA, neoplan, NEOPLAN, solaris, SOLARIS
+
+### Výrobca EČV (Turčan Delta):
+- turcandelta, TURCANDELTA, turcan delta, TURCAN DELTA
+- turcandeltasro, kostanynadturcom
+- spm, spmsecurity (nový výrobca od 2022)
+
+### Dopravcovia:
+- sadzvolen, SAD Zvolen, sadlucenec, SAD Lucenec
+- sad, SAD (www.sadlc.sk - z cestovného poriadku)
+
+### Škoda Auto (z vylet/den3 príbehu):
+- skoda, SKODA, skoda120, skodaauto
+- aznp, AZNP, mladaboleslav
+
+### Miesta:
+- zvolen, lom, rimavica, sihla, brezno
+- lomnadrimavicou, vysoke myto
+
+### Ostatné:
+- opilec, stefan, manik, hra
+- autobus, bus, spz, ecv
+
+**Metódy šifrovania skúšané:**
+- AES-128-CBC, AES-256-CBC
+- AES-CCM (SJCL štýl)
+- PBKDF2 s 1, 1000, 10000 iteráciami
+- Priamy kľúč (16 bytes) aj key derivation
+- Rôzne kombinácie salt/IV z hex časti
+
+## Dopravca z obrázku vylet/den3/029.jpg
+- **SAD Lučenec a.s.** (www.sadlc.sk)
+- Zastávka Utekáč, Drahová
+- Cieľové stanice: Lom nad Rimavicou, Utekáč (Dlhá Lúka, Havrilovo)
 
 ## Google Street View - autobus
-- **ŠPZ:** ZV 414BC
-- **Dopravca:** Slovenská autobusová doprava (SAD Zvolen)
+- **ŠPZ:** ZV 414BC (okres Zvolen)
+- **Dopravca:** SAD Lučenec alebo SAD Zvolen
 - **Typ:** Pravdepodobne Karosa C934 alebo SOR
-- **Potrebné:** Nájsť nápis výrobcu na autobuse
+- **Potrebné:** Nájsť presný nápis výrobcu na autobuse
 
 ## Ďalší level
 - **URL:** https://manik.sk/hra/kamenista_dolina/
 - **Status:** 401 (credentials neznáme)
 
 ## Status
-IN PROGRESS - nájdený zašifrovaný súbor, hľadám správne heslo (výrobca autobusu)
+IN PROGRESS - nájdený zašifrovaný súbor, hľadám správne heslo
+
+**Potrebné od používateľa:**
+1. Skontrolovať autobus na Google Street View a identifikovať výrobcu
+2. Logo/nápis na boku alebo prednej časti autobusu
+3. Presný model autobusu (ak je viditeľný)
