@@ -58,12 +58,18 @@
 - Šablóna na konci: S..... O...... P...... SR
 - Bodky pravdepodobne reprezentujú nejaký kód alebo písmená
 
-### riadok (RAR archív)
+### riadok (RAR archív) ✓ ROZŠIFROVANÉ
 - Súbor: `https://manik.sk/hra/kamenista_dolina/riadok`
 - Má poškodený header (00 00 00 00 namiesto "Rar!")
 - Po oprave prvých 4 bajtov na 52 61 72 21 → RAR archív
-- **ŠIFROVANÝ** - potrebuje heslo
-- Obsahuje súbor s názvom "riadok"
+- **Heslo:** `1hHcWSUxQB8` (YouTube video ID z obrazok.jpg!)
+- **Obsah rozšifrovaného súboru:**
+```
+*   4 3      9      1    6    7   2   8      5      *
+```
+- Toto je "chýbajúci riadok" z pomocka šablóny!
+- Čísla 4, 3, 9, 1, 6, 7, 2, 8, 5 = permutácia čísel 1-9
+- Pravdepodobne inštrukcie na preusporiadanie alebo výber písmen
 
 ## YouTube video analýza
 
@@ -95,20 +101,35 @@ Možné významy:
 - Lesná železnička v minulosti
 - Tunelom točitých schodov z hrádze nádrže
 
-## Testované heslá pre RAR (všetky neúspešné)
-- meandre, potok, dolina, kamenista, kamenistypotok
-- pisces, mortui, solum, flumine, natant, cum
-- stefan, obrazok, pomocka, riadok, video, videa
-- mnk, MnkFcbk, youtube, 1hHcWSUxQB8
-- vino, sedem, karosa, dominik (z predchádzajúcich levelov)
-- chraneneareal, polana, statnaochranaprirody
-- SOPSR, sopsr, SOP_SR
-- MeandreKamenistehoPotoka, kamenistopotoka
-- 732, 2013, 31122013
-
 ## Ďalší level
 - **URL:** https://manik.sk/hra/na_vyhliadke/
 - **Status:** 401 - vyžaduje auth
 
+## Analýza riadku
+
+Čísla z riadku: **4 3 9 1 6 7 2 8 5**
+
+Toto je permutácia 1-9. Možné interpretácie:
+1. **Pozície písmen** - vybrať N-té písmeno z 9-písmenového slova
+2. **Preusporiadanie** - preskupiť 9 písmen podľa tejto postupnosti
+3. **Výber slov** - vybrať slová z pomocka šablóny
+
+### Pomocka štruktúra (dĺžky slov):
+- Riadok 3: 7 = "Meandre"
+- Riadok 4: 11+6 = "Kamenisteho Potoka"
+- Riadok 6: 10+11+3+2+6+5+3 (7 slov)
+- Riadok 7: 8+6+1+8+9+5+5 (7 slov)
+- Riadok 8: 6+7+3+3 (4 slová)
+- Riadok 10: 13+1+13+8+7 (5 slov)
+- Riadok 13: S(6) O(7) P(7) SR(2) = "Statna Ochrana Prirody SR"
+
+### Testované 9-písmenové slová:
+- KAMENISTY → pozície 4,3,9,1,6,7,2,8,5 = EMYKISATN ❌
+- VYHLIADKE → pozície 4,3,9,1,6,7,2,8,5 = LHEVADYKI ❌
+
+### Potrebné:
+- Zistiť presný text na informačnej tabuli z YouTube videa
+- Screenshot z videa obsahuje túto tabuľu
+
 ## Status
-**IN PROGRESS** - Potrebné nájsť heslo pre RAR archív "riadok"
+**IN PROGRESS** - RAR rozšifrovaný, čakám na text z tabule vo videu
