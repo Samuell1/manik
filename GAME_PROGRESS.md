@@ -718,8 +718,10 @@ X pozície: 2, 2, 3, 2, 3, 2, 1
 - Level 13: /kuchyna12/ - LATINSKY cipher → lienka = Coccinella septempunctata → alleniccoc:atatcnupmetpes
 - Level 14: /latrina/ - Base64 3x → terakota ZIP → vylet/den3 → utekac:havrilovo
 - Level 15: /doma_v_izbe/ - RGB hex kódy → abc123:123abc → /opilec/
-- Level 16: /opilec/ - ZV414BC encipher.it → karosa → nápis na plote (IN PROGRESS)
+- Level 16: /opilec/ - ZV414BC encipher.it → karosa → krcma:skodov → /kamenista_dolina/
+- Level 17: /kamenista_dolina/ - YouTube video ID → prezident encipher → prekrasne:vyhlady → /na_vyhliadke/
+- Level 18: /na_vyhliadke/ - GIF kalkulačka, napoveda.rar heslo "9" → CYKLOTURA NAPRIEC SLOVENSKOM (IN PROGRESS)
 
 **Subory ulozene v /home/user/manik/levels/:**
-- 01/ až 16/ - README.md pre každý level
+- 01/ až 18/ - README.md pre každý level
 - kafka_table.md - Kafkova periodická tabuľka (abecedne zoradená)
