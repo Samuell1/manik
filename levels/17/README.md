@@ -58,12 +58,18 @@
 - Šablóna na konci: S..... O...... P...... SR
 - Bodky pravdepodobne reprezentujú nejaký kód alebo písmená
 
-### riadok (RAR archív)
+### riadok (RAR archív) ✓ ROZŠIFROVANÉ
 - Súbor: `https://manik.sk/hra/kamenista_dolina/riadok`
 - Má poškodený header (00 00 00 00 namiesto "Rar!")
 - Po oprave prvých 4 bajtov na 52 61 72 21 → RAR archív
-- **ŠIFROVANÝ** - potrebuje heslo
-- Obsahuje súbor s názvom "riadok"
+- **Heslo:** `1hHcWSUxQB8` (YouTube video ID z obrazok.jpg!)
+- **Obsah rozšifrovaného súboru:**
+```
+*   4 3      9      1    6    7   2   8      5      *
+```
+- Toto je "chýbajúci riadok" z pomocka šablóny!
+- Čísla 4, 3, 9, 1, 6, 7, 2, 8, 5 = permutácia čísel 1-9
+- Pravdepodobne inštrukcie na preusporiadanie alebo výber písmen
 
 ## YouTube video analýza
 
@@ -95,20 +101,95 @@ Možné významy:
 - Lesná železnička v minulosti
 - Tunelom točitých schodov z hrádze nádrže
 
-## Testované heslá pre RAR (všetky neúspešné)
-- meandre, potok, dolina, kamenista, kamenistypotok
-- pisces, mortui, solum, flumine, natant, cum
-- stefan, obrazok, pomocka, riadok, video, videa
-- mnk, MnkFcbk, youtube, 1hHcWSUxQB8
-- vino, sedem, karosa, dominik (z predchádzajúcich levelov)
-- chraneneareal, polana, statnaochranaprirody
-- SOPSR, sopsr, SOP_SR
-- MeandreKamenistehoPotoka, kamenistopotoka
-- 732, 2013, 31122013
-
 ## Ďalší level
 - **URL:** https://manik.sk/hra/na_vyhliadke/
 - **Status:** 401 - vyžaduje auth
 
+## Analýza riadku
+
+Čísla z riadku: **4 3 9 1 6 7 2 8 5**
+
+Toto je permutácia 1-9. Možné interpretácie:
+1. **Pozície písmen** - vybrať N-té písmeno z 9-písmenového slova
+2. **Preusporiadanie** - preskupiť 9 písmen podľa tejto postupnosti
+3. **Výber slov** - vybrať slová z pomocka šablóny
+
+### Pomocka štruktúra (dĺžky slov):
+- Riadok 3: 7 = "Meandre"
+- Riadok 4: 11+6 = "Kamenisteho Potoka"
+- Riadok 6: 10+11+3+2+6+5+3 (7 slov)
+- Riadok 7: 8+6+1+8+9+5+5 (7 slov)
+- Riadok 8: 6+7+3+3 (4 slová)
+- Riadok 10: 13+1+13+8+7 (5 slov)
+- Riadok 13: S(6) O(7) P(7) SR(2) = "Statna Ochrana Prirody SR"
+
+### Testované 9-písmenové slová:
+- KAMENISTY → pozície 4,3,9,1,6,7,2,8,5 = EMYKISATN ❌
+- VYHLIADKE → pozície 4,3,9,1,6,7,2,8,5 = LHEVADYKI ❌
+
+## Text z tabule (YouTube video screenshot)
+
+```
+MEANDRE
+KAMENISTÉHO POTOKA
+
+PRIRODZENE MEANDRUJÚCI TOK NA KTOROM MOŽNO DO-
+KLADOVAŤ TVORBU A DYNAMIKU MEANDROV. DĹŽKA CHRÁ-
+NENÉHO VÝTVORU 2,5 km.
+
+NEZNEČISŤUJTE A NEPOŠKODZUJTE CHRÁNENÉ ÚZEMIE !
+
+ŠTÁTNA OCHRANA PRÍRODY SR
+```
+
+### Analýza textu bez diakritiky:
+- Riadok 1: MEANDRE (7) ✓
+- Riadok 2: KAMENISTEHO POTOKA (11+6) ✓
+- Popis: PRIRODZENE MEANDRUJUCI TOK NA KTOROM MOZNO DOKLADOVAT TVORBU A DYNAMIKU MEANDROV DLZKA CHRANENEHO VYTVORU
+- Varovanie: NEZNECISTUJTE A NEPOSKODZUJTE CHRANENE UZEMIE
+- Päta: STATNA OCHRANA PRIRODY SR (6+7+7+2) ✓
+
+### Testované kombinácie (100+, všetky 401):
+- Dvojice slov z tabule: meandre:potoka, chranene:uzemie, statna:ochrana
+- Permutované prvé písmená: ppmm:tnkkm, ntapmdmtk
+- Latinská fráza z kanálu: pisces:mortui, solum:flumine
+- Príroda/ochrana: priroda:ochrana, ochrana:prirody
+- Video ID časti: 1hHcWSUxQB8 kombinácie
+
+## RIEŠENIE ✓
+
+### Súbor /prezident
+- Nájdený skrytý súbor: `https://manik.sk/hra/kamenista_dolina/prezident`
+- Formát: encipher.it (rovnaký ako level 16)
+- **Heslo:** `1hHcWSUxQB8` (YouTube video ID - použité aj pre riadok.rar!)
+
+### Dešifrovaný obsah:
+```
+---------------------------------------------------------------
+HRA by MNK | Slovenska online psychodventura
+---------------------------------------------------------------
+
+        Meno a heslo do 18. levelu su nasledovne
+
+                        prekrasne / vyhlady
+
+---------------------------------------------------------------
+```
+
+### Prihlasovacie údaje pre /na_vyhliadke/:
+- **Username:** prekrasne
+- **Password:** vyhlady
+
+### Kľúč k riešeniu:
+- Hint "niektoré veci využiješ viackrát" = YouTube video ID sa používa 2x!
+  1. Ako heslo pre riadok.rar
+  2. Ako heslo pre súbor /prezident
+- Súbor /prezident bol nájdený cez hint "je to prezident"
+
 ## Status
-**IN PROGRESS** - Potrebné nájsť heslo pre RAR archív "riadok"
+**COMPLETED ✓**
+
+## Ďalší level
+- **URL:** https://manik.sk/hra/na_vyhliadke/
+- **Auth:** prekrasne:vyhlady
+- **Level:** 18
