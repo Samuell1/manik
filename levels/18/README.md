@@ -477,4 +477,32 @@ Pôvodne som mal 38-číslicové číslo končiace "...301", ale obrazok.jpg jas
 3. Možno odpoveď je v den09 súboroch, nie v /na_vyhliadke/
 
 ## Status
-**IN PROGRESS** - 1500+ kombinácií testovaných. Hlavný objav: dlhé číslo má 39 číslic (nie 38), sum=28 (nie 29).
+**IN PROGRESS** - 2500+ kombinácií testovaných bez úspechu.
+
+## Kľúčové spojenie: Level 18 ↔ Den09
+
+Citát na den09 stránke obsahuje presne credentials Level 18:
+- "**prekrásna** krajina" = username
+- "**výhľadov** plná" = password
+
+Obrázok 009.jpg v den09 ukazuje cyklistu **pomaly** tlačiaceho bicykel cez trávu - priama referencia na "pomaličky"!
+
+### Čo vieme s istotou:
+1. napoveda.rar heslo = 9 ✓
+2. Dlhé číslo má 39 číslic, sum posledných 9 = 28
+3. "dvadsatosem" má v hex písmená (6f, 6d) → nemožno použiť Level 10 formulu
+4. Spojenie s den09 cez citát a "pomaly" obrázok
+
+### Testované (všetko 404):
+- Všetky sumy 1-50 so slovenským slovom → hex → first6+last6
+- Názvy súborov: pomaly, pomalicky, dalej, hore, stupaj, veza, rozhladna
+- Miesta z den09: zajezova, polomy, detva, klastorisko
+- Šifra dekódované: tupo, skol, tsrp
+- Čísla: 28, 1382747, 1353835, atď.
+- Súbory s príponami: .ne, .txt, .rar, .gif
+
+### Možné smery:
+1. Súbor s iným názvom ktorý som netestoval
+2. Potrebná iná autentifikácia
+3. Kultúrna/lokálna referencia
+4. Výpočet ktorý som nesprávne interpretoval
