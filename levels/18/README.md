@@ -182,5 +182,44 @@ Toto naznačuje, že MNK kalkulačka "filtruje" číslicu 5.
 3. **Pomaličky ako kľúčové slovo**: Súbor súvisí s niečím pomalým
 4. **Deň 9 z cykloturistiky**: Niečo špecifické z trasy
 
+## Dodatočné testovanie (Session 24/12)
+
+### Level 10 štýl hex konverzia
+- "dvadsatdevat" → hex 647661647361746465766174 (24 digits)
+- First 6 + Last 6: 647661 + 766174 = **1413835** → 404
+- "devetnast" → hex obsahuje 'e', sum = 1263950 → 404
+
+### Cipher slová s all-digit hex:
+- PRST → 50525354 (all digits) → 404
+- DASA → 44415341 (all digits) → 404
+- TSRP → 54535250 (all digits) → 404
+- ASAD → 41534144 (all digits) → 404
+
+### Day 9 cycling tour analýza:
+- Trasa: Krpáčovo → Zaježová/Polomy (108km)
+- "Pohodička na Zaježke" = relaxed pace = SLOWLY!
+- Podpolianske folklórne slávnosti v Detve
+- slavnosti.jpg v den09/
+- Citát obsahuje "prekrásna" a "výhľadov" = Level 18 credentials!
+
+### Testované kategórie (500+ kombinácií, všetky 404):
+- Slovenské synonymá "pomaly": zvolna, postupne, nenahlivo, vahavo, vlecuco, lenivo
+- Idiomy: pomaly_dalej_zajdes, isto, pomaly_ale_isto
+- Súbory s príponami: .gif, .ne, .rar, .zip, .txt, .jpg
+- Day 9 miesta: zaježova, polomy, detva, kalinka, slatinskelazy
+- Hex hodnoty: 1d, 7a, 23, 25, 13
+- Slovenské čísla: dvadsatdevat, stodvadsatdva, trinast, desat, tridsatpat
+- MNK grid hodnoty: 2240, 6700, 8200, 0031
+- Cipher dekódované: tupo, skol, tsrp, asad, orim, bado
+- 8-digit number: 43657381 s rôznymi príponami
+- Long number časti: prvých 14, posledných 14
+
+### Kľúčové poznatky z Day 9:
+- Citát: "Slovensko naše, prekrásna krajina, výhľadov plná kraj..."
+  - "prekrásna" = username Level 18
+  - "výhľadov" = password Level 18
+  - Toto potvrdzuje spojenie s Day 9!
+- GIF frame duration: 10000ms = 10 seconds = "slow" animation
+
 ## Status
-**IN PROGRESS** - Rozsiahle hľadanie súboru "pomaličky pustí ďalej", 300+ kombinácií testovaných
+**IN PROGRESS** - 500+ kombinácií testovaných bez úspechu. Potrebná nová interpretácia hints 6-8.
