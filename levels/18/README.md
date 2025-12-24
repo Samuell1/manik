@@ -506,3 +506,90 @@ Obrázok 009.jpg v den09 ukazuje cyklistu **pomaly** tlačiaceho bicykel cez tr�
 2. Potrebná iná autentifikácia
 3. Kultúrna/lokálna referencia
 4. Výpočet ktorý som nesprávne interpretoval
+
+## Session 24/12/2025 - Rozšírené testovanie (3000+ kombinácií)
+
+### Nové výpočty testované:
+
+**Celková suma všetkých číslic v dlhom čísle:** 161 (NIE 157!)
+- 545746432486465452312314784565371453014
+- Suma = 161
+
+**CYKLOTURA NAPRIEC SLOVENSKOM - počet písmen:**
+- CYKLOTURA = 9 písmen
+- NAPRIEC = 7 písmen
+- SLOVENSKOM = 10 písmen
+- Celkom = 26
+
+**26 = "dvadsatsest":**
+- hex = 6476616473617473657374 (22 chars)
+- first6 + last6 = 647661 + 657374 = 1305035 → 404
+
+**Cipher "správne pozície" analýza:**
+Kódy: 1243, 4321, 2341, 4321, 3214, 2143, 1432, 3412
+- Pozície kde digit = pozícia:
+  - 1243: pozície 1,2 správne (1 a 2) = 2 správne
+  - 4321: 0 správnych
+  - 2341: 0 správnych
+  - 4321: 0 správnych
+  - 3214: pozície 2,4 správne = 2 správne
+  - 2143: 0 správnych
+  - 1432: pozície 1,3 správne = 2 správne
+  - 3412: 0 správnych
+- **Celkom správnych pozícií = 6**
+- 6 = "sest" → hex 73657374 → first6+last6 = 736573+657374 = 1393947 → 404
+
+**Nezmenené číslice v transformovanom čísle 60072028:**
+- Pozície s 0 alebo 2: pozície 2,3,5,6,7
+- Hodnoty: 0, 0, 2, 0, 2
+- Suma = 4
+
+**Last 9 bez 5-ky (371453014 → 37143014):**
+- Suma = 23
+- 23 = "dvadsattri" → hex 64766164736174747269 → first6+last6 = 647661+747269 = 1394930 → 404
+
+### Testované adresáre a súbory:
+
+**/hra/na_vyhliadke/ (s príponami "", .ar, .txt, .gif, .jpg, .ne):**
+- Všetky vypočítané čísla: 1393947, 1413835, 1382747, 1353835, 1473653, 1305035, 1394930, 1412750
+- Hex stringy: 73657374, 6465766174, 6465736174, 64766164736174
+- Slovenské číslovky: dva až päťdesiat, dvadsatdevat, trinast, atď.
+- Pomaly varianty: pomalicky, pomaly, zvolna, pozvolna, postupne, krok_za_krokom
+- Príslovie: pomaly_dalej_zajdes, trpezlivost, zajdes, dalej
+- Pomalé zvieratá: slimak, korytnacka, zelva, lenivec, snail, turtle, sloth
+- Šifra dekódované: skol, tsrp, asad, orim, tupo, irks, dahl, bado
+- MNK hodnoty: 2240, 6700, 8205, 0031, 31, 17176, 9454
+- 8-digit a transformed: 43657381, 60072028
+- GIF delay: 2710, 10000, 10sec
+- Skryté súbory: secret, hidden, skryty, kluc, key, answer, odpoved, riesenie
+
+**/hra/ root:**
+- pomalicky, pomaly, dalej, 19, level19, level_19, next, dalsi_level
+- Všetky vypočítané čísla
+
+**/slovensko/den09/:**
+- pomalicky, pomaly, dalej, pustit, pokracuj, riesenie, kluc, cyklotura
+- Všetky vypočítané čísla
+
+### HTML analýza:
+- Image map v Level 18 je **PRÁZDNA** - žiadne clickable areas!
+- Musíme nájsť súbor aby sme mohli pokračovať
+
+### Analýza obrazok.jpg a kalkulacka.gif:
+- Žiadne skryté textové reťazce v obrazok.jpg (len JPEG artefakty)
+- kalkulacka.gif nemá skryté dáta na konci súboru
+- GIF delay = 10000ms
+
+### Nezodpovedané otázky:
+1. Čo presne znamená "správne číslice"?
+2. Prečo 28 (suma posledných 9) nemožno použiť (obsahuje hex písmená)?
+3. Aká je správna interpretácia "slovom preveď do hex"?
+4. Kde je súbor ktorý "pomaličky pustí ďalej"?
+
+## Status
+**IN PROGRESS** - 3000+ kombinácií testovaných bez úspechu.
+
+### Potrebné:
+- Nový pohľad na hinty
+- Možná kultúrna/lokálna referencia ktorú nepoznám
+- Alternatívna interpretácia "správne číslice"
