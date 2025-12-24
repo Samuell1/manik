@@ -102,16 +102,45 @@ HRA by MNK | Slovenska online psychodventura
 6. ⏳ Nájsť súbor ktorý "pomaly pustí ďalej"
 7. ⏳ Získať credentials pre ďalší level
 
-## Testované súbory (404)
+## Testované súbory (404) - Rozsiahle hľadanie
+
+### Základné kombinácie
 - cyklotura, pomaly, slow, pomalicky, slowly
-- Hex súčtov: 1d, 15, e, 27, 25, 2be
-- Slovenské čísla: dvadsatdevat, devat, strnast, dvadsatjeden
-- Hex kódovania: 647661, 6465766174, 64766164
-- Pomalé zvieratá: korytnacka, slimak, turtle, snail
-- Šifra dekódovaná: skol, tsrp, asad, orim, tupo, irks, dahl, bado
-- Kombinácie: cyklotura_napriec_slovenskom, CNS, cns
+- Hex súčtov: 1d, 15, e, 27, 25, 2be, 7a, 9d, 23
+- Slovenské čísla: dvadsatdevat, devat, strnast, dvadsatjeden, trinast, tridsatpat
 - /vylet/den7-den20 neexistujú
-- Jednoduché čísla 0-9, 29, 21, 37, 39
+
+### Hex kódovania slov
+- dvadsatdevat → 647661647361746465766174
+- trinast → 7472696e617374
+- devat → 6465766174
+- stodvadsatdva → 73746f64766164736174647661
+
+### Šifra dekódovaná
+- SKOL, TSRP, ASAD, ORIM, TUPO (Slovak!), IRKS, DAHL, BADO
+- PUTO → TUPO je jediná dvojica kde oba výrazy sú zmysluplné slovenské slová
+
+### Miesta z cykloturistiky deň 9
+- krpacovo, zajezova, polomy, slatinskelazy, kalinka, detva, stožok, klokoc
+- Všetky miesta z trasy testované
+
+### Pomaly súvisiace slová
+- lenivec, slimak, korytnacka, snek (pomalé zvieratá)
+- volky, pomalky, volky-pomalky (idiom)
+- zvolna, postupne, opatrne, zdlhavo
+- zavora, lanovka, sedacka, vytah, stupanie
+
+### MNK kalkulačka hodnoty
+- Riadky: 2240, 6700, 8200/8205/8209, 0031
+- Stĺpce: 2680, 2720, 4003, 0001
+- Suma viditeľných: 35
+
+### Výpočty
+- Dlhé číslo suma: 157 (hex 9D)
+- Suma bez 5-ok: 122 (hex 7A = 'z')
+- Suma len 5-ok: 35 (= MNK suma!)
+- Posledných 9 číslic suma: 29 (hex 1D)
+- Posledných 5 číslic suma: 13 (hex D)
 
 ## Ďalší level
 - **URL:** https://manik.sk/hra/??? (clickable area v obrazku)
@@ -136,5 +165,22 @@ HRA by MNK | Slovenska online psychodventura
 - Obsahuje 13 dní cykloturistiky (den01-den13)
 - Deň 9 (den09/): trasa 108km, končí v Zaježovej
 
+## Kľúčový objav
+
+**Suma číslic MNK kalkulačky (35) = Suma všetkých 5-ok v dlhom čísle (7×5=35)**
+
+Toto naznačuje, že MNK kalkulačka "filtruje" číslicu 5.
+- "Správne" číslice = tie čo zostanú po odstránení 5-ok
+- Suma "správnych" číslic = 157 - 35 = **122**
+- 122 v hex = **7A** (ASCII = 'z')
+- 122 po slovensky = "stodvadsatdva"
+
+## Teórie na vyriešenie
+
+1. **Hexadecimálny súbor**: Názov súboru je hex kód sumy (napr. 7a, 1d)
+2. **Slovenské číslo ako súbor**: Slovenský názov čísla (dvadsatdevat, stodvadsatdva)
+3. **Pomaličky ako kľúčové slovo**: Súbor súvisí s niečím pomalým
+4. **Deň 9 z cykloturistiky**: Niečo špecifické z trasy
+
 ## Status
-**IN PROGRESS** - GIF analýza odhalila skrytý "Kalkulačka by MNK" frame, hľadám spojitosť s hintom
+**IN PROGRESS** - Rozsiahle hľadanie súboru "pomaličky pustí ďalej", 300+ kombinácií testovaných
