@@ -103,9 +103,15 @@ HRA by MNK | Slovenska online psychodventura
 7. ⏳ Získať credentials pre ďalší level
 
 ## Testované súbory (404)
-- cyklotura, pomaly, slow, 1d, 29, dvadsatdevat
-- Rôzne kombinácie s .txt, .gif príponami
-- /vylet/den7-den9 neexistujú
+- cyklotura, pomaly, slow, pomalicky, slowly
+- Hex súčtov: 1d, 15, e, 27, 25, 2be
+- Slovenské čísla: dvadsatdevat, devat, strnast, dvadsatjeden
+- Hex kódovania: 647661, 6465766174, 64766164
+- Pomalé zvieratá: korytnacka, slimak, turtle, snail
+- Šifra dekódovaná: skol, tsrp, asad, orim, tupo, irks, dahl, bado
+- Kombinácie: cyklotura_napriec_slovenskom, CNS, cns
+- /vylet/den7-den20 neexistujú
+- Jednoduché čísla 0-9, 29, 21, 37, 39
 
 ## Ďalší level
 - **URL:** https://manik.sk/hra/??? (clickable area v obrazku)
