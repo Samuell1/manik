@@ -317,8 +317,45 @@ Permutácie: 1243, 4321, 2341, 4321, 3214, 2143, 1432, 3412
 - 0 appears 1× at position 36
 - Sum of "unchanged" digits = 6
 
+## Session 24/12/2025 - Pokračovanie analýzy
+
+### Overené fakty:
+1. **Dlhé číslo má 39 číslic** končiacich na 3014 (nie 38/301)
+2. **Suma posledných 9 číslic = 28** ("dvadsatosem" - obsahuje 'o','m' v hex → NEPLATNÉ)
+3. **MNK kalkulačka**: M=8, N=13, K=15, Bottom=4, Total=40
+4. **Transformované 43657381 → 60072028**, suma = 25
+5. **Šifra dekódované**: SKOL, TSRP, ASAD, ORIM, **TUPO** (jediné SK slovo!), IRKS, DAHL, BADO
+6. **den09/009.jpg** = cyklista POMALY idúca cez trávu (relevantné!)
+
+### Testované výpočty (všetky 404):
+| Suma | Slovak word | Hex calculation | Result |
+|------|-------------|-----------------|--------|
+| 3 | tri | 747269 + 747269 | 1494538 |
+| 6 | sest | 736573 + 657374 | 1393947 |
+| 25 | dvadsatpat | 647661 + 706174 | 1353835 |
+| 29 | dvadsatdevat | 647661 + 766174 | 1413835 |
+| 35 | tridsatpat | 747269 + 706174 | 1453443 |
+| 39 | tridsatdevat | 747269 + 766174 | 1513443 |
+| 40 | styridsat | 737479 + 736174 | 1473653 |
+
+### Testované kategórie súborov (2000+ kombinácií):
+- Všetky vypočítané hodnoty s/bez prípon
+- Slovenské číslovky (jeden-päťdesiat)
+- Pomaly/pomaličky varianty
+- Šifra dekódované slová (tupo, skol, irks, atď.)
+- Cyklotura/slovensko súvisiace
+- MNK grid hodnoty
+- Hex stringy ako názvy
+- den09 obrázky a lokácie (Kláštorisko, Zaježová, Sekier)
+
+### Neprebádané možnosti:
+1. Súbor v úplne inom adresári
+2. Iná interpretácia "správne číslice"
+3. Kultúrna/lokálna referencia ktorú nepoznám
+4. Chýbajúci krok v logickom postupe
+
 ## Status
-**IN PROGRESS** - 1000+ kombinácií testovaných bez úspechu.
+**IN PROGRESS** - 2000+ kombinácií testovaných bez úspechu.
 
 ### Čo vieme s istotou:
 1. K row = 8205, MNK suma = 40
