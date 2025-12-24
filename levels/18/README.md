@@ -318,16 +318,71 @@ Permutácie: 1243, 4321, 2341, 4321, 3214, 2143, 1432, 3412
 - Sum of "unchanged" digits = 6
 
 ## Status
-**IN PROGRESS** - 800+ kombinácií testovaných bez úspechu.
+**IN PROGRESS** - 1000+ kombinácií testovaných bez úspechu.
 
 ### Čo vieme s istotou:
 1. K row = 8205, MNK suma = 40
 2. Frame 0 a Frame 1 majú digit mapping (len 2 a 0 nezmenené)
 3. 43657381 vyhýba sa "unchanged" digits (0, 2, 9)
 4. MNK letters (13+14+11=38) = počet číslic dlhého čísla
+5. napoveda.rar heslo = 9, obsah = "CYKLOTURA NAPRIEC SLOVENSKOM"
+6. PUTO→TUPO je jediná šifra kde oba sú slovenské slová (kód 3214)
+7. /slovensko/den09/009.jpg = cyklista pomaly tlačí bicykel cez trávu
+8. /slovensko/den09/099.jpg = kozy, súčet číslic (0+9+9=18) = číslo levelu
 
-### Potrebné preskúmať:
-1. Iný význam "správne číslice"
-2. Spojenie medzi cipher permutáciami a MNK grid
-3. Možná operácia medzi dvoma frame-ami
-4. Alternatívna interpretácia "pomaly"
+### Kľúčové výpočty (všetky 404):
+| Suma | Slovensky | Hex formula | Výsledok |
+|------|-----------|-------------|----------|
+| 29 | dvadsatdevat | first6+last6 | 1413835 |
+| 40 | styridsat | first6+last6 | 1473653 |
+| 13 | trinast | first6+last6 | 1364643 |
+| 37 | tridsatsedem | first6+last6 | 1311925 |
+| 122 | stodvadsatdva | first6+last6 | 1385127 |
+| 157 | stopatdesiatsedem | first6+last6 | N/A |
+| 10 | desat | hex | 6465736174 |
+
+### Testované kategórie súborov (všetky 404):
+- Slovenské číslovky: jeden až dvadsat, dvadsatdevat, trinast, atď.
+- Pomaly varianty: pomaly, pomalicky, zvolna, pozvolna, postupne
+- Hex hodnoty: 1d, 7a, 23, 25, 0a, atď.
+- Level 10 štýl výpočty: 1413835, 1364643, 1473653, atď.
+- Cipher dekódované: tupo, skol, tsrp, asad, orim, bado
+- Den09 miesta: krpacovo, zajezova, detva, kalinka, sihla
+- Cyklotura: bicykel, cyklista, luka, trava, polana
+- Názvy z čísel: 43657381, 537145301, 099, 009
+
+### Neprebádané možnosti:
+1. Úplne iná interpretácia "správne číslice"
+2. Skrytý súbor v inom adresári (/slovensko/den09/?)
+3. Kombinácia viacerých hintov
+4. Kultúrna referencia ktorú nepoznám
+
+### Session 24/12/2025 - nové objavy:
+- den09/009.jpg = cyklista v tráve = "pomaly" (slow movement)
+- den09/099.jpg = kozy, 0+9+9=18 = level číslo
+- PUTO→TUPO jediná "správna" šifra, suma kódu = 10
+- Žiadne clickable areas v Level 18 HTML okrem image mapy
+
+## Session 24/12 - Rozsiahle testovanie
+
+### Testované prístupy (1000+ kombinácií):
+1. **Slovak number words** - všetky čísla 1-29 a ich hex konverzie
+2. **Cipher transformations** - SKOL, TSRP, TUPO, atď.
+3. **MNK calculator values** - 2240, 6700, 8205, 0031
+4. **Level 10 style sums** - first6 + last6 z hex slov
+5. **Den09 files** - obrázky 009.jpg, 099.jpg
+6. **Hash values** - MD5/SHA1 kľúčových slov
+7. **Background searches** - číselné rozsahy 1000000-1500000
+
+### Kľúčové poznatky:
+- MNK mapped 43657381 = 60072028, suma = 25
+- Všetky cipher permutácie na pozíciách 1-4 dávajú sumu 16
+- napoveda heslo = 9, obsahuje "CYKLOTURA NAPRIEC SLOVENSKOM"
+- GIF má 10s delay medzi framami
+- den09/099.jpg existuje (obrázok s kozami, 0+9+9=18!)
+
+### Neprebádané teórie:
+1. Kombinácia cipher slov s den09 obrázkami
+2. Skrytý odkaz v kalkulačka.gif (okrem MNK framu)
+3. Špecifický súbor v /slovensko/ adresári
+4. Alternatívna interpretácia "pomaličky"
