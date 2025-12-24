@@ -221,5 +221,34 @@ Toto naznačuje, že MNK kalkulačka "filtruje" číslicu 5.
   - Toto potvrdzuje spojenie s Day 9!
 - GIF frame duration: 10000ms = 10 seconds = "slow" animation
 
+## Dodatočné testovanie (Session 24/12 - pokračovanie)
+
+### "Správne číslice" interpretácie:
+1. **Posledných 9 číslic**: sum = 29 → "dvadsatdevat" → 404
+2. **Bez 5-ok**: sum = 122 → "stodvadsatdva" → 404
+3. **MNK suma**: 35 → "tridsatpat" → 404
+4. **Permutácie - správne pozície**: 1,2,2,4,1,3 → sum = 13 → 404
+5. **Počet správnych pozícií**: 6 → "sest" → 404
+
+### Matematické operácie s 43657381:
+- Digit sum: 37
+- Reversed: 18375634
+- Hex: 0x29a28a5
+- Sqrt: 6607.37
+- mod 35: 26
+- // 35: 1247353
+
+### Level 10 štýl sumy:
+- "dvadsatdevat" hex → first6 + last6 = 1413835 → 404
+- "trinast" hex → first6 + last6 = 1364643 → 404
+- "devetnast" hex → sum = 1263950 → 404
+
+### Ďalšie testované kategórie:
+- Day 9 citát slová: krajina, plna, kraj, horach, nadhery, tronia, udoliach, sumi, lubezny, haj
+- Číslo 9 variácie: deviatka, deviaty, 9_den, cislo9
+- "Pustí" variácie: pusti_dalej, pustenie, uvolni, volno
+- GIF duration: 10000, 10sec, 10sekund
+- Calculator display: 0.29, nula, bodka
+
 ## Status
-**IN PROGRESS** - 500+ kombinácií testovaných bez úspechu. Potrebná nová interpretácia hints 6-8.
+**IN PROGRESS** - 700+ kombinácií testovaných bez úspechu. Puzzle zostáva nevyriešený. Potrebná nová interpretácia "súčet správnych číslic slovom preveď do hex" alebo iný prístup k nájdeniu "súbor ktorý pomaly pustí ďalej".
