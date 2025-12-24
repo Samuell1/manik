@@ -117,5 +117,24 @@ HRA by MNK | Slovenska online psychodventura
 - **URL:** https://manik.sk/hra/??? (clickable area v obrazku)
 - **Status:** Hľadám "súbor ktorý pomaly pustí ďalej"
 
+## Nové objavy
+
+### kalkulacka.gif má 2 frame-y!
+- **Frame 0**: Štandardný Windows Calculator s "0."
+- **Frame 1**: "Kalkulačka by MNK" s vlastným rozložením:
+  ```
+  M: 2  2  4  0
+  N: 6  7  0  0
+  K: 8  2  0  ?
+     0  0  3  1
+  ```
+- Suma viditeľných číslic: 35 (hex: 23)
+- MNK = meno autora hry
+
+### /slovensko/ prístupné s auth!
+- URL: https://manik.sk/slovensko/
+- Obsahuje 13 dní cykloturistiky (den01-den13)
+- Deň 9 (den09/): trasa 108km, končí v Zaježovej
+
 ## Status
-**IN PROGRESS** - napoveda.rar rozšifrované, hľadám ďalší súbor podľa hintu "CYKLOTURA NAPRIEC SLOVENSKOM"
+**IN PROGRESS** - GIF analýza odhalila skrytý "Kalkulačka by MNK" frame, hľadám spojitosť s hintom
