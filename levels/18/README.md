@@ -250,5 +250,84 @@ Toto naznačuje, že MNK kalkulačka "filtruje" číslicu 5.
 - GIF duration: 10000, 10sec, 10sekund
 - Calculator display: 0.29, nula, bodka
 
+## Session 24/12 - Frame Connection Analysis
+
+### KĽÚČOVÝ OBJAV: K row má poslednú číslicu 5!
+- K row v MNK kalkulačke: **8 2 0 5** (nie 8 2 0 ?)
+- Opravená MNK suma: **40** (nie 35)
+- Frame 1 detailne ukazuje: M=2240, N=6700, K=8205, Bottom=0031
+
+### Digit mapping medzi Frame 0 (Standard) a Frame 1 (MNK)
+Standard → MNK:
+```
+7→2, 8→2, 9→4
+4→6, 5→7, 6→0
+1→8, 2→2, 3→0
+0→0
+```
+
+**Unchanged digits**: Len 2 a 0 ostávajú rovnaké!
+- Zaujímavé: 8-digit číslo 43657381 NEobsahuje 0, 2, ani 9
+
+### Digit mapping aplikovaný na 43657381
+- 43657381 → **60072028**
+- Suma mapped digits: **25**
+
+### Difference calculations (Standard - MNK)
+- Sum of differences: **14**
+- Sum of absolute differences: **36**
+- Sum of XORs: **50**
+
+### Cipher "správne pozície" analýza
+Permutácie: 1243, 4321, 2341, 4321, 3214, 2143, 1432, 3412
+- Počet pozícií kde digit = pozícia: **6** (2+0+0+0+2+0+2+0)
+- Suma číslic na správnych pozíciach: **13** (1+2+2+4+1+3)
+
+### Level 10 štýl výpočty (word → hex → first6+last6)
+| Slovo | Hex výsledok |
+|-------|-------------|
+| dvadsatdevat (29) | 1413835 |
+| styridsat (40) | 1473653 |
+| tridsatpat (35) | 1453443 |
+| dvadsatpat (25) | 1353835 |
+| strnast (14) | 1354846 |
+| tridsatsest (36) | 1404643 |
+| patdesiat (50) | 1402348 |
+| sest (6) | 1393947 |
+| trinast (13) | 1364643 |
+
+### Testované súbory (všetky 404)
+- Mapped values: 60072028, 25, dvadsatpat
+- MNK readings: 2240, 6700, 8205, 0031, 2240670082050031
+- Differences: 14, 36, 50
+- Diagonals: 2701, 0020
+- Grid sums: 17176, 9454
+- MNK letters: 131411, 778775, 4D4E4B
+- Cipher decoded: skol, tsrp, asad, orim, tupo, irks, dahl, bado
+- Slow animals: korytnacka, zelva, slimak, lenivec
+- Calculator ops: sqrt, odmocnina, vypocet, sucet
+- Number operations: 6607, 4850820, 18375634
+
+### MNK Letter Analysis
+- M=13, N=14, K=11 (letter positions)
+- Sum = 38 = počet číslic v dlhom čísle!
+
+### Unchanged digits in long number
+- 2 appears 3× at positions 8, 17, 20
+- 0 appears 1× at position 36
+- Sum of "unchanged" digits = 6
+
 ## Status
-**IN PROGRESS** - 700+ kombinácií testovaných bez úspechu. Puzzle zostáva nevyriešený. Potrebná nová interpretácia "súčet správnych číslic slovom preveď do hex" alebo iný prístup k nájdeniu "súbor ktorý pomaly pustí ďalej".
+**IN PROGRESS** - 800+ kombinácií testovaných bez úspechu.
+
+### Čo vieme s istotou:
+1. K row = 8205, MNK suma = 40
+2. Frame 0 a Frame 1 majú digit mapping (len 2 a 0 nezmenené)
+3. 43657381 vyhýba sa "unchanged" digits (0, 2, 9)
+4. MNK letters (13+14+11=38) = počet číslic dlhého čísla
+
+### Potrebné preskúmať:
+1. Iný význam "správne číslice"
+2. Spojenie medzi cipher permutáciami a MNK grid
+3. Možná operácia medzi dvoma frame-ami
+4. Alternatívna interpretácia "pomaly"
