@@ -108,3 +108,43 @@ Pri každom obrázku VŽDY skontroluj:
 @levels/15/README.md
 @levels/16/README.md
 @levels/17/README.md
+@levels/18/README.md
+
+## Level 18 - Logická analýza postup
+
+### Čo vieme s istotou:
+1. **napoveda.rar heslo = 9** ✓
+2. **napoveda obsahuje "CYKLOTURA NAPRIEC SLOVENSKOM"** → odkaz na /slovensko/ cykloturistiku
+3. **GIF má skrytý frame** s "Kalkulačka by MNK"
+4. **MNK kalkulačka číslice suma = 35**
+5. **Dlhé číslo suma = 157**, obsahuje 7×5 = 35 (rovná sa MNK suma!)
+
+### Hinty a ich interpretácia:
+1. "traja páni" = GIF (Gustáv Ivan František) ✓
+2. "nie je všetko také" = GIF má skrytý frame ✓
+3. "kalkulačka má rada 8 miestne čísla" = 43657381 ✓
+4. "výsledok z kalkulačky určuje deň a počet" = ???
+5. "odomkni napovedu" = heslo 9 ✓
+6. "použi výsledok zrátaných číslic" = ???
+7. "súčet správnych číslic slovom preveď do hex" = ???
+8. "súbor ktorý ťa pomaličky pustí ďalej" = ???
+
+### Logické dedukcie:
+- Heslo 9 → pravdepodobne deň=9 ALEBO počet=9
+- Ak počet=9: posledných 9 číslic = 537145301, suma = 29
+- 29 v hex = 1D
+- 29 po slovensky = "dvadsatdevat"
+- MNK suma 35 = suma 5-ok v dlhom čísle → 5 je "nesprávna" číslica?
+
+### Kľúčová otázka:
+Čo znamená "pomaličky pustí ďalej"?
+1. **Doslovne**: názov súboru obsahuje "pomaly" alebo synonymum
+2. **Metaforicky**: súbor postupne odhaľuje informácie (animácia?)
+3. **Slovná hračka**: "po-mal-ičky" = po malých častiach?
+4. **Kultúrna referencia**: slovenská pieseň/porekadlo o pomalosti?
+
+### Neprebádané možnosti:
+1. Či existuje viac framov v GIF-e
+2. Špecifické súbory z /slovensko/den09/
+3. Vzťah medzi šifrou a dlhým číslom
+4. Ako sa kód 3214 (PUTO→TUPO) líši od ostatných
