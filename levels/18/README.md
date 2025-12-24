@@ -26,7 +26,7 @@
 ### Horná časť:
 - **8-miestne číslo:** 43657381
 - **Traja páni:** Gustáv Ivan František = **GIF** (hint na kalkulacka.gif)
-- **Dlhé číslo:** 54574643248646545231231478456537145301 (38 číslic)
+- **Dlhé číslo:** 545746432486465452312314784565371453014 (39 číslic - OPRAVENÉ!)
 
 ### Dolná časť - šifra:
 ```
@@ -386,3 +386,58 @@ Permutácie: 1243, 4321, 2341, 4321, 3214, 2143, 1432, 3412
 2. Skrytý odkaz v kalkulačka.gif (okrem MNK framu)
 3. Špecifický súbor v /slovensko/ adresári
 4. Alternatívna interpretácia "pomaličky"
+
+## Session 24/12/2025 - KRITICKÝ OBJAV
+
+### OPRAVA: Dlhé číslo má 39 číslic!
+Pôvodne som mal 38-číslicové číslo končiace "...301", ale obrazok.jpg jasne ukazuje:
+- **545746432486465452312314784565371453014** (39 číslic, končí na **3014**!)
+
+### Prepočty s opraveným číslom:
+- Last 9 digits: **371453014** (nie 537145301)
+- Sum of last 9: **28** (nie 29!)
+- 28 = "dvadsatosem" → hex obsahuje písmená (6f, 6d)
+
+### Slovak slová s ALL-DIGIT hex:
+| Slovo | Hex | All digits? |
+|-------|-----|-------------|
+| dva | 647661 | ✓ |
+| tri | 747269 | ✓ |
+| styri | 7374797269 | ✓ |
+| pat | 706174 | ✓ |
+| sest | 73657374 | ✓ |
+| sedem | 736564656d | ✗ (6d=m) |
+| osem | 6f73656d | ✗ (6f=o, 6d=m) |
+| devat | 6465766174 | ✓ |
+| desat | 6465736174 | ✓ |
+
+### Výpočty:
+| Sum | Slovak | Hex | First6+Last6 | Result |
+|-----|--------|-----|--------------|--------|
+| 28 | dvadsatosem | 647661...73656d | Obsahuje písmená! | N/A |
+| 25 (MNK mapped) | dvadsatpat | 64766164736174706174 | 647661+706174 | **1353835** → 404 |
+| 9 (napoveda) | devat | 6465766174 | 646576+766174 | **1412750** → 404 |
+| 10 | desat | 6465736174 | 646573+736174 | **1382747** → 404 |
+
+### Den09 objavy:
+- **108.jpg** existuje! Ukazuje zastávku "Zaježová rázcestie" + smer "SEKIER"
+- **109.jpg** = mapa Zaježovej oblasti s vrchmi Madačka 745m, Lukový Vrch 804m
+- Images 101-120 existujú (okrem 102, 106)
+
+### Testované location names (všetky 404):
+- zajezova, razcestie, sekier, zastavka
+- madacka, lukovy, polianky, detva, krivan
+- 745, 804
+
+### Interpretácia hints:
+- Hint 4: "výsledok z kalkulačky určuje deň a počet" → Day=9, Count=9
+- Sum of last 9 = **28** (s opraveným číslom)
+- Ale "dvadsatosem" hex obsahuje písmená → možno iný prístup?
+
+### Ďalšie možnosti:
+1. "Správne číslice" nie sú last 9, ale niečo iné
+2. Použiť digits-only z hex: 64766164736174673656 → 1321317 (404)
+3. Možno odpoveď je v den09 súboroch, nie v /na_vyhliadke/
+
+## Status
+**IN PROGRESS** - 1500+ kombinácií testovaných. Hlavný objav: dlhé číslo má 39 číslic (nie 38), sum=28 (nie 29).
