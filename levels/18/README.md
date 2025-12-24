@@ -26,7 +26,7 @@
 ### Horná časť:
 - **8-miestne číslo:** 43657381
 - **Traja páni:** Gustáv Ivan František = **GIF** (hint na kalkulacka.gif)
-- **Dlhé číslo:** 54574643248646545231231478456537145301 (38 číslic)
+- **Dlhé číslo:** 545746432486465452312314784565371453014 (39 číslic - OPRAVENÉ!)
 
 ### Dolná časť - šifra:
 ```
@@ -317,17 +317,192 @@ Permutácie: 1243, 4321, 2341, 4321, 3214, 2143, 1432, 3412
 - 0 appears 1× at position 36
 - Sum of "unchanged" digits = 6
 
+## Session 24/12/2025 - Pokračovanie analýzy
+
+### Overené fakty:
+1. **Dlhé číslo má 39 číslic** končiacich na 3014 (nie 38/301)
+2. **Suma posledných 9 číslic = 28** ("dvadsatosem" - obsahuje 'o','m' v hex → NEPLATNÉ)
+3. **MNK kalkulačka**: M=8, N=13, K=15, Bottom=4, Total=40
+4. **Transformované 43657381 → 60072028**, suma = 25
+5. **Šifra dekódované**: SKOL, TSRP, ASAD, ORIM, **TUPO** (jediné SK slovo!), IRKS, DAHL, BADO
+6. **den09/009.jpg** = cyklista POMALY idúca cez trávu (relevantné!)
+
+### Testované výpočty (všetky 404):
+| Suma | Slovak word | Hex calculation | Result |
+|------|-------------|-----------------|--------|
+| 3 | tri | 747269 + 747269 | 1494538 |
+| 6 | sest | 736573 + 657374 | 1393947 |
+| 25 | dvadsatpat | 647661 + 706174 | 1353835 |
+| 29 | dvadsatdevat | 647661 + 766174 | 1413835 |
+| 35 | tridsatpat | 747269 + 706174 | 1453443 |
+| 39 | tridsatdevat | 747269 + 766174 | 1513443 |
+| 40 | styridsat | 737479 + 736174 | 1473653 |
+
+### Testované kategórie súborov (2000+ kombinácií):
+- Všetky vypočítané hodnoty s/bez prípon
+- Slovenské číslovky (jeden-päťdesiat)
+- Pomaly/pomaličky varianty
+- Šifra dekódované slová (tupo, skol, irks, atď.)
+- Cyklotura/slovensko súvisiace
+- MNK grid hodnoty
+- Hex stringy ako názvy
+- den09 obrázky a lokácie (Kláštorisko, Zaježová, Sekier)
+
+### Neprebádané možnosti:
+1. Súbor v úplne inom adresári
+2. Iná interpretácia "správne číslice"
+3. Kultúrna/lokálna referencia ktorú nepoznám
+4. Chýbajúci krok v logickom postupe
+
 ## Status
-**IN PROGRESS** - 800+ kombinácií testovaných bez úspechu.
+**IN PROGRESS** - 2000+ kombinácií testovaných bez úspechu.
 
 ### Čo vieme s istotou:
 1. K row = 8205, MNK suma = 40
 2. Frame 0 a Frame 1 majú digit mapping (len 2 a 0 nezmenené)
 3. 43657381 vyhýba sa "unchanged" digits (0, 2, 9)
 4. MNK letters (13+14+11=38) = počet číslic dlhého čísla
+5. napoveda.rar heslo = 9, obsah = "CYKLOTURA NAPRIEC SLOVENSKOM"
+6. PUTO→TUPO je jediná šifra kde oba sú slovenské slová (kód 3214)
+7. /slovensko/den09/009.jpg = cyklista pomaly tlačí bicykel cez trávu
+8. /slovensko/den09/099.jpg = kozy, súčet číslic (0+9+9=18) = číslo levelu
 
-### Potrebné preskúmať:
-1. Iný význam "správne číslice"
-2. Spojenie medzi cipher permutáciami a MNK grid
-3. Možná operácia medzi dvoma frame-ami
-4. Alternatívna interpretácia "pomaly"
+### Kľúčové výpočty (všetky 404):
+| Suma | Slovensky | Hex formula | Výsledok |
+|------|-----------|-------------|----------|
+| 29 | dvadsatdevat | first6+last6 | 1413835 |
+| 40 | styridsat | first6+last6 | 1473653 |
+| 13 | trinast | first6+last6 | 1364643 |
+| 37 | tridsatsedem | first6+last6 | 1311925 |
+| 122 | stodvadsatdva | first6+last6 | 1385127 |
+| 157 | stopatdesiatsedem | first6+last6 | N/A |
+| 10 | desat | hex | 6465736174 |
+
+### Testované kategórie súborov (všetky 404):
+- Slovenské číslovky: jeden až dvadsat, dvadsatdevat, trinast, atď.
+- Pomaly varianty: pomaly, pomalicky, zvolna, pozvolna, postupne
+- Hex hodnoty: 1d, 7a, 23, 25, 0a, atď.
+- Level 10 štýl výpočty: 1413835, 1364643, 1473653, atď.
+- Cipher dekódované: tupo, skol, tsrp, asad, orim, bado
+- Den09 miesta: krpacovo, zajezova, detva, kalinka, sihla
+- Cyklotura: bicykel, cyklista, luka, trava, polana
+- Názvy z čísel: 43657381, 537145301, 099, 009
+
+### Neprebádané možnosti:
+1. Úplne iná interpretácia "správne číslice"
+2. Skrytý súbor v inom adresári (/slovensko/den09/?)
+3. Kombinácia viacerých hintov
+4. Kultúrna referencia ktorú nepoznám
+
+### Session 24/12/2025 - nové objavy:
+- den09/009.jpg = cyklista v tráve = "pomaly" (slow movement)
+- den09/099.jpg = kozy, 0+9+9=18 = level číslo
+- PUTO→TUPO jediná "správna" šifra, suma kódu = 10
+- Žiadne clickable areas v Level 18 HTML okrem image mapy
+
+## Session 24/12 - Rozsiahle testovanie
+
+### Testované prístupy (1000+ kombinácií):
+1. **Slovak number words** - všetky čísla 1-29 a ich hex konverzie
+2. **Cipher transformations** - SKOL, TSRP, TUPO, atď.
+3. **MNK calculator values** - 2240, 6700, 8205, 0031
+4. **Level 10 style sums** - first6 + last6 z hex slov
+5. **Den09 files** - obrázky 009.jpg, 099.jpg
+6. **Hash values** - MD5/SHA1 kľúčových slov
+7. **Background searches** - číselné rozsahy 1000000-1500000
+
+### Kľúčové poznatky:
+- MNK mapped 43657381 = 60072028, suma = 25
+- Všetky cipher permutácie na pozíciách 1-4 dávajú sumu 16
+- napoveda heslo = 9, obsahuje "CYKLOTURA NAPRIEC SLOVENSKOM"
+- GIF má 10s delay medzi framami
+- den09/099.jpg existuje (obrázok s kozami, 0+9+9=18!)
+
+### Neprebádané teórie:
+1. Kombinácia cipher slov s den09 obrázkami
+2. Skrytý odkaz v kalkulačka.gif (okrem MNK framu)
+3. Špecifický súbor v /slovensko/ adresári
+4. Alternatívna interpretácia "pomaličky"
+
+## Session 24/12/2025 - KRITICKÝ OBJAV
+
+### OPRAVA: Dlhé číslo má 39 číslic!
+Pôvodne som mal 38-číslicové číslo končiace "...301", ale obrazok.jpg jasne ukazuje:
+- **545746432486465452312314784565371453014** (39 číslic, končí na **3014**!)
+
+### Prepočty s opraveným číslom:
+- Last 9 digits: **371453014** (nie 537145301)
+- Sum of last 9: **28** (nie 29!)
+- 28 = "dvadsatosem" → hex obsahuje písmená (6f, 6d)
+
+### Slovak slová s ALL-DIGIT hex:
+| Slovo | Hex | All digits? |
+|-------|-----|-------------|
+| dva | 647661 | ✓ |
+| tri | 747269 | ✓ |
+| styri | 7374797269 | ✓ |
+| pat | 706174 | ✓ |
+| sest | 73657374 | ✓ |
+| sedem | 736564656d | ✗ (6d=m) |
+| osem | 6f73656d | ✗ (6f=o, 6d=m) |
+| devat | 6465766174 | ✓ |
+| desat | 6465736174 | ✓ |
+
+### Výpočty:
+| Sum | Slovak | Hex | First6+Last6 | Result |
+|-----|--------|-----|--------------|--------|
+| 28 | dvadsatosem | 647661...73656d | Obsahuje písmená! | N/A |
+| 25 (MNK mapped) | dvadsatpat | 64766164736174706174 | 647661+706174 | **1353835** → 404 |
+| 9 (napoveda) | devat | 6465766174 | 646576+766174 | **1412750** → 404 |
+| 10 | desat | 6465736174 | 646573+736174 | **1382747** → 404 |
+
+### Den09 objavy:
+- **108.jpg** existuje! Ukazuje zastávku "Zaježová rázcestie" + smer "SEKIER"
+- **109.jpg** = mapa Zaježovej oblasti s vrchmi Madačka 745m, Lukový Vrch 804m
+- Images 101-120 existujú (okrem 102, 106)
+
+### Testované location names (všetky 404):
+- zajezova, razcestie, sekier, zastavka
+- madacka, lukovy, polianky, detva, krivan
+- 745, 804
+
+### Interpretácia hints:
+- Hint 4: "výsledok z kalkulačky určuje deň a počet" → Day=9, Count=9
+- Sum of last 9 = **28** (s opraveným číslom)
+- Ale "dvadsatosem" hex obsahuje písmená → možno iný prístup?
+
+### Ďalšie možnosti:
+1. "Správne číslice" nie sú last 9, ale niečo iné
+2. Použiť digits-only z hex: 64766164736174673656 → 1321317 (404)
+3. Možno odpoveď je v den09 súboroch, nie v /na_vyhliadke/
+
+## Status
+**IN PROGRESS** - 2500+ kombinácií testovaných bez úspechu.
+
+## Kľúčové spojenie: Level 18 ↔ Den09
+
+Citát na den09 stránke obsahuje presne credentials Level 18:
+- "**prekrásna** krajina" = username
+- "**výhľadov** plná" = password
+
+Obrázok 009.jpg v den09 ukazuje cyklistu **pomaly** tlačiaceho bicykel cez trávu - priama referencia na "pomaličky"!
+
+### Čo vieme s istotou:
+1. napoveda.rar heslo = 9 ✓
+2. Dlhé číslo má 39 číslic, sum posledných 9 = 28
+3. "dvadsatosem" má v hex písmená (6f, 6d) → nemožno použiť Level 10 formulu
+4. Spojenie s den09 cez citát a "pomaly" obrázok
+
+### Testované (všetko 404):
+- Všetky sumy 1-50 so slovenským slovom → hex → first6+last6
+- Názvy súborov: pomaly, pomalicky, dalej, hore, stupaj, veza, rozhladna
+- Miesta z den09: zajezova, polomy, detva, klastorisko
+- Šifra dekódované: tupo, skol, tsrp
+- Čísla: 28, 1382747, 1353835, atď.
+- Súbory s príponami: .ne, .txt, .rar, .gif
+
+### Možné smery:
+1. Súbor s iným názvom ktorý som netestoval
+2. Potrebná iná autentifikácia
+3. Kultúrna/lokálna referencia
+4. Výpočet ktorý som nesprávne interpretoval

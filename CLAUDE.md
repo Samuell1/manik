@@ -71,6 +71,12 @@ Pri každom obrázku VŽDY skontroluj:
   7. Počet objektov (napr. bodky na lienke)
 - Každý nájdený detail môže byť hint - ZAPÍŠ ho a POUŽI
 
+## DÔLEŽITÉ: Paralelné spracovanie
+- Používaj background tasks na rozsiahle vyhľadávania
+- Spúšťaj viacero HTTP testov súčasne
+- Počas čakania na výsledky pracuj na ďalších teóriách
+- Príklad: `run_in_background: true` v Bash nástrojoch
+
 ## DÔLEŽITÉ: Logické myslenie pri riešení
 - VŽDY najprv ZAMYSLI sa nad významom hintov
 - Hľadaj SÚVISLOSTI medzi hintami (napr. zrkadlo + slová = otočené slová)
