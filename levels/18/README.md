@@ -586,10 +586,72 @@ Kódy: 1243, 4321, 2341, 4321, 3214, 2143, 1432, 3412
 3. Aká je správna interpretácia "slovom preveď do hex"?
 4. Kde je súbor ktorý "pomaličky pustí ďalej"?
 
+## Session 25/12/2025 - Pokračovanie testovania
+
+### Hlavná teória: Sum of unchanged digits = 6
+- V dlhom čísle sú len 0 a 2 "nezmenené" v MNK transformácii
+- Pozície 2: 9, 18, 21 (tri dvojky)
+- Pozícia 0: 37 (jedna nula)
+- Sum = 2+2+2+0 = **6**
+- "sest" → hex = 73657374 → first6+last6 = 736573+657374 = **1393947**
+- Výsledok 1393947 je **404**
+
+### Testované nové kategórie (všetky 404):
+1. **Čísla 2-5 s Level 10 formulou:**
+   - dva(2) → 1295322
+   - tri(3) → 1494538
+   - styri(4) → 1534748
+   - pat(5) → 1412348
+
+2. **Cipher aplikovaný na 8-digit:**
+   - 43657381 s kódom 3214 → 63458371
+
+3. **Slovak proverbs:**
+   - pomaly_dalej_zajdes, zajdes, isto
+
+4. **Music tempo:**
+   - adagio, lento, largo, grave, andante
+
+5. **Den09 locations:**
+   - krpacovo, zajezova, polomy, detva, pohodicka
+
+6. **GIF timing:**
+   - 1000 (centiseconds), 10000 (ms), 10 (seconds)
+
+7. **Cipher words:**
+   - sklo, prst, dasa, miro, puto, risk, dlha, doba
+   - skol, tsrp, asad, orim, tupo, irks, dahl, bado
+
+8. **MNK related:**
+   - 2240, 6700, 8205, 0031, 17176, 22427
+
+9. **Viewpoint words:**
+   - vyhliadka, veza, rozhladna, schody, stupaj
+
+10. **Previous level references:**
+    - kafka, dominik, rykyncice, vrak, auto
+
+### Objavené den09 obrázky:
+- 060.jpg (cesta cez polia)
+- 108.jpg (zastávka Zaježová)
+- 118.jpg (drevená chalupa)
+- Images 101-122 existujú
+
+### Bulk search výsledky:
+- Rozsah 1392947-1394947 - žiadne súbory nájdené
+
+### Aktuálne nezodpovedané otázky:
+1. Prečo 1393947 nefunguje ak suma = 6?
+2. Je Level 10 formula správna pre Level 18?
+3. Existuje iný význam "správne číslice"?
+4. Je súbor v úplne inom adresári?
+5. Potrebujem kultúrnu/lokálnu znalosť?
+
 ## Status
-**IN PROGRESS** - 3000+ kombinácií testovaných bez úspechu.
+**IN PROGRESS** - 3500+ kombinácií testovaných bez úspechu.
 
 ### Potrebné:
 - Nový pohľad na hinty
 - Možná kultúrna/lokálna referencia ktorú nepoznám
 - Alternatívna interpretácia "správne číslice"
+- Kontakt s autorom hry alebo nápoveda od niekoho kto level riešil
