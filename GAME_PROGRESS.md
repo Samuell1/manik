@@ -724,4 +724,3 @@ X pozície: 2, 2, 3, 2, 3, 2, 1
 
 **Subory ulozene v /home/user/manik/levels/:**
 - 01/ až 18/ - README.md pre každý level
-- kafka_table.md - Kafkova periodická tabuľka (abecedne zoradená)
