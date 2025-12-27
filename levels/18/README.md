@@ -647,8 +647,65 @@ Kódy: 1243, 4321, 2341, 4321, 3214, 2143, 1432, 3412
 4. Je súbor v úplne inom adresári?
 5. Potrebujem kultúrnu/lokálnu znalosť?
 
+## Session 26/12/2025 - Ďalšie testovanie
+
+### Nové interpretácie "správne číslice" testované:
+
+1. **Position-matching digits** (digits at same position in 8-digit and last 9):
+   - Position 6: both have 3 ✓
+   - Position 8: both have 1 ✓
+   - Sum = 4 → styri → 1534748 → 404
+
+2. **Digits dividing 28** (1, 2, 4, 7):
+   - In last 9: 7, 1, 4, 1, 4 → sum = 17
+   - sedemnast → 1353938 → 404
+
+3. **Prime digits** (2, 3, 5, 7):
+   - In last 9: 3, 7, 5, 3 → sum = 18
+   - osemnast → 1291030 → 404
+
+4. **Cipher fixed points applied to 8-digit**:
+   - All fixed digits from all codes: sum = 54
+   - patdesiatstyri → 1503443 → 404
+
+5. **CYKLOTURA positions** (C=3, Y=25, K=11...):
+   - Digits at those positions in long number: sum = 41
+   - styridasatjeden → 1302135 → 404
+
+6. **MNK row sums as positions** (8, 13, 15, 4):
+   - Digits at those positions: 3, 4, 5, 7 → sum = 19
+   - devatnast → 1263950 → 404
+
+7. **Letters at fixed cipher positions** (S, K, U, O, D, H):
+   - Letter position sum: 19+11+21+15+4+8 = 78
+   - sedemdesiatosem → 1410220 → 404
+
+### Testované adresáre:
+- /hra/na_vyhliadke/ - všetky kombinácie
+- /slovensko/ - kľúčové hodnoty
+- /slovensko/den09/ - kľúčové hodnoty
+- /hra/ root - kľúčové hodnoty
+
+### Testované prípony súborov:
+- .gif, .ar (Argon - 18th element), .ne, .txt, .jpg, .rar, .zip
+
+### Ďalšie testované kategórie (všetky 404):
+- Tower names: vartovka, sitno, gerlach, dukla, hradok
+- Cycling words: bicykel, cyklista, pedal, koleso
+- Slow animals: slimak, korytnacka, zelva, lenivec
+- Raw hex values: 1c, 1C, 9, 25, 28, 7a
+- Decoded cipher words: skol, tsrp, asad, orim, tupo, irks, dahl, bado
+- 9-related: devat, deviaty, deviatka, den9, 009, 099
+
+### Analýza súborov:
+- obrazok.jpg - štandardný JPEG, končí FFD9 markerom, žiadne skryté dáta
+- kalkulacka.gif - 2 frames, delay 10000ms
+- den09/009.jpg - normálny JPEG
+
+### Celkový počet testovaných kombinácií: 4000+
+
 ## Status
-**IN PROGRESS** - 3500+ kombinácií testovaných bez úspechu.
+**IN PROGRESS** - 4000+ kombinácií testovaných bez úspechu.
 
 ### Potrebné:
 - Nový pohľad na hinty
