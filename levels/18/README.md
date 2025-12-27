@@ -705,10 +705,70 @@ Kódy: 1243, 4321, 2341, 4321, 3214, 2143, 1432, 3412
 ### Celkový počet testovaných kombinácií: 4000+
 
 ## Status
-**IN PROGRESS** - 4000+ kombinácií testovaných bez úspechu.
+**IN PROGRESS** - 4500+ kombinácií testovaných bez úspechu.
+
+## Session 27/12/2025 - GIF Analýza
+
+### Kľúčový objav: GIF byte pozície
+- **Frame 0** je na byte pozícii **781**
+- **Frame 1** (MNK calculator) je na byte pozícii **6607**
+- **6607 ≈ sqrt(43657381) = 6607.37** - toto nemôže byť náhoda!
+- Obe frames majú delay **10000ms** (10 sekúnd = "pomaličky")
+
+### Testované na základe GIF analýzy:
+- 6607, 6608, 660737 → všetky 404
+- 10000, 10 → 404
+
+### Cipher dekódovanie - fixné pozície:
+| Kód | Slovo | Fixed pozície | Výsledok |
+|-----|-------|---------------|----------|
+| 1243 | SKLO | 1,2 | S,K |
+| 4321 | PRST | - | - |
+| 2341 | DÁŠA | - | - |
+| 4321 | MIRO | - | - |
+| 3214 | PUTO | 2,4 | U,O |
+| 2143 | RISK | - | - |
+| 1432 | DLHÁ | 1,3 | D,H |
+| 3412 | DOBA | - | - |
+
+**Fixed písmená:** S,K,U,O,D,H = SKUODH (anagram?)
+
+### Testované sumy a ich Level 10 výpočty:
+| Suma | Slovo | Hex | first6+last6 | HTTP |
+|------|-------|-----|--------------|------|
+| 2 | dva | 647661 | 1295322 | 404 |
+| 3 | tri | 747269 | 1494538 | 404 |
+| 4 | styri | 7374797269 | 1534748 | 404 |
+| 5 | pat | 706174 | 1412348 | 404 |
+| 6 | sest | 73657374 | 1393947 | 404 |
+| 9 | devat | 6465766174 | 1412750 | 404 |
+| 10 | desat | 6465736174 | 1382747 | 404 |
+| 20 | dvadsat | 64766164736174 | 1383835 | 404 |
+| 25 | dvadsatpat | 64766164736174706174 | 1353835 | 404 |
+| 30 | tridsat | 74726964736174 | 1483443 | 404 |
+| 40 | styridsat | 737479726964736174 | 1473653 | 404 |
+
+### Interpretácie "správne číslice" (všetky neúspešné):
+1. **Pozície 1,2 fixné dvakrát** → digits 3,7 → sum=10 → 1382747 (404)
+2. **PUTO fixed (2,4)** → digits 7,4 z last 9 → sum=11 (invalid hex)
+3. **Počet fixed pozícií** → 6 → 1393947 (404)
+4. **MNK transformed sum** → 25 → 1353835 (404)
+5. **Cipher digit values** → 1+2+2+4+1+3=13 (invalid hex)
+
+### Súvislosti s Day 9 cykloturistiky:
+- Image 009.jpg = cyklista pomaly tlačí bicykel (="pomaličky")
+- Image 099.jpg = kozy, 0+9+9=18 (číslo levelu!)
+- Citát obsahuje "prekrásna" + "výhľadov" = credentials
+- Route = 108 km, 1+0+8=9 (číslo dňa!)
+
+### Neprebádané teórie:
+1. Súbor je v úplne inom adresári
+2. Názov súboru je kombinácia viacerých hintov
+3. Tower v obrázku má špecifické meno
+4. Potrebný kultúrny/lokálny kontext
+5. Chýba krok v logickom postupe medzi hint 6 a 7
 
 ### Potrebné:
-- Nový pohľad na hinty
-- Možná kultúrna/lokálna referencia ktorú nepoznám
-- Alternatívna interpretácia "správne číslice"
-- Kontakt s autorom hry alebo nápoveda od niekoho kto level riešil
+- Identifikácia konkrétnej veže (observation tower) v obrázku
+- Nový pohľad na "správne číslice" interpretáciu
+- Možná pomoc od niekoho kto level riešil
